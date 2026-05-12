@@ -82,7 +82,7 @@
                     </span>
 
                     <span class="badge rounded-pill bg-light text-dark px-3 py-2">
-                        Semester 3
+                        Semester 4
                     </span>
 
                     <span class="badge rounded-pill bg-light text-dark px-3 py-2">
@@ -94,89 +94,392 @@
 
 
 
+  <!-- TUJUAN -->
+        <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+            
             <div class="p-5">
 
-
-                <h3 class="fw-bold mb-4" style="color:#73073d;">
+                <h2 class="fw-bold mb-4" style="color:#73073d;">
                     I. Tujuan Praktikum
-                </h3>
+                </h2>
 
-                <p>
+                <p class="fs-5">
                     Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
                 </p>
 
-                <ul>
-                    <li>Memahami konsep dasar Laravel</li>
-                    <li>Melakukan instalasi Laravel</li>
-                    <li>Menjalankan project Laravel</li>
-                    <li>Memahami struktur folder Laravel</li>
+                <ul class="fs-5 lh-lg">
+                    <li>Memahami konsep dasar framework Laravel.</li>
+                    <li>Melakukan instalasi Laravel beserta tools pendukung.</li>
+                    <li>Menjalankan project Laravel menggunakan artisan.</li>
+                    <li>Memahami struktur dasar Laravel dan konsep MVC.</li>
+                    <li>Menghubungkan Laravel dengan database MySQL.</li>
                 </ul>
-
-
-
-                <br><br>
-
-
-                <h3 class="fw-bold mb-4" style="color:#73073d;">
-                    II. Dasar Teori
-                </h3>
-
-                <p>
-                    Laravel merupakan framework PHP berbasis MVC yang digunakan
-                    untuk membangun aplikasi web modern dengan sintaks yang elegan
-                    dan terstruktur.
-                </p>
-
-
-
-                <br><br>
-
-
-                <h3 class="fw-bold mb-4" style="color:#73073d;">
-                    III. Langkah Kerja
-                </h3>
-
-                <ol>
-                    <li>Menginstall Composer</li>
-                    <li>Membuka terminal / CMD</li>
-                    <li>Menjalankan perintah instalasi Laravel</li>
-                    <li>Membuat project baru Laravel</li>
-                    <li>Menjalankan local server</li>
-                </ol>
-
-
-
-                <br><br>
-
-
-                <h3 class="fw-bold mb-4" style="color:#73073d;">
-                    IV. Hasil Praktikum
-                </h3>
-
-                <p>
-                    Berikut hasil tampilan Laravel yang berhasil dijalankan:
-                </p>
-
-                <img src="images/laravel.png"
-                class="img-fluid rounded shadow-sm mt-3">
-
-
-
-                <br><br><br>
-
-
-                <h3 class="fw-bold mb-4" style="color:#73073d;">
-                    V. Kesimpulan
-                </h3>
-
-                <p>
-                    Praktikum ini membantu memahami proses instalasi dan konfigurasi
-                    awal Laravel sebagai framework PHP modern.
-                </p>
-
 
             </div>
         </div>
+
+        <!-- DASAR TEORI -->
+        <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+            <div class="p-5">
+
+                <h2 class="fw-bold mb-4" style="color:#73073d;">
+                    II. Dasar Teori
+                </h2>
+
+                <p class="fs-5 lh-lg">
+                    Laravel merupakan framework PHP berbasis open source yang digunakan 
+                    untuk membangun aplikasi web dengan konsep MVC (Model, View, Controller). 
+                    Laravel dikembangkan oleh Taylor Otwell dan menjadi salah satu framework 
+                    PHP paling populer karena memiliki sintaks yang sederhana, modern, 
+                    serta mendukung proses pengembangan web yang lebih cepat dan terstruktur.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Laravel menyediakan berbagai fitur seperti routing, middleware, 
+                    authentication, blade template engine, artisan CLI, dan Eloquent ORM 
+                    yang mempermudah pengelolaan database serta pengembangan aplikasi.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Dalam proses pengembangan Laravel dibutuhkan beberapa software pendukung 
+                    seperti XAMPP sebagai web server dan database server, Composer untuk 
+                    mengelola dependency PHP, serta Node JS dan NPM untuk mengelola asset frontend.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- LANGKAH PRAKTIKUM -->
+        <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+            <div class="p-5">
+
+                <h2 class="fw-bold mb-4" style="color:#73073d;">
+                    III. Langkah-Langkah Praktikum
+                </h2>
+
+                <ol class="fs-5 lh-lg">
+
+                    <li class="mb-4">
+                        <b>Install XAMPP</b><br>
+                        Mengunduh dan menginstall XAMPP sebagai web server, PHP, 
+                        serta MySQL server yang digunakan dalam pengembangan Laravel.
+                        <center>
+                            <img 
+                                src="images/xampp.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                        </center> 
+                    </li>
+
+                    <li class="mb-4">
+                        <b>Install Composer</b><br>
+                        Menginstall Composer sebagai package manager PHP untuk 
+                        mengelola dependency framework Laravel.
+
+                        <center>
+                            <img 
+                                src="images/composer install.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                        </center> 
+                    </li>
+
+                    <li class="mb-4">
+                        <b>Install Laravel</b><br>
+                        Membuka terminal kemudian menjalankan 
+                        perintah instalasi Laravel:
+
+                        <center>
+                            <img 
+                                src="images/install laravel 2.png" 
+                                width="600"
+                                class="rounded shadow mt-4 mb-4""
+                            >
+                        </center> 
+                        
+                        <center>
+                            <img 
+                                src="images/install laravel.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                        </center> 
+
+
+                    </li>
+
+                    <li class="mb-4">
+                        <b>Mempersiapkan Software Pendukung</b><br>
+                        Menginstall Node JS dan NPM untuk mendukung pengelolaan 
+                        frontend dan asset pada Laravel.
+
+                        <center>
+                            <img 
+                                src="images/install node.png" 
+                                width="600"
+                                class="rounded shadow mt-4 mb-4"
+                            >
+                        </center> 
+
+                        <center>
+                            <img 
+                                src="images/npm.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                        </center> 
+                    </li>
+
+                    <li class="mb-4">
+                        <b>Menjalankan Laravel</b><br>
+                        Masuk ke folder project kemudian menjalankan server Laravel 
+                        menggunakan perintah:
+                        
+<pre class="bg-light p-3 rounded mt-3">
+cd laravel-app
+php artisan serve
+</pre>
+
+                    </li>
+
+                    <li class="mb-4">
+                        <b>Menghubungkan Laravel dengan MySQL</b><br>
+                        Membuat database pada PhpMyAdmin kemudian melakukan konfigurasi 
+                        file <b>.env</b> pada Laravel.
+                        
+<pre class="bg-light p-3 rounded mt-3">
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=root
+DB_PASSWORD=
+</pre>
+
+                    <center>
+                            <img 
+                                src="images/mysql.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                    </center> 
+
+                    </li>
+
+                    <li class="mb-4">
+                        Setelah konfigurasi selesai, dilakukan pengujian koneksi database 
+                        menggunakan migration Laravel.
+                        
+<pre class="bg-light p-3 rounded mt-3">
+php artisan migrate
+</pre>
+
+                    </li>
+
+                </ol>
+
+            </div>
+        </div>
+
+        <!-- CHALLENGE MVC -->
+<div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+    <div class="p-5">
+
+        <h2 class="fw-bold mb-4" style="color:#73073d;">
+            IV. Challenge MVC
+        </h2>
+
+        <ol class="fs-5 lh-lg">
+
+            <li class="mb-4">
+                Membuka project Laravel menggunakan Visual Studio Code.
+            </li>
+
+            <li class="mb-4">
+                Membuka terminal kemudian membuat controller baru 
+                dengan nama <b>UserController</b> menggunakan perintah:
+                
+<pre class="bg-light p-3 rounded mt-3">
+php artisan make:controller UserController
+</pre>
+            </li>
+
+            <li class="mb-4">
+                Setelah controller berhasil dibuat, kemudian menambahkan 
+                function <b>index()</b> pada file 
+                <b>UserController.php</b>.
+                
+<pre class="bg-light p-3 rounded mt-3">
+public function index()
+{
+    return view('user');
+}
+</pre>
+
+
+                    <center>
+                            <img 
+                                src="images/user controller.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                        </center> 
+
+
+            </li>
+
+            <li class="mb-4">
+                Membuat file view baru pada folder 
+                <b>resources/views</b> dengan nama 
+                <b>user.blade.php</b>.
+            </li>
+
+            <li class="mb-4">
+                Menambahkan tampilan HTML sederhana pada file 
+                <b>user.blade.php</b>.
+                
+<pre class="bg-light p-3 rounded mt-3">
+&lt;h1&gt;Halaman User&lt;/h1&gt;
+&lt;p&gt;Selamat datang di halaman user Laravel.&lt;/p&gt;
+</pre>
+
+                    <center>
+                            <img 
+                                src="images/user blade.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                    </center> 
+
+            </li>
+
+            <li class="mb-4">
+                Membuka file <b>web.php</b> pada folder 
+                <b>routes</b> kemudian menambahkan routing 
+                untuk halaman user.
+                
+<pre class="bg-light p-3 rounded mt-3">
+use App\Http\Controllers\UserController;
+
+Route::get('/user', [UserController::class, 'index']);
+</pre>
+
+                    <center>
+                            <img 
+                                src="images/web.php.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                    </center> 
+
+            </li>
+
+            <li class="mb-4">
+                Menjalankan Laravel menggunakan perintah:
+                
+<pre class="bg-light p-3 rounded mt-3">
+php artisan serve
+</pre>
+
+                    <center>
+                            <img 
+                                src="images/php artisan.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                    </center> 
+
+            </li>
+
+            <li class="mb-4">
+                Membuka browser dan mengetik URL:
+                
+<pre class="bg-light p-3 rounded mt-3">
+http://127.0.0.1:8000/user
+</pre>
+
+                sehingga halaman view user berhasil ditampilkan.
+
+                    <center>
+                            <img 
+                                src="images/hasil.png" 
+                                width="600"
+                                class="rounded shadow"
+                            >
+                    </center> 
+            </li>
+
+        </ol>
+
+    </div>
+
+</div>
+
+        <!-- HASIL PEMBAHASAN -->
+        <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+            <div class="p-5">
+
+                <h2 class="fw-bold mb-4" style="color:#73073d;">
+                    V. Hasil dan Pembahasan
+                </h2>
+
+                <p class="fs-5 lh-lg">
+                    Berdasarkan praktikum yang telah dilakukan, proses instalasi Laravel 
+                    berhasil dilakukan dengan baik menggunakan Composer. Seluruh software 
+                    pendukung seperti XAMPP, Node JS, dan NPM berhasil diinstall dan dapat digunakan.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Project Laravel berhasil dibuat dan dijalankan menggunakan perintah 
+                    <b>php artisan serve</b>. Halaman welcome Laravel berhasil tampil pada browser 
+                    yang menandakan bahwa Laravel telah berjalan dengan baik.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Selain itu, Laravel juga berhasil dihubungkan dengan database MySQL 
+                    melalui konfigurasi file <b>.env</b>. Proses migration database berjalan 
+                    dengan sukses sehingga tabel bawaan Laravel berhasil dibuat pada database.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- KESIMPULAN -->
+        <div class="card border-0 shadow-lg overflow-hidden">
+
+            <div class="p-5">
+
+                <h2 class="fw-bold mb-4" style="color:#73073d;">
+                    VI. Kesimpulan
+                </h2>
+
+                <p class="fs-5 lh-lg">
+                    Dari praktikum yang telah dilakukan dapat disimpulkan bahwa Laravel 
+                    merupakan framework PHP yang mempermudah proses pengembangan aplikasi web 
+                    dengan konsep MVC yang terstruktur.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Proses instalasi Laravel membutuhkan beberapa software pendukung 
+                    seperti XAMPP, Composer, Node JS, dan NPM. Laravel dapat dijalankan 
+                    menggunakan artisan server dan dapat dihubungkan dengan database MySQL 
+                    melalui konfigurasi file environment.
+                </p>
+
+                <p class="fs-5 lh-lg">
+                    Dengan adanya fitur-fitur bawaan Laravel, proses pengembangan website 
+                    menjadi lebih cepat, rapi, dan efisien.
+                </p>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
