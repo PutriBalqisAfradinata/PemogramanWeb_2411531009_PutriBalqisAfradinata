@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background-color:#ffb6d9;">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Balqis<span style="color:#734;">Portfolio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="portfolio.html">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="report.html">Report</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div style="height: 30px;"></div>
+
+
+<div style="height: 40px;"></div>
+
+
+<div class="container py-5">
+    <div class="row g-4">
+
+        <div class="col-lg-5">
+            <div class="contact-card">
+                <h3 class="mb-4 text-center text-danger">Contact Information</h3>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">📍</div>
+                    <div>
+                        <h6 class="fw-bold">Address</h6>
+                        <p class="mb-0">Jl. Dr. Moh Hatta Jl. Psr Baru, Pauh, Padang</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">📞</div>
+                    <div>
+                        <h6 class="fw-bold">Phone</h6>
+                        <p class="mb-0">+62 812-7589-4580</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">✉️</div>
+                    <div>
+                        <h6 class="fw-bold">Email</h6>
+                        <p class="mb-0">balqisafradinata@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">🌐</div>
+                    <div>
+                        <h6 class="fw-bold">Social Media</h6>
+                        Instagram: @balqisafradinata <br>
+                        LinkedIn: Balqis Afradinata
+                    </div>
+                </div>
+
+                <h6 class="fw-bold">Location Map</h6>
+                   <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2968442993133!2d100.43164257395892!3d-0.926366799064671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b9006ce5757f%3A0xeb89e84e70eb96fc!2sARUNA%20HOUSE!5e0!3m2!1sen!2sid!4v1765507550573!5m2!1sen!2sid"
+                    width="100%" 
+                    height="250"
+                    style="border:0; border-radius:15px;"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="contact-card">
+                <h3 class="mb-4 text-center text-danger">Send Me a Message</h3>
+
+                <div id="successAlert" class="alert alert-success alert-custom d-none">
+                    Your message has been sent!
+                </div>
+
+                <div id="errorAlert" class="alert alert-danger alert-custom d-none">
+                    Please fix the errors in the form!
+                </div>
+
+
+                <form id="contactForm" class="needs-validation" novalidate>
+                    
+                    <div class="mb-3">
+                        <label class="form-label required">Name</label>
+                        <input type="text" class="form-control" id="name" required />
+                        <div class="invalid-feedback">Name is required</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required">Email</label>
+                        <input type="email" class="form-control" id="email" required />
+                        <div class="invalid-feedback">Enter a valid email</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required">Phone</label>
+                        <input type="tel" class="form-control" id="phone" required pattern="[0-9]{10,15}" />
+                        <div class="invalid-feedback">Phone must be 10–15 digits</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required">Subject</label>
+                        <select class="form-select" id="subject" required>
+                            <option value="">Choose...</option>
+                            <option>Information</option>
+                            <option>Feedback</option>
+                            <option>Support</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a subject</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required">Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                        <div class="invalid-feedback">Message cannot be empty</div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="agree" required />
+                        <label class="form-check-label required">I agree to terms and conditions</label>
+                        <div class="invalid-feedback">You must agree before submitting</div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-pink w-100" disabled>Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    
+    const successAlert = document.getElementById("successAlert");
+    const errorAlert = document.getElementById("errorAlert");
+
+
+    function hideAlerts() {
+        successAlert.classList.add("d-none");
+        errorAlert.classList.add("d-none");
+    }
+
+    hideAlerts();
+
+    const agreeBox = document.getElementById("agree");
+    agreeBox.addEventListener("change", () => {
+        submitBtn.disabled = !agreeBox.checked;
+    });
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        hideAlerts();
+
+        const emailField = document.getElementById("email");
+        const emailValue = emailField.value;
+
+
+        if (!form.checkValidity()) {
+            errorAlert.innerText = "Please fill all fields correctly!";
+            errorAlert.classList.remove("d-none");
+            form.classList.add("was-validated");
+            return;
+        }
+
+        successAlert.classList.remove("d-none");
+        form.reset();
+        form.classList.remove("was-validated");
+
+        submitBtn.disabled = true;
+    });
+</script>
+
+
+    <footer class="footer text-center py-4">
+        <div class="container">
+
+            <h5 class="fw-bold mb-3">Balqis Portfolio</h5>
+
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="portfolio.html" class="footer-link">Portfolio</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <div class="footer-social mt-3">
+               <a href="https://instagram.com/balqisafradinata" target="_blank" class="social-icon">
+                    <img src="images/ig.png"> </a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" class="social-icon">
+                     <img src="images/lin2.png" ></a>
+                 <a href="https://github.com/PutriBalqisAfradinata" target="_blank" class="social-icon">
+                     <img src="images/github.png" ></a>
+            </div>
+
+            <p class="small">© 2025 Balqis Portfolio — All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active-page");
+        }
+    });
+</script>
+
+
+</body>
+</html>

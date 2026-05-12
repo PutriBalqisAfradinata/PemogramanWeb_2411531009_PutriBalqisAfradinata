@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Aqis</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background-color:#ffb6d9;">
+        <div class="container">
+
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                Balqis<span style="color:#734;">Portfolio</span>
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="portfolio.html">Portfolio</a>
+                    </li>
+                
+                    <li class="nav-item">
+                         <a class="nav-link fw-semibold" href="report.html">Report</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="height: 30px;"></div>
+
+    <div style="height: 40px;"></div>
+
+
+    <section class="text-center py-5">
+        <h1 class="fw-bold">My Portfolio</h1>
+        <p class="text-muted">Beberapa project yang pernah saya kerjakan</p>
+    </section>
+
+
+    <div class="container mb-4">
+        <ul class="nav nav-tabs justify-content-center" id="portfolioTabs">
+            <li class="nav-item"><button class="nav-link active" data-filter="all">All</button></li>
+            <li class="nav-item"><button class="nav-link" data-filter="java">Java</button></li>
+            <li class="nav-item"><button class="nav-link" data-filter="web">Web</button></li>
+        </ul>
+    </div>
+
+
+    <div class="container pb-5">
+        <div class="row g-4" id="portfolioGrid">
+
+
+            <div class="col-md-4 portfolio-item" data-category="java">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/download1.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Download Manager App</h5>
+                        <p class="card-text text-muted">Aplikasi download manager sederhana.</p>
+                        <span class="badge badge-category">Java</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-item" data-category="java">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/ldry.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Aplikasi Laundry</h5>
+                        <p class="card-text text-muted">Membuat aplikasi laundry yang modern.</p>
+                        <span class="badge badge-category">Java</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-item" data-category="web">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/web.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Profile</h5>
+                        <p class="card-text text-muted">Membuat web profile yang informatif.</p>
+                        <span class="badge badge-category">web</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-item" data-category="java">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/stack11.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Stack Visualizer</h5>
+                        <p class="card-text text-muted">Demo stack dalam bentuk aplikasi</p>
+                        <span class="badge badge-category">Java</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-item" data-category="java">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/pilkada.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Aplikasi Pilkada</h5>
+                        <p class="card-text text-muted">Aplikasi pilkada digital sederhana.</p>
+                        <span class="badge badge-category">Java</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 portfolio-item" data-category="java">
+                <div class="card portfolio-card shadow-sm">
+                    <img src="images/todo.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">To Do List App</h5>
+                        <p class="card-text text-muted">Aplikasi To Do List harian</p>
+                        <span class="badge badge-category">Java</span>
+                        <button class="btn btn-outline-pink mt-3" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">Download Manager App</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body">
+
+
+                    <div id="carousel1" class="carousel slide mb-3" data-bs-ride="carousel">
+
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/download1.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/download2.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+
+                    <p class="mt-3">
+                        Aplikasi sederhana yang memeperlihatkan proses unduhan dari beberapa file pada waktu yang bersamaan.
+
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/2411531009_project_kelas_A/blob/dev/Praktikum9/src/latihan2/DownloadManagerGUI.java" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">Aplikasi Laundry</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <div id="carousel2" class="carousel slide mb-3" data-bs-ride="carousel">
+                        
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/ldry.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ldry2.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+                    <p>
+                        Aplikasi yang dirancang untuk mempermudah pengelolaan layanan laundry, termasuk pencatatan transaksi, status cuci–setrika, dan data pelanggan. Menawarkan tampilan modern dan mudah digunakan.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/2411531009_project_kelas_A/tree/master/laundryapps/src" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">Web Profile</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div id="carousel3" class="carousel slide mb-3" data-bs-ride="carousel">
+
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/web.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/web2.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+                    <p>
+                        Website profil informatif yang menunjukkan identitas, pengalaman, dan informasi penting lainnya. Dibangun dengan desain sederhana dan clean agar mudah dinavigasi oleh pengguna.
+                    </p>
+
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/Desain-Web---2411531009---Putri-Balqis-A" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="projectModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">Stack Visualizer</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <div id="carousel4" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/stack11.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/stack11.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p>
+                        Aplikasi edukasi yang menampilkan cara kerja struktur data Stack secara visual. Pengguna dapat melihat proses push, pop, dan alur data dengan tampilan interaktif.
+                    </p>
+
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/PrakSD01_1_2411531009/blob/master/PrakSD01_1_2411531009/src/UAP_2411531009/StackTracker.java" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="projectModal5" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">Aplikasi Pilkada Sederhana</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <div id="carousel5" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/pilkada.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/pilkada2.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p>
+                       Aplikasi pilkada digital yang bertujuan untuk mempermudah proses pemilihan dengan cara digital. melalui aplikasi ini pengguna dapat memasukkan nama, NIK, dan pilihan mereka dengan cepat dan mudah.
+
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/2024-1-Alpro-2411531009/blob/master/prakalpro_1_2411531009/src/Pekan8/pilkada1.java" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="projectModal6" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg" style="border-radius:18px;">
+
+                <div class="modal-header" style="background-color:#ff5fa2; color:white;">
+                    <h5 class="modal-title fw-bold">To-Do List App</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div id="carousel6" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="images/todo.png" class="d-block w-100 rounded">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/todo2.png" class="d-block w-100 rounded">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <p>
+                        Aplikasi manajemen tugas harian yang memungkinkan pengguna menambah, menyelesaikan, dan menghapus aktivitas. Dibuat untuk membantu pengaturan produktivitas sehari-hari dengan cara yang mudah dan cepat.
+                    </p>
+
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-between">
+
+                    <a href="https://github.com/PutriBalqisAfradinata/2024-1-Alpro-2411531009/blob/master/prakalpro_1_2411531009/src/Pekan8/ToDoListApp.java" 
+                    target="_blank" 
+                    class="btn btn-github">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+
+                    <button class="btn btn-close-pink" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const buttons = document.querySelectorAll("[data-filter]");
+        const items = document.querySelectorAll(".portfolio-item");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", function () {
+                const filter = this.getAttribute("data-filter");
+
+                buttons.forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+
+                items.forEach(item => {
+                    if (filter === "all" || item.dataset.category === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer class="footer text-center py-4">
+        <div class="container">
+
+            <h5 class="fw-bold mb-3">Balqis Portfolio</h5>
+
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="portfolio.html" class="footer-link">Portfolio</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+
+            <div class="footer-social mt-3">
+               <a href="https://instagram.com/balqisafradinata" target="_blank" class="social-icon">
+                    <img src="images/ig.png"> </a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" class="social-icon">
+                     <img src="images/lin2.png" ></a>
+                 <a href="https://github.com/PutriBalqisAfradinata" target="_blank" class="social-icon">
+                     <img src="images/github.png" ></a>
+            </div>
+
+            <p class="small">© 2025 Balqis Portfolio — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    const currentPage = window.location.pathname.split("/").pop();
+
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active-page");
+        }
+    });
+</script>
+
+</body>
+</html>
