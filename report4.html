@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Report 4 - Laravel UI Bootstrap dan Templating
+    </title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body style="background-color:#fff7fb;">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
+style="background-color:#ffb6d9;">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Balqis<span style="color:#73073d;">Portfolio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="portfolio.html">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold active-page" href="report.html">Report</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<div style="height:100px;"></div>
+
+
+
+<section class="pb-5">
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="card border-0 shadow-lg overflow-hidden mb-5">
+
+        <div class="p-5 text-white"
+        style="background: linear-gradient(to right, #ffb6d9, #ff7eb6);">
+
+            <h1 class="fw-bold">
+                Report 4  — Laravel Relationship dan Eloquent ORM
+            </h1>
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Pemrograman Web
+                </span>
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Semester 4
+                </span>
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Putri Balqis Afradinata
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TUJUAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                I. Tujuan Praktikum
+            </h2>
+            <ul class="fs-5 lh-lg">
+                <li>Memahami proses instalasi dan konfigurasi Laravel 12.</li>
+                <li>Memahami penggunaan Laravel UI untuk membuat sistem autentikasi (Login dan Register).</li>
+                <li>Memahami proses integrasi template SB Admin 2 ke dalam Laravel.</li>
+                <li>Memahami penggunaan Blade Template dalam membangun tampilan aplikasi.</li>
+                <li>Memahami penggunaan Resource Controller pada Laravel.</li>
+                <li>Membuat fitur CRUD (Create, Read, Update, Delete) untuk manajemen data User.</li>
+                <li>Memahami penggunaan DataTables untuk menampilkan data secara lebih interaktif.</li>
+                <li>Membangun aplikasi Sistem Informasi sederhana berbasis Laravel dengan tampilan dashboard yang responsif.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DASAR TEORI -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+<!-- DASAR TEORI -->
+
+<div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+```
+<div class="p-5">
+
+    <h2 class="fw-bold mb-4"
+    style="color:#73073d;">
+        II. Dasar Teori
+    </h2>
+
+    <p class="fs-5 lh-lg">
+
+        Laravel merupakan framework PHP berbasis MVC
+        (Model View Controller) yang digunakan untuk
+        mempermudah proses pengembangan aplikasi web.
+        Laravel menyediakan berbagai fitur modern seperti
+        routing, migration, middleware, authentication,
+        Eloquent ORM, dan Blade Template Engine.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        Laravel UI merupakan package tambahan yang digunakan
+        untuk menghasilkan fitur authentication secara otomatis,
+        seperti halaman Login, Register, dan Logout.
+        Dengan Laravel UI, proses pembuatan sistem autentikasi
+        menjadi lebih cepat dan mudah.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        Authentication merupakan proses verifikasi identitas
+        pengguna sebelum mengakses sistem. Pada Laravel,
+        fitur authentication digunakan untuk membatasi akses
+        aplikasi sehingga hanya pengguna yang telah login
+        yang dapat mengakses halaman tertentu.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        Blade Template Engine merupakan template engine bawaan
+        Laravel yang digunakan untuk membuat tampilan website
+        menjadi lebih terstruktur, dinamis, dan mudah dikelola.
+        Blade memungkinkan pembuatan layout yang dapat digunakan
+        kembali pada banyak halaman.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        SB Admin 2 merupakan template dashboard berbasis Bootstrap
+        yang digunakan untuk mempercantik tampilan aplikasi web.
+        Template ini menyediakan berbagai komponen antarmuka
+        seperti sidebar, navbar, card, tabel, dan form yang
+        responsif serta mudah digunakan.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        Resource Controller merupakan fitur Laravel yang digunakan
+        untuk menangani operasi CRUD (Create, Read, Update, Delete)
+        dalam satu controller. Resource Controller menyediakan
+        method bawaan seperti index(), create(), store(),
+        edit(), update(), dan destroy().
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        CRUD (Create, Read, Update, Delete) merupakan operasi dasar
+        yang digunakan untuk mengelola data pada sebuah aplikasi.
+        Pada praktikum ini CRUD diterapkan pada data User sehingga
+        pengguna dapat menambahkan, menampilkan, mengubah,
+        dan menghapus data melalui antarmuka web.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        DataTables merupakan plugin JavaScript yang digunakan
+        untuk meningkatkan fungsi tabel dengan menambahkan fitur
+        pencarian (search), pengurutan data (sorting),
+        dan pembagian halaman (pagination) secara otomatis.
+
+    </p>
+
+    <p class="fs-5 lh-lg">
+
+        Eloquent ORM (Object Relational Mapping) merupakan fitur
+        Laravel yang memungkinkan developer berinteraksi dengan
+        database menggunakan model dan object tanpa harus
+        menuliskan query SQL secara manual sehingga kode program
+        menjadi lebih rapi dan mudah dipelihara.
+
+    </p>
+
+</div>
+```
+
+</div>
+
+
+    </div>
+
+
+
+    <!-- LANGKAH PRAKTIKUM -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                III. Langkah-Langkah Praktikum
+            </h2>
+
+            <ol class="fs-5 lh-lg">
+
+                <!-- STEP 1 -->
+                <li class="mb-5">
+
+                    <b>Membuat Model dan Migration</b><br>
+
+                    Langkah pertama yang dilakukan yaitu membuat model
+                    Major, Student, dan Subject menggunakan artisan command
+                    Laravel. Model digunakan untuk menghubungkan aplikasi
+                    dengan tabel database menggunakan Eloquent ORM Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan make:model Major -m
+php artisan make:model Student -m
+php artisan make:model Subject -m
+</pre>
+
+                    <p>
+
+                        Opsi <b>-m</b> digunakan agar Laravel otomatis membuat
+                        migration bersamaan dengan model. Migration nantinya
+                        digunakan untuk membuat struktur tabel pada database.
+
+                    </p>
+
+                    <p>
+
+                        Setelah command dijalankan, Laravel otomatis membuat
+                        file model pada folder <b>app/Models</b> dan file migration
+                        pada folder <b>database/migrations</b>.
+
+                    </p>
+
+                    <center>
+
+
+
+                </li>
+
+
+
+                <!-- STEP 2 -->
+                <li class="mb-5">
+
+                    <b>Membuat Migration Major</b><br>
+
+                    Migration Major digunakan untuk membuat tabel majors
+                    pada database Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+Schema::create('majors', function (Blueprint $table) {
+
+    $table->id();
+
+    $table->string('name');
+
+    $table->timestamps();
+
+});
+</pre>
+
+                    <p>
+
+                        Tabel majors digunakan untuk menyimpan data jurusan
+                        mahasiswa. Field name digunakan untuk menyimpan
+                        nama jurusan.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/migration model.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 3 -->
+                <li class="mb-5">
+
+                    <b>Membuat Migration Student</b><br>
+
+                    Migration Student digunakan untuk membuat tabel students.
+
+<pre class="bg-light p-3 rounded mt-3">
+Schema::create('students', function (Blueprint $table) {
+
+    $table->id();
+
+    $table->string('nim')->unique();
+
+    $table->string('name');
+
+    $table->text('address');
+
+    $table->foreignId('major_id')->constrained();
+
+    $table->timestamps();
+
+});
+</pre>
+
+                    <p>
+
+                        Pada tabel students terdapat foreign key major_id
+                        yang digunakan untuk menghubungkan mahasiswa
+                        dengan tabel jurusan.
+
+                    </p>
+
+                    <p>
+
+                        Fungsi constrained() digunakan agar Laravel otomatis
+                        membuat foreign key ke tabel majors.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/migration student.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 4 -->
+                <li class="mb-5">
+
+                    <b>Membuat Migration Subject</b><br>
+
+                    Migration Subject digunakan untuk membuat tabel subjects.
+
+<pre class="bg-light p-3 rounded mt-3">
+Schema::create('subjects', function (Blueprint $table) {
+
+    $table->id();
+
+    $table->string('name');
+
+    $table->integer('sks');
+
+    $table->timestamps();
+
+});
+</pre>
+
+                    <p>
+
+                        Tabel subjects digunakan untuk menyimpan data
+                        mata kuliah dan jumlah SKS.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/migration subject.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 5 -->
+                <li class="mb-5">
+
+                    <b>Membuat Pivot Table</b><br>
+
+                    Pivot table digunakan untuk relationship Many-to-Many
+                    antara mahasiswa dan mata kuliah.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan make:migration create_student_subject_table
+</pre>
+
+                    <p>
+
+                        Pivot table digunakan karena satu mahasiswa
+                        dapat mengambil banyak mata kuliah dan
+                        satu mata kuliah dapat diambil oleh
+                        banyak mahasiswa.
+
+                    </p>
+
+
+                </li>
+
+
+
+                <!-- STEP 6 -->
+                <li class="mb-5">
+
+                    <b>Membuat Struktur Pivot Table</b><br>
+
+                    Struktur pivot table dibuat menggunakan migration Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+Schema::create('student_subject', function (Blueprint $table) {
+
+    $table->id();
+
+    $table->foreignId('student_id')->constrained();
+
+    $table->foreignId('subject_id')->constrained();
+
+    $table->timestamps();
+
+});
+</pre>
+
+                    <p>
+
+                        Tabel student_subject digunakan untuk menyimpan
+                        relasi antara mahasiswa dan mata kuliah.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/pivot.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 7 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Migration</b><br>
+
+                    Migration dijalankan agar seluruh tabel berhasil dibuat
+                    pada database MySQL.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan migrate
+</pre>
+
+                    <p>
+
+                        Setelah migration berhasil dijalankan,
+                        tabel majors, students, subjects,
+                        dan student_subject akan muncul
+                        pada database Laravel.
+
+                    </p>
+
+
+
+                </li>
+
+                                <!-- STEP MODEL -->
+                <li class="mb-5">
+
+                    <b>Membuat Model</b><br>
+
+                    Model digunakan untuk merepresentasikan tabel database
+                    pada Laravel menggunakan Eloquent ORM.
+
+                <pre class="bg-light p-3 rounded mt-3">
+                php artisan make:model Major
+                php artisan make:model Student
+                php artisan make:model Subject
+                </pre>
+
+                    <p>
+
+                        Model Major digunakan untuk tabel jurusan,
+                        model Student digunakan untuk tabel mahasiswa,
+                        dan model Subject digunakan untuk tabel mata kuliah.
+
+                    </p>
+
+                    <p>
+
+                        File model otomatis dibuat pada folder
+                        <b>app/Models</b>. Model nantinya digunakan
+                        untuk melakukan query database menggunakan
+                        Eloquent ORM Laravel.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/model major.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/model student.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <img
+                            src="images/model subject.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+                <!-- STEP 8 -->
+                <li class="mb-5">
+
+                    <b>Membuat Seeder</b><br>
+
+                    Seeder digunakan untuk menambahkan data awal
+                    ke dalam database Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan make:seeder MajorSeeder
+php artisan make:seeder StudentSeeder
+php artisan make:seeder SubjectSeeder
+</pre>
+
+                    <p>
+
+                        Seeder mempermudah proses pengisian data awal
+                        pada database tanpa harus menginput data secara manual.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/seeder major.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <img
+                            src="images/seeder student.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <img
+                            src="images/seeder subject.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 9 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan Seeder ke DatabaseSeeder</b><br>
+
+                    Seeder didaftarkan pada file DatabaseSeeder
+                    agar dapat dijalankan otomatis oleh Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+$this->call([
+    MajorSeeder::class,
+    SubjectSeeder::class,
+    StudentSeeder::class,
+]);
+</pre>
+
+                    <p>
+
+                        DatabaseSeeder berfungsi untuk menjalankan
+                        seluruh seeder yang ada pada project Laravel.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/seeder db.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 10 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Seeder</b><br>
+
+                    Seeder dijalankan agar data otomatis masuk
+                    ke database Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan db:seed
+</pre>
+
+                    <p>
+
+                        Setelah proses seeding selesai,
+                        data jurusan, mahasiswa, dan mata kuliah
+                        berhasil tersimpan pada database.
+
+                    </p>
+
+
+                </li>
+
+
+
+                <!-- STEP 11 -->
+                <li class="mb-5">
+
+                    <b>Membuat Relationship pada Model</b><br>
+
+                    Setelah seluruh tabel berhasil dibuat,
+                    langkah berikutnya yaitu membuat relationship
+                    antar model menggunakan Eloquent ORM Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+public function major()
+{
+    return $this->belongsTo(Major::class);
+}
+
+public function subjects()
+{
+    return $this->belongsToMany(Subject::class);
+}
+</pre>
+
+                    <p>
+
+                        Method belongsTo() digunakan untuk menunjukkan
+                        bahwa satu mahasiswa hanya memiliki satu jurusan.
+
+                    </p>
+
+                    <p>
+
+                        Sedangkan belongsToMany() digunakan karena
+                        mahasiswa dapat mengambil banyak mata kuliah.
+
+                    </p>
+
+
+                </li>
+
+
+
+                <!-- STEP 12 -->
+                <li class="mb-5">
+
+                    <b>Membuat Controller</b><br>
+
+                    Controller digunakan untuk mengatur logika aplikasi
+                    dan menghubungkan model dengan view Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+$students = Student::with(['major', 'subjects'])->get();
+</pre>
+
+                    <p>
+
+                        Query tersebut digunakan untuk mengambil seluruh data
+                        mahasiswa beserta jurusan dan mata kuliah.
+
+                    </p>
+
+                    <p>
+
+                        Method with() digunakan untuk eager loading
+                        agar query database menjadi lebih efisien.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/student controller.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 13 -->
+                <li class="mb-5">
+
+                    <b>Membuat Route</b><br>
+
+                    Route digunakan untuk menghubungkan URL
+                    dengan controller Laravel.
+
+<pre class="bg-light p-3 rounded mt-3">
+Route::resource('students', StudentController::class);
+</pre>
+
+                    <p>
+
+                        Route resource otomatis membuat route CRUD
+                        seperti create, store, edit, update,
+                        dan delete.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/routes report3.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 14 -->
+                <li class="mb-5">
+
+                    <b>Membuat Layout Utama</b><br>
+
+                    Layout utama dibuat menggunakan Blade Template
+                    dan Bootstrap.
+
+                    <p>
+
+                        Layout digunakan sebagai template utama
+                        seluruh halaman Laravel agar tampilan
+                        lebih rapi dan konsisten.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/layout.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 15 -->
+                <li class="mb-5">
+
+                    <b>Membuat View Index Student</b><br>
+
+                    View index digunakan untuk menampilkan
+                    seluruh data mahasiswa.
+
+                    <p>
+
+                        Data mahasiswa ditampilkan menggunakan
+                        tabel Bootstrap agar tampilan lebih rapi.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/index1.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <img
+                            src="images/index2.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 16 -->
+                <li class="mb-5">
+
+                    <b>Membuat Form Tambah Mahasiswa</b><br>
+
+                    Form create digunakan untuk menambahkan
+                    data mahasiswa baru.
+
+                    <p>
+
+                        Form terdiri dari NIM, nama, alamat,
+                        jurusan, dan mata kuliah mahasiswa.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/create student.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 17 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Laravel</b><br>
+
+                    Laravel dijalankan menggunakan artisan command
+                    agar aplikasi dapat dibuka pada browser.
+
+<pre class="bg-light p-3 rounded mt-3">
+php artisan serve
+</pre>
+
+                    <p>
+
+                        Setelah command dijalankan,
+                        Laravel akan memberikan localhost
+                        yang dapat diakses melalui browser.
+
+                    </p>
+
+                </li>
+
+
+
+                <!-- STEP 18 -->
+                <li class="mb-5">
+
+                    <b>Menampilkan Hasil</b><br>
+
+                    Setelah seluruh konfigurasi selesai,
+                    halaman students berhasil ditampilkan
+                    pada browser.
+
+<pre class="bg-light p-3 rounded mt-3">
+http://127.0.0.1:8000/students
+</pre>
+
+                    <p>
+
+                        Halaman tersebut menampilkan data mahasiswa,
+                        jurusan, mata kuliah, dan total SKS
+                        menggunakan relationship Laravel.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/hasil report3.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+            </ol>
+
+        </div>
+
+    </div>
+
+
+
+        <!-- CHALLENGE -->
+        <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+            <div class="p-5">
+
+                <h2 class="fw-bold mb-4"
+                style="color:#73073d;">
+                    IV. Challenge
+                </h2>
+
+                <p class="fs-5 lh-lg">
+                    Pada challenge praktikum ini ditambahkan fitur
+                    jadwal mata kuliah pada setiap subject.
+                </p>
+
+                <!-- STEP 1 -->
+                <h4 class="fw-bold mt-5">
+                    1. Menambahkan Kolom Schedule pada Migration
+                </h4>
+
+                <p class="fs-5 lh-lg">
+                    Kolom schedule ditambahkan pada tabel subjects
+                    menggunakan migration Laravel.
+                </p>
+
+        <pre class="bg-light p-3 rounded mt-3">
+        $table->string('schedule');
+        </pre>
+
+                <center>
+                    <img
+                        src="images/schedule.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
+                </center>
+
+
+
+                <!-- STEP 2 -->
+                <h4 class="fw-bold mt-5">
+                    2. Menambahkan Data Jadwal pada Seeder
+                </h4>
+
+                <p class="fs-5 lh-lg">
+                    Jadwal mata kuliah kemudian ditambahkan
+                    pada SubjectSeeder.
+                </p>
+
+        <pre class="bg-light p-3 rounded mt-3">
+        [
+            'name' => 'Pemrograman Web',
+            'sks' => 3,
+            'schedule' => 'Senin 08:00'
+        ]
+        </pre>
+
+                <center>
+                    <img
+                        src="images/seeder ch.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
+                </center>
+
+
+
+                <!-- STEP 3 -->
+                <h4 class="fw-bold mt-5">
+                    3. Menampilkan Jadwal pada View Student
+                </h4>
+
+                <p class="fs-5 lh-lg">
+                    Jadwal mata kuliah ditampilkan pada halaman
+                    student menggunakan Blade Template.
+                </p>
+
+        <pre class="bg-light p-3 rounded mt-3">
+        @foreach($student->subjects as $subject)
+            &lt;div&gt;
+                {{ $subject->name }}
+                &lt;br&gt;
+                &lt;small&gt;
+                    {{ $subject->schedule }}
+                &lt;/small&gt;
+            &lt;/div&gt;
+        @endforeach
+        </pre>
+
+                <center>
+                    <img
+                        src="images/view ch.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
+                </center>
+
+
+
+                <!-- STEP 4 -->
+                <h4 class="fw-bold mt-5">
+                    4. Hasil Challenge
+                </h4>
+
+                <p class="fs-5 lh-lg">
+                    Setelah challenge selesai dikerjakan,
+                    jadwal mata kuliah berhasil tampil
+                    pada halaman student.
+                </p>
+
+                <center>
+                    <img
+                        src="images/hasil ch.png"
+                        width="700"
+                        class="rounded shadow mt-4"
+                    >
+                </center>
+
+            </div>
+        </div>
+
+
+
+    <!-- TUGAS -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                V. Tugas Query Relationship
+            </h2>
+
+            <ol class="fs-5 lh-lg">
+
+                <li class="mb-5">
+
+                    <b>
+                        Menampilkan semua mahasiswa beserta jurusan
+                        dan mata kuliahnya
+                    </b>
+
+<pre class="bg-light p-3 rounded mt-3">
+$students = Student::with(['major', 'subjects'])->get();
+</pre>
+
+                    <p>
+
+                        Query tersebut digunakan untuk mengambil
+                        seluruh data mahasiswa beserta relasi
+                        jurusan dan mata kuliahnya.
+
+                    </p>
+
+                    <center>
+
+
+                        <img
+                            src="images/tugas1.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/hasil ch.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <li class="mb-5">
+
+                    <b>
+                        Menampilkan jurusan dengan mahasiswa terbanyak
+                    </b>
+
+<pre class="bg-light p-3 rounded mt-3">
+$major = Major::withCount('students')
+            ->orderBy('students_count', 'desc')
+            ->first();
+</pre>
+
+                    <p>
+
+                        Query tersebut digunakan untuk menghitung
+                        jumlah mahasiswa pada setiap jurusan
+                        menggunakan withCount().
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/tugas2.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <li class="mb-5">
+
+                    <b>
+                        Menampilkan mata kuliah mahasiswa tertentu
+                    </b>
+
+<pre class="bg-light p-3 rounded mt-3">
+$student = Student::with('subjects')->find(1);
+</pre>
+
+                    <p>
+
+                        Query tersebut digunakan untuk mengambil
+                        data mata kuliah dari mahasiswa tertentu.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/tugas3.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <li class="mb-5">
+
+                    <b>
+                        Menampilkan total SKS setiap mahasiswa
+                    </b>
+
+<pre class="bg-light p-3 rounded mt-3">
+$totalSks = $student->subjects->sum('sks');
+</pre>
+
+                    <p>
+
+                        Query tersebut digunakan untuk menghitung
+                        total SKS yang dimiliki mahasiswa
+                        berdasarkan mata kuliah yang diambil.
+
+                    </p>
+
+                    <center>
+
+                        <!-- FOTO -->
+                        <img
+                            src="images/tugas4.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+            </ol>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HASIL -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                VI. Hasil dan Pembahasan
+            </h2>
+
+            <p class="fs-5 lh-lg">
+
+                Berdasarkan praktikum yang telah dilakukan,
+                Laravel berhasil digunakan untuk membuat
+                relationship database menggunakan Eloquent ORM.
+
+            </p>
+
+            <p class="fs-5 lh-lg">
+
+                Relationship One-to-Many dan Many-to-Many
+                berhasil diterapkan pada tabel mahasiswa,
+                jurusan, dan mata kuliah.
+
+            </p>
+
+            <p class="fs-5 lh-lg">
+
+                Data mahasiswa berhasil ditampilkan bersama
+                jurusan, mata kuliah, jadwal mata kuliah,
+                dan total SKS menggunakan Blade Template Laravel.
+
+            </p>
+
+            <p class="fs-5 lh-lg">
+
+                Penggunaan Eloquent ORM mempermudah proses query
+                database karena data relationship dapat diakses
+                langsung melalui model Laravel.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- KESIMPULAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                VII. Kesimpulan
+            </h2>
+
+            <p class="fs-5 lh-lg">
+
+                Dari praktikum yang telah dilakukan dapat disimpulkan
+                bahwa Laravel mempermudah proses pengembangan aplikasi
+                web menggunakan konsep MVC dan Eloquent ORM.
+
+            </p>
+
+            <p class="fs-5 lh-lg">
+
+                Relationship database seperti One-to-Many dan
+                Many-to-Many dapat diterapkan dengan mudah
+                menggunakan Laravel Relationship.
+
+            </p>
+
+            <p class="fs-5 lh-lg">
+
+                Pada praktikum ini berhasil dibuat aplikasi CRUD
+                mahasiswa menggunakan relationship database,
+                pivot table, dan Blade Template Laravel.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GITHUB -->
+    <div class="text-center mt-5">
+
+        <a
+            href="https://github.com/PutriBalqisAfradinata/Laprak_PeWeb_2411531009_PutriBalqisAfradinata"
+            target="_blank"
+            class="btn btn-lg text-white fw-semibold px-4 py-3 shadow"
+            style="background-color:#ff69b4; border-radius:14px;"
+        >
+            🔗 Lihat Repository GitHub
+        </a>
+
+    </div>
+
+
+
+    </div>
+
+    </section>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+    </html> 
