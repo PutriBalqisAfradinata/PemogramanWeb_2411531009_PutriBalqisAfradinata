@@ -269,142 +269,136 @@ style="background-color:#ffb6d9;">
 
             <ol class="fs-5 lh-lg">
 
-                <!-- STEP 1 -->
-                <li class="mb-5">
+            <!-- STEP 1 -->
+            <li class="mb-5">
 
-                    <b>Membuat Model dan Migration</b><br>
+                <b>Membuat Project Laravel 12</b><br>
 
-                    Langkah pertama yang dilakukan yaitu membuat model
-                    Major, Student, dan Subject menggunakan artisan command
-                    Laravel. Model digunakan untuk menghubungkan aplikasi
-                    dengan tabel database menggunakan Eloquent ORM Laravel.
+                Langkah pertama yang dilakukan yaitu membuat project Laravel 12
+                menggunakan Composer. Laravel digunakan sebagai framework PHP
+                untuk membangun aplikasi Sistem Informasi berbasis web.
 
-<pre class="bg-light p-3 rounded mt-3">
-php artisan make:model Major -m
-php artisan make:model Student -m
-php artisan make:model Subject -m
-</pre>
+            <pre class="bg-light p-3 rounded mt-3">
+            composer create-project laravel/laravel laravel_sisfo12
+            </pre>
 
-                    <p>
+                <p>
 
-                        Opsi <b>-m</b> digunakan agar Laravel otomatis membuat
-                        migration bersamaan dengan model. Migration nantinya
-                        digunakan untuk membuat struktur tabel pada database.
+                    Perintah tersebut akan mengunduh seluruh file Laravel dan
+                    membuat project baru dengan nama <b>laravel_sisfo12</b>.
 
-                    </p>
+                </p>
 
-                    <p>
+                <p>
 
-                        Setelah command dijalankan, Laravel otomatis membuat
-                        file model pada folder <b>app/Models</b> dan file migration
-                        pada folder <b>database/migrations</b>.
+                    Setelah proses instalasi selesai, project Laravel dapat
+                    dibuka menggunakan Visual Studio Code untuk melanjutkan
+                    proses pengembangan aplikasi.
 
-                    </p>
+                </p>
 
-                    <center>
+                <center>
 
+                    <!-- FOTO -->
+                    <img
+                        src="images/install-laravel.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
 
+                </center>
 
-                </li>
-
-
-
-                <!-- STEP 2 -->
-                <li class="mb-5">
-
-                    <b>Membuat Migration Major</b><br>
-
-                    Migration Major digunakan untuk membuat tabel majors
-                    pada database Laravel.
-
-<pre class="bg-light p-3 rounded mt-3">
-Schema::create('majors', function (Blueprint $table) {
-
-    $table->id();
-
-    $table->string('name');
-
-    $table->timestamps();
-
-});
-</pre>
-
-                    <p>
-
-                        Tabel majors digunakan untuk menyimpan data jurusan
-                        mahasiswa. Field name digunakan untuk menyimpan
-                        nama jurusan.
-
-                    </p>
-
-                    <center>
-
-                        <!-- FOTO -->
-                        <img
-                            src="images/migration model.png"
-                            width="600"
-                            class="rounded shadow mt-4"
-                        >
-
-                    </center>
-
-                </li>
+            </li>
 
 
 
-                <!-- STEP 3 -->
-                <li class="mb-5">
+            <!-- STEP 2 -->
+            <li class="mb-5">
 
-                    <b>Membuat Migration Student</b><br>
+                <b>Konfigurasi Database Laravel</b><br>
 
-                    Migration Student digunakan untuk membuat tabel students.
+                Setelah project berhasil dibuat, langkah berikutnya yaitu
+                melakukan konfigurasi database pada file <b>.env</b> agar
+                Laravel dapat terhubung dengan MySQL.
 
-<pre class="bg-light p-3 rounded mt-3">
-Schema::create('students', function (Blueprint $table) {
+            <pre class="bg-light p-3 rounded mt-3">
+            DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=laravel_sisfo12
+            DB_USERNAME=root
+            DB_PASSWORD=
+            </pre>
 
-    $table->id();
+                <p>
 
-    $table->string('nim')->unique();
+                    Konfigurasi tersebut digunakan untuk menentukan database
+                    yang akan digunakan oleh aplikasi Laravel.
 
-    $table->string('name');
+                </p>
 
-    $table->text('address');
+                <p>
 
-    $table->foreignId('major_id')->constrained();
+                    Setelah konfigurasi selesai, Laravel dapat melakukan proses
+                    migration dan penyimpanan data ke dalam database MySQL.
 
-    $table->timestamps();
+                </p>
 
-});
-</pre>
+                <center>
 
-                    <p>
+                    <!-- FOTO -->
+                    <img
+                        src="images/konfigurasi-db.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
 
-                        Pada tabel students terdapat foreign key major_id
-                        yang digunakan untuk menghubungkan mahasiswa
-                        dengan tabel jurusan.
+                </center>
 
-                    </p>
+            </li>
 
-                    <p>
 
-                        Fungsi constrained() digunakan agar Laravel otomatis
-                        membuat foreign key ke tabel majors.
 
-                    </p>
+            <!-- STEP 3 -->
+            <li class="mb-5">
 
-                    <center>
+                <b>Menjalankan Migration Database</b><br>
 
-                        <!-- FOTO -->
-                        <img
-                            src="images/migration student.png"
-                            width="600"
-                            class="rounded shadow mt-4"
-                        >
+                Migration dijalankan untuk membuat tabel bawaan Laravel
+                seperti users, password_reset_tokens, dan tabel lainnya
+                ke dalam database.
 
-                    </center>
+            <pre class="bg-light p-3 rounded mt-3">
+            php artisan migrate
+            </pre>
 
-                </li>
+                <p>
 
+                    Laravel akan membaca seluruh file migration yang terdapat
+                    pada folder <b>database/migrations</b> kemudian membuat
+                    tabel secara otomatis pada database.
+
+                </p>
+
+                <p>
+
+                    Setelah migration berhasil dijalankan, struktur database
+                    Laravel siap digunakan untuk proses pengembangan aplikasi.
+
+                </p>
+
+                <center>
+
+                    <!-- FOTO -->
+                    <img
+                        src="images/migrate.png"
+                        width="600"
+                        class="rounded shadow mt-4"
+                    >
+
+                </center>
+
+            </li>
 
 
                 <!-- STEP 4 -->
