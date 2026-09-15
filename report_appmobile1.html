@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Report 1 AppMobile - Input Widgets dan Basic Form
+    </title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+
+<body style="background-color:#fff7fb;">
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
+style="background-color:#ffb6d9;">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Balqis<span style="color:#73073d;">Portfolio</span>
+        </a>
+
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold"
+                    href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold"
+                    href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold"
+                    href="portfolio.html">
+                        Portfolio
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold active-page"
+                    href="report.html">
+                        Report
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold"
+                    href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<div style="height:100px;"></div>
+
+
+
+<section class="pb-5">
+
+<div class="container">
+
+
+    <!-- HEADER -->
+    <div class="card border-0 shadow-lg overflow-hidden mb-5">
+
+        <div class="p-5 text-white"
+        style="background: linear-gradient(to right, #ffb6d9, #ff7eb6);">
+
+            <h1 class="fw-bold">
+                Report 1 AppMobile — Input Widgets dan Basic Form
+            </h1>
+
+
+            <div class="mt-3 d-flex flex-wrap gap-2">
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Aplikasi Mobile
+                </span>
+
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Semester 5
+                </span>
+
+
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                    Putri Balqis Afradinata
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TUJUAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                I. Tujuan Praktikum
+            </h2>
+
+
+            <ul class="fs-5 lh-lg">
+
+                <li>
+                    Memahami penggunaan widget TextField pada Flutter.
+                </li>
+
+
+                <li>
+                    Memahami penggunaan TextEditingController
+                    untuk mengambil input dari pengguna.
+                </li>
+
+
+                <li>
+                    Memahami penggunaan widget TextFormField
+                    dalam pembuatan form.
+                </li>
+
+
+                <li>
+                    Memahami penggunaan Form dan GlobalKey<FormState>
+                    untuk melakukan validasi input.
+                </li>
+
+
+                <li>
+                    Menerapkan validator untuk melakukan validasi
+                    terhadap input pengguna.
+                </li>
+
+
+                <li>
+                    Membuat aplikasi sederhana menggunakan input widget
+                    pada Flutter.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DASAR TEORI -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                II. Dasar Teori
+            </h2>
+
+
+            <p class="fs-5 lh-lg">
+
+                Flutter menyediakan berbagai macam widget yang dapat
+                digunakan untuk membangun antarmuka aplikasi mobile.
+                Salah satu jenis widget yang penting dalam pembuatan
+                aplikasi interaktif adalah widget input yang digunakan
+                untuk menerima data dari pengguna.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                <b>TextField</b> merupakan widget yang digunakan untuk
+                menerima input teks dari pengguna. TextField dapat
+                digunakan untuk berbagai kebutuhan seperti memasukkan
+                nama, alamat, maupun data lainnya.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                <b>TextEditingController</b> digunakan untuk mengontrol
+                isi dari TextField dan mengambil nilai yang dimasukkan
+                oleh pengguna. Controller juga perlu di-dispose ketika
+                widget sudah tidak digunakan.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Selain TextField, Flutter menyediakan
+                <b>TextFormField</b> yang dapat digunakan bersama
+                dengan widget <b>Form</b>. TextFormField mendukung
+                proses validasi input menggunakan property
+                <b>validator</b>.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                <b>GlobalKey&lt;FormState&gt;</b> digunakan untuk
+                mengakses state dari Form. Dengan menggunakan key
+                tersebut, aplikasi dapat menjalankan proses validasi
+                menggunakan method <b>validate()</b> sebelum data
+                diproses.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Pada praktikum ini konsep TextField dan TextFormField
+                kemudian diterapkan untuk membuat form sederhana
+                serta aplikasi kalkulator yang dapat menjalankan
+                operasi kabataku.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LANGKAH PRAKTIKUM -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                III. Langkah-Langkah Praktikum
+            </h2>
+
+
+
+            <h3 class="fw-bold mt-4 mb-4"
+            style="color:#73073d;">
+                A. Basic Form TextField
+            </h3>
+
+
+            <ol class="fs-5 lh-lg">
+
+
+                <!-- STEP 1 -->
+                <li class="mb-5">
+
+                    <b>Membuat File form-textfield.dart</b><br>
+
+                    Langkah pertama yaitu membuat file Dart baru
+                    di dalam folder <b>lib</b> dengan nama
+                    <b>form-textfield.dart</b>.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+lib/form-textfield.dart
+                    </pre>
+
+
+                    <p>
+
+                        File tersebut digunakan untuk membuat aplikasi
+                        Basic Form menggunakan widget TextField.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/create form textfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 2 -->
+                <li class="mb-5">
+
+                    <b>Membuat Tampilan Basic Form</b><br>
+
+                    Selanjutnya dibuat tampilan awal Basic Form
+                    menggunakan MaterialApp, Scaffold, AppBar,
+                    StatefulWidget, Padding, Column, TextField,
+                    dan ElevatedButton.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+import 'package:flutter/material.dart';
+
+void main() =&gt; runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Basic Form'),
+        ),
+        body: const MyForm(),
+      ),
+    );
+  }
+}
+
+class MyForm extends StatefulWidget {
+  const MyForm({super.key});
+
+  @override
+  State&lt;MyForm&gt; createState() =&gt; _MyFormState();
+}
+
+class _MyFormState extends State&lt;MyForm&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('Masukkan nama anda :'),
+          const SizedBox(
+            height: 10,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              labelText: 'Nama Lengkap',
+              hintText: 'Misalnya masnoer',
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.person)),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.amber,
+              foregroundColor: Colors.black),
+            child: const Text('Tampilkan mama'))
+        ],
+      ),
+    );
+  }
+}
+                    </pre>
+
+
+                    <p>
+
+                        Pada tahap awal, TextField digunakan untuk
+                        menerima input nama lengkap pengguna.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/basic form textfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 3 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan TextEditingController</b><br>
+
+                    Pada class <b>_MyFormState</b> ditambahkan
+                    TextEditingController untuk mengambil inputan
+                    dari pengguna.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+TextEditingController _textEditingController = TextEditingController();
+
+@override
+void dispose() {
+  _textEditingController.dispose();
+  super.dispose();
+}
+                    </pre>
+
+
+                    <p>
+
+                        TextEditingController berfungsi untuk mengambil
+                        inputan yang diberikan oleh pengguna pada
+                        TextField.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/controller textfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 4 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan Controller, keyboardType,
+                    dan onChanged</b><br>
+
+                    Property tambahan kemudian diberikan pada widget
+                    TextField.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+TextField(
+  decoration: const InputDecoration(
+    labelText: 'Nama Lengkap',
+    hintText: 'Misalnya masnoer',
+    border: OutlineInputBorder(),
+    prefixIcon: Icon(Icons.person)),
+  controller: _textEditingController,
+  keyboardType: TextInputType.text,
+  onChanged: (text) {
+    print('Sedang mengetik teks : ,$text');
+  },
+),
+                    </pre>
+
+
+                    <p>
+
+                        Property <b>controller</b> digunakan untuk
+                        menghubungkan TextField dengan
+                        TextEditingController. Property
+                        <b>keyboardType</b> menentukan jenis input,
+                        sedangkan <b>onChanged</b> digunakan untuk
+                        mengetahui perubahan teks ketika pengguna
+                        sedang mengetik.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/textfield controller.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 5 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan Fungsi pada ElevatedButton</b><br>
+
+                    Selanjutnya property <b>onPressed</b> pada
+                    ElevatedButton diubah untuk mengambil input
+                    pengguna dan menampilkannya menggunakan SnackBar.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+onPressed: () {
+  String inputText = _textEditingController.text;
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(content: Text('Nama anda adalah , $inputText'))
+  );
+},
+                    </pre>
+
+
+                    <p>
+
+                        Nilai yang dimasukkan pengguna diambil melalui
+                        <b>_textEditingController.text</b>. Setelah
+                        tombol ditekan, nilai tersebut ditampilkan
+                        menggunakan SnackBar.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/snackbar textfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 6 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Program TextField</b><br>
+
+                    Setelah seluruh kode selesai dibuat, program
+                    dijalankan menggunakan device Chrome.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+flutter run -d chrome -t lib/form-textfield.dart
+                    </pre>
+
+
+                    <p>
+
+                        Setelah program berhasil dijalankan, pengguna
+                        dapat memasukkan nama pada TextField kemudian
+                        menekan tombol <b>Tampilkan mama</b> untuk
+                        menampilkan input melalui SnackBar.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/hasil textfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+            </ol>
+
+
+
+            <!-- TEXTFORMFIELD -->
+
+            <h3 class="fw-bold mt-5 mb-4"
+            style="color:#73073d;">
+                B. Basic Form TextFormField
+            </h3>
+
+
+            <ol class="fs-5 lh-lg">
+
+
+                <!-- STEP 1 -->
+                <li class="mb-5">
+
+                    <b>Membuat File form-textformfield.dart</b><br>
+
+                    File baru dibuat di dalam folder <b>lib</b>
+                    dengan nama <b>form-textformfield.dart</b>.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+lib/form-textformfield.dart
+                    </pre>
+
+
+                    <p>
+
+                        File ini digunakan untuk membuat Basic Form
+                        menggunakan widget TextFormField.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/create textformfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 2 -->
+                <li class="mb-5">
+
+                    <b>Membuat Tampilan Basic Form TextFormField</b><br>
+
+                    Pada tahap awal dibuat dua buah TextFormField
+                    untuk menerima input nama dan email serta satu
+                    tombol Submit.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+import 'package:flutter/material.dart';
+
+void main() =&gt; runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Basic Form TextFormField"),
+        ),
+        body: const MyFormText(),
+      ),
+    );
+  }
+}
+
+class MyFormText extends StatefulWidget {
+  const MyFormText({super.key});
+
+  @override
+  State&lt;MyFormText&gt; createState() =&gt; _MyFormTextState();
+}
+
+class _MyFormTextState extends State&lt;MyFormText&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const SizedBox(
+          height: 10,
+        ),
+        TextFormField(
+          decoration: const InputDecoration(
+            labelText: "Nama : ", border: OutlineInputBorder()),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        TextFormField(
+          decoration: const InputDecoration(
+            labelText: "Email : ", border: OutlineInputBorder()),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+          width: double.infinity,
+          child:
+          ElevatedButton(onPressed: () {}, child: const Text('Submit')))
+      ],
+    );
+  }
+}
+                    </pre>
+
+
+                    <p>
+
+                        Dua TextFormField digunakan untuk menerima
+                        data nama dan email dari pengguna.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/basic textformfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 3 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan GlobalKey dan Controller</b><br>
+
+                    Pada class <b>_MyFormTextState</b> ditambahkan
+                    GlobalKey untuk Form serta controller untuk
+                    masing-masing input.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+final _formKey = GlobalKey&lt;FormState&gt;();
+final _nameController = TextEditingController();
+final _emailController = TextEditingController();
+
+@override
+void dispose() {
+  _nameController.dispose();
+  _emailController.dispose();
+  super.dispose();
+}
+
+void _submitForm(){
+  if (_formKey.currentState!.validate()) {
+    String name = _nameController.text;
+    String email = _emailController.text;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Validasi $name, $email Berhasil'))
+    );
+  }
+}
+                    </pre>
+
+
+                    <p>
+
+                        GlobalKey digunakan untuk mengakses state dari
+                        Form. Controller digunakan untuk mengambil
+                        nilai dari TextFormField, sedangkan method
+                        <b>_submitForm()</b> digunakan ketika tombol
+                        Submit ditekan.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/controller textformfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 4 -->
+                <li class="mb-5">
+
+                    <b>Membungkus Tampilan dengan Form</b><br>
+
+                    Widget tampilan kemudian dibungkus menggunakan
+                    widget Form dan diberikan property
+                    <b>key: _formKey</b>.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+return Form(
+  key: _formKey,
+  child: Padding(
+    padding: const EdgeInsets.all(20.0),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+                    </pre>
+
+
+                    <p>
+
+                        Form digunakan sebagai wadah untuk
+                        TextFormField sehingga proses validasi
+                        dapat dilakukan menggunakan FormState.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/form key.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 5 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan Validasi pada Nama</b><br>
+
+                    TextFormField nama diberikan controller dan
+                    validator untuk memastikan input nama tidak kosong.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+TextFormField(
+  controller: _nameController,
+  decoration: const InputDecoration(
+    labelText: "Nama : ", border: OutlineInputBorder()),
+  validator: (value){
+    if (value == null || value.isEmpty) {
+      return 'Masukkan nama anda';
+    }
+    return null;
+  },
+),
+                    </pre>
+
+
+                    <p>
+
+                        Jika field nama kosong, validator akan
+                        memberikan pesan <b>Masukkan nama anda</b>.
+                        Jika input valid, validator mengembalikan
+                        nilai <b>null</b>.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/validasi nama.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 6 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan Validasi pada Email</b><br>
+
+                    TextFormField email kemudian diberikan controller
+                    dan validator untuk memastikan email tidak kosong
+                    serta memiliki karakter @.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+TextFormField(
+  controller: _emailController,
+  decoration: const InputDecoration(
+    labelText: "Email : ", border: OutlineInputBorder()),
+  validator: (value){
+    if (value == null || value.isEmpty) {
+      return 'Masukkan email anda ';
+    }
+    if(!value.contains('@')){
+      return 'Email tidak valid';
+    }
+    return null;
+  },
+),
+                    </pre>
+
+
+                    <p>
+
+                        Jika email kosong maka akan muncul pesan
+                        <b>Masukkan email anda</b>. Jika email tidak
+                        mengandung karakter @ maka akan muncul pesan
+                        <b>Email tidak valid</b>.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/validasi email.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 7 -->
+                <li class="mb-5">
+
+                    <b>Menambahkan _submitForm pada ElevatedButton</b><br>
+
+                    Method <b>_submitForm</b> kemudian dipanggil
+                    melalui property <b>onPressed</b> pada
+                    ElevatedButton.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+SizedBox(
+  width: double.infinity,
+  child: ElevatedButton(
+    onPressed: _submitForm,
+    child: const Text('Submit')))
+                    </pre>
+
+
+                    <p>
+
+                        Ketika tombol Submit ditekan, Form akan
+                        menjalankan proses validasi. Jika seluruh
+                        input valid, nama dan email akan ditampilkan
+                        menggunakan SnackBar.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/submit textformfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- STEP 8 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Program TextFormField</b><br>
+
+                    Setelah seluruh perubahan selesai, aplikasi
+                    dijalankan menggunakan Chrome.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+flutter run -d chrome -t lib/form-textformfield.dart
+                    </pre>
+
+
+                    <p>
+
+                        Form dapat diuji dengan mengosongkan input,
+                        memasukkan email yang tidak valid, serta
+                        memasukkan nama dan email yang valid.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/hasil textformfield.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+            </ol>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TUGAS -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                IV. Tugas Praktikum
+            </h2>
+
+
+            <p class="fs-5 lh-lg">
+
+                Pada tugas praktikum ini digunakan ketentuan
+                <b>Kelas A</b>. Tugas yang diberikan adalah membuat
+                aplikasi kalkulator yang dapat menjalankan operasi
+                kabataku.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Operasi kabataku yang digunakan terdiri dari
+                perkalian, pembagian, penjumlahan, dan pengurangan.
+                Aplikasi menggunakan dua buah widget input untuk
+                menerima nilai yang akan dihitung.
+
+            </p>
+
+
+            <ol class="fs-5 lh-lg">
+
+
+                <!-- TUGAS STEP 1 -->
+                <li class="mb-5">
+
+                    <b>Membuat File kalkulator.dart</b><br>
+
+                    File baru dibuat di dalam folder <b>lib</b>
+                    dengan nama <b>kalkulator.dart</b>.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+lib/kalkulator.dart
+                    </pre>
+
+
+                    <center>
+
+                        <img
+                            src="images/create kalkulator.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 2 -->
+                <li class="mb-5">
+
+                    <b>Membuat Dua Widget Input</b><br>
+
+                    Dua TextField digunakan untuk menerima angka
+                    pertama dan angka kedua.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+final _angka1Controller = TextEditingController();
+final _angka2Controller = TextEditingController();
+                    </pre>
+
+
+                    <p>
+
+                        Kedua controller digunakan untuk mengambil
+                        nilai angka yang dimasukkan pengguna.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/input kalkulator.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 3 -->
+                <li class="mb-5">
+
+                    <b>Membuat Method Perhitungan</b><br>
+
+                    Method <b>hitung()</b> digunakan untuk menjalankan
+                    operasi kabataku berdasarkan tombol yang dipilih.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+void hitung(String operasi) {
+  double angka1 = double.tryParse(_angka1Controller.text) ?? 0;
+  double angka2 = double.tryParse(_angka2Controller.text) ?? 0;
+
+  double hasilPerhitungan = 0;
+
+  if (operasi == 'kali') {
+    hasilPerhitungan = angka1 * angka2;
+  } else if (operasi == 'bagi') {
+    if (angka2 == 0) {
+      setState(() {
+        hasil = 'Tidak dapat dibagi 0';
+      });
+      return;
+    }
+    hasilPerhitungan = angka1 / angka2;
+  } else if (operasi == 'tambah') {
+    hasilPerhitungan = angka1 + angka2;
+  } else if (operasi == 'kurang') {
+    hasilPerhitungan = angka1 - angka2;
+  }
+
+  setState(() {
+    hasil = hasilPerhitungan.toString();
+  });
+}
+                    </pre>
+
+
+                    <p>
+
+                        Method tersebut menerima parameter operasi
+                        untuk menentukan jenis perhitungan yang
+                        dilakukan. Hasil perhitungan kemudian
+                        disimpan dan ditampilkan pada aplikasi.
+
+                    </p>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 4 -->
+                <li class="mb-5">
+
+                    <b>Membuat Tombol Operasi Kabataku</b><br>
+
+                    Empat ElevatedButton digunakan untuk menjalankan
+                    operasi Kali, Bagi, Tambah, dan Kurang.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+ElevatedButton(
+  onPressed: () {
+    hitung('kali');
+  },
+  child: const Text('Kali'),
+),
+
+ElevatedButton(
+  onPressed: () {
+    hitung('bagi');
+  },
+  child: const Text('Bagi'),
+),
+
+ElevatedButton(
+  onPressed: () {
+    hitung('tambah');
+  },
+  child: const Text('Tambah'),
+),
+
+ElevatedButton(
+  onPressed: () {
+    hitung('kurang');
+  },
+  child: const Text('Kurang'),
+),
+                    </pre>
+
+
+                    <p>
+
+                        Setiap tombol memanggil method
+                        <b>hitung()</b> dengan parameter operasi
+                        yang sesuai.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/button kalkulator.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 5 -->
+                <li class="mb-5">
+
+                    <b>Menampilkan Hasil Perhitungan</b><br>
+
+                    Widget Text digunakan untuk menampilkan hasil
+                    operasi yang telah dilakukan.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+Text(
+  'Hasil: $hasil',
+  style: const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  ),
+),
+                    </pre>
+
+
+                    <p>
+
+                        Nilai hasil akan berubah setiap kali pengguna
+                        menekan salah satu tombol operasi.
+
+                    </p>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 6 -->
+                <li class="mb-5">
+
+                    <b>Menjalankan Aplikasi Kalkulator</b><br>
+
+                    Aplikasi kalkulator dijalankan menggunakan
+                    Chrome.
+
+                    <pre class="bg-light p-3 rounded mt-3">
+flutter run -d chrome -t lib/kalkulator.dart
+                    </pre>
+
+
+                    <p>
+
+                        Setelah aplikasi dijalankan, pengguna dapat
+                        memasukkan dua angka kemudian memilih operasi
+                        Kali, Bagi, Tambah, atau Kurang.
+
+                    </p>
+
+
+                    <center>
+
+                        <img
+                            src="images/hasil kalkulator.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+
+                <!-- TUGAS STEP 7 -->
+                <li class="mb-5">
+
+                    <b>Hasil Tugas Praktikum</b><br>
+
+                    Aplikasi berhasil menjalankan empat operasi
+                    kabataku dan menampilkan hasil perhitungan
+                    menggunakan widget Text.
+
+                    <center>
+
+                        <img
+                            src="images/hasil kalkulator.png"
+                            width="600"
+                            class="rounded shadow mt-4"
+                        >
+
+                    </center>
+
+                </li>
+
+
+            </ol>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HASIL DAN PEMBAHASAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                V. Hasil dan Pembahasan
+            </h2>
+
+
+            <p class="fs-5 lh-lg">
+
+                Berdasarkan praktikum yang telah dilakukan,
+                widget TextField berhasil digunakan untuk menerima
+                input teks dari pengguna. TextEditingController
+                digunakan untuk mengambil nilai yang dimasukkan
+                melalui TextField.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Pada penggunaan TextFormField, form berhasil
+                dilengkapi dengan proses validasi menggunakan
+                GlobalKey&lt;FormState&gt; dan validator. Validasi
+                dapat digunakan untuk memastikan bahwa input nama
+                dan email telah memenuhi kondisi yang ditentukan.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Pada tugas Kelas A, konsep input widget kemudian
+                diterapkan pada aplikasi kalkulator. Dua input
+                digunakan untuk menerima angka, sedangkan
+                ElevatedButton digunakan untuk menjalankan operasi
+                perkalian, pembagian, penjumlahan, dan pengurangan.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Hasil operasi kemudian ditampilkan menggunakan
+                widget Text sehingga pengguna dapat melihat hasil
+                perhitungan secara langsung pada aplikasi.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- KESIMPULAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+        <div class="p-5">
+
+            <h2 class="fw-bold mb-4"
+            style="color:#73073d;">
+                VI. Kesimpulan
+            </h2>
+
+
+            <p class="fs-5 lh-lg">
+
+                Dari praktikum yang telah dilakukan dapat disimpulkan
+                bahwa Flutter menyediakan berbagai widget input
+                seperti TextField dan TextFormField yang dapat
+                digunakan untuk menerima data dari pengguna.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                TextEditingController dapat digunakan untuk mengambil
+                dan mengontrol nilai input, sedangkan TextFormField
+                dapat digunakan bersama Form dan validator untuk
+                melakukan validasi terhadap data yang dimasukkan.
+
+            </p>
+
+
+            <p class="fs-5 lh-lg">
+
+                Pada tugas praktikum Kelas A, konsep tersebut berhasil
+                diterapkan dalam pembuatan aplikasi kalkulator
+                kabataku yang menggunakan dua input, ElevatedButton
+                untuk menjalankan operasi, serta Text untuk
+                menampilkan hasil perhitungan.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GITHUB -->
+    <div class="text-center mt-5">
+
+        <a
+            href="https://github.com/PutriBalqisAfradinata/PutriBalqisAfradinata_2411531009_AplikasiMobile"
+            target="_blank"
+            class="btn btn-lg text-white fw-semibold px-4 py-3 shadow"
+            style="background-color:#ff69b4; border-radius:14px;"
+        >
+
+            🔗 Lihat Repository GitHub
+
+        </a>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
