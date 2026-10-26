@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     content="width=device-width, initial-scale=1.0">
 
     <title>
-        Laporan Akhir AppMobile - Expense Tracker
+        Laporan Akhir Project Expense Tracker
     </title>
 
     <!-- FONT -->
@@ -105,117 +105,121 @@ style="background-color:#ffb6d9;">
 
     <!-- HEADER -->
     <div class="card border-0 shadow-lg overflow-hidden mb-5">
-        <div class="p-5 text-white"
-        style="background: linear-gradient(to right, #ffb6d9, #ff7eb6);">
-            <h1 class="fw-bold">
-                Laporan Akhir AppMobile — Expense Tracker
-            </h1>
-
+        <div class="p-5 text-white" style="background: linear-gradient(to right, #ffb6d9, #ff7eb6);">
+            <h1 class="fw-bold">Laporan Akhir Project — Expense Tracker</h1>
             <div class="mt-3 d-flex flex-wrap gap-2">
-                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
-                    Aplikasi Mobile
-                </span>
-                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
-                    Semester 5
-                </span>
-                <span class="badge rounded-pill bg-light text-dark px-3 py-2">
-                    Putri Balqis Afradinata
-                </span>
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">Aplikasi Mobile</span>
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">Semester 5</span>
+                <span class="badge rounded-pill bg-light text-dark px-3 py-2">Putri Balqis Afradinata</span>
             </div>
         </div>
     </div>
 
     <!-- TUJUAN -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">I. Tujuan Praktikum</h2>
-<ul class="fs-5 lh-lg">
-  <li>Menggabungkan materi Praktikum 1 sampai Praktikum 5 ke dalam aplikasi Expense Tracker berbasis Flutter.</li>
-  <li>Menerapkan widget dan antarmuka untuk menampilkan dashboard, formulir, daftar transaksi, serta detail transaksi.</li>
-  <li>Menerapkan validasi input, navigasi antarhalaman, dan passing data.</li>
-  <li>Menyimpan serta mengelola data akun dan transaksi menggunakan database lokal SQLite melalui sqflite.</li>
-  <li>Membangun aplikasi pencatatan pemasukan dan pengeluaran dengan tampilan yang mudah digunakan.</li>
-</ul>
-        </div>
-    </div>
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+        <h2 class="fw-bold mb-4" style="color:#73073d;">I. Tujuan Praktikum</h2>
+        <ul class="fs-5 lh-lg">
+            <li>Mengembangkan aplikasi Expense Tracker menggunakan Flutter dan bahasa pemrograman Dart.</li>
+            <li>Menerapkan form registrasi dan login agar pengguna dapat membuat akun dan masuk ke aplikasi.</li>
+            <li>Menggunakan penyimpanan lokal SQLite untuk menyimpan data pengguna dan transaksi.</li>
+            <li>Menerapkan pengelolaan sesi pengguna menggunakan SharedPreferences.</li>
+            <li>Membuat fitur pencatatan pemasukan dan pengeluaran, ringkasan dashboard, riwayat, detail, dan penghapusan transaksi.</li>
+            <li>Menerapkan navigasi antarhalaman dan mengorganisasi kode ke dalam database, models, screens, services, dan widgets.</li>
+            <li>Membangun aplikasi menjadi APK release untuk diuji dan didistribusikan.</li>
+        </ul>
+    </div></div>
 
     <!-- DASAR TEORI -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">II. Dasar Teori</h2>
-<p class="fs-5 lh-lg">Project akhir ini merupakan aplikasi <b>Expense Tracker</b> yang dikembangkan menggunakan <b>Flutter</b>. Aplikasi membantu pengguna mencatat pemasukan dan pengeluaran, melihat ringkasan keuangan, serta memeriksa detail transaksi.</p>
-<p class="fs-5 lh-lg">Flutter menggunakan pendekatan berbasis <b>Widget</b> untuk membangun antarmuka. Widget seperti <b>Scaffold</b>, <b>AppBar</b>, <b>TextFormField</b>, <b>ElevatedButton</b>, <b>Card</b>, dan <b>ListView</b> digunakan untuk menyusun halaman dan menerima interaksi pengguna.</p>
-<p class="fs-5 lh-lg">Formulir login, registrasi, dan penambahan transaksi menggunakan <b>Form</b>, <b>GlobalKey&lt;FormState&gt;</b>, controller, dan validator. Validasi memastikan input memenuhi ketentuan sebelum diproses.</p>
-<p class="fs-5 lh-lg">Navigasi dikelola menggunakan <b>Navigator</b> dan named route. Data halaman tujuan dikirim melalui arguments atau constructor. Data pengguna dan transaksi dikelola secara lokal menggunakan <b>SQLite</b> melalui package <b>sqflite</b>.</p>
-        </div>
-    </div>
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+        <h2 class="fw-bold mb-4" style="color:#73073d;">II. Dasar Teori</h2>
+        <p class="fs-5 lh-lg"><b>Flutter</b> merupakan framework untuk membangun antarmuka aplikasi dengan satu basis kode, sedangkan <b>Dart</b> adalah bahasa pemrograman yang digunakan dalam project ini. Struktur antarmuka disusun menggunakan widget dan halaman aplikasi.</p>
+        <p class="fs-5 lh-lg"><b>SQLite</b> adalah database relasional lokal yang digunakan untuk menyimpan data di perangkat. Pada project ini, database memiliki tabel <code>users</code> untuk data akun dan tabel <code>transactions</code> untuk catatan keuangan. Operasi seperti insert, query, dan delete digunakan untuk mengelola data.</p>
+        <p class="fs-5 lh-lg"><b>SharedPreferences</b> digunakan untuk menyimpan nilai sederhana, yaitu ID pengguna yang sedang login. Saat aplikasi dibuka, ID tersebut diperiksa kembali dan digunakan untuk memuat data pengguna. Data akun dan transaksi tetap disimpan di SQLite.</p>
+        <p class="fs-5 lh-lg"><b>Model</b> digunakan untuk merepresentasikan data dalam bentuk objek. <code>AppUser</code> merepresentasikan pengguna, sedangkan <code>TransactionModel</code> merepresentasikan transaksi. Pemisahan model membantu proses konversi data database dan penggunaan data di antarmuka.</p>
+        <p class="fs-5 lh-lg"><b>Navigasi</b> diatur melalui route pada <code>MaterialApp</code> dan fungsi seperti <code>Navigator.pushNamed</code>, <code>Navigator.pop</code>, serta <code>Navigator.pushNamedAndRemoveUntil</code>. Argumen route dapat digunakan untuk mengirim ID pengguna atau objek transaksi ke halaman tujuan.</p>
+        <p class="fs-5 lh-lg"><b>Validasi form</b> memastikan input penting telah diisi dengan benar sebelum diproses. Pada form transaksi, nama transaksi wajib diisi dan nominal harus berupa angka bulat lebih dari nol.</p>
+    </div></div>
 
-    <!-- LANGKAH PRAKTIKUM -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">III. Langkah-Langkah Praktikum</h2>
-<ol class="fs-5 lh-lg">
-<li class="mb-5"><b>Menyiapkan Struktur Project</b><br>Project dipisahkan menjadi beberapa bagian, seperti halaman aplikasi, model, database, dan widget pendukung agar setiap file memiliki tanggung jawab yang jelas.
-<pre class="bg-light p-3 rounded mt-3">lib/
-├── main.dart
+    <!-- LANGKAH-LANGKAH PENGEMBANGAN -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+        <h2 class="fw-bold mb-4" style="color:#73073d;">III. Langkah-Langkah Pengembangan</h2>
+        <p class="fs-5 lh-lg">Langkah berikut disusun mengikuti struktur dan implementasi source code Expense Tracker pada project Flutter.</p>
+        <ol class="fs-5 lh-lg">
+          <li class="mb-5"><b>Mempersiapkan project dan dependensi</b><br>Project dibuat menggunakan Flutter. File <code>pubspec.yaml</code> mencantumkan dependensi yang digunakan, yaitu <code>sqflite</code> untuk SQLite, <code>path</code> untuk membantu membentuk path database, <code>shared_preferences</code> untuk menyimpan sesi, dan <code>crypto</code> untuk proses hash password. Dependensi disiapkan melalui perintah <code>flutter pub get</code>.
+            <pre class="bg-light p-3 rounded mt-3">flutter pub get</pre>
+          </li>
+          <li class="mb-5"><b>Menyusun struktur folder kode</b><br>Kode dikelompokkan berdasarkan tanggung jawab agar lebih mudah dipelihara.
+            <pre class="bg-light p-3 rounded mt-3">lib/
 ├── database/
 │   └── app_database.dart
 ├── models/
 │   ├── app_user.dart
 │   └── transaction_model.dart
 ├── screens/
+│   ├── auth_gate.dart
 │   ├── login_screen.dart
 │   ├── register_screen.dart
+│   ├── main_screen.dart
 │   ├── dashboard_screen.dart
 │   ├── add_transaction_screen.dart
-│   └── transaction_detail_screen.dart
-└── widgets/
-    ├── formatters.dart
-    └── transaction_tile.dart</pre>
-<p>Nama dan susunan file mengikuti struktur project akhir yang digunakan.</p></li>
-<li class="mb-5"><b>Membuat Dashboard</b><br>Dashboard menampilkan saldo, menu pemasukan dan pengeluaran, ringkasan keuangan, serta transaksi terbaru. Tombol tambah membuka formulir transaksi.
-<pre class="bg-light p-3 rounded mt-3">Scaffold(
-  backgroundColor: const Color(0xFFF5F7FA),
-  floatingActionButton: FloatingActionButton.extended(
-    onPressed: _openAddForm,
-    backgroundColor: const Color(0xFFFFA000),
-    foregroundColor: Colors.white,
-    icon: const Icon(Icons.add),
-    label: const Text('Tambah'),
-  ),
+│   ├── history_screen.dart
+│   ├── transaction_detail_screen.dart
+│   └── profile_screen.dart
+├── services/
+│   └── session_service.dart
+├── widgets/
+│   ├── formatters.dart
+│   └── transaction_tile.dart
+└── main.dart</pre>
+            <p>Folder <code>screens</code> berisi halaman aplikasi, <code>database</code> mengelola penyimpanan, <code>models</code> mendefinisikan struktur data, <code>services</code> mengelola sesi, dan <code>widgets</code> berisi komponen yang dapat digunakan kembali.</p>
+          </li>
+          <li class="mb-5"><b>Membuat titik awal aplikasi dan konfigurasi route</b><br>File <code>lib/main.dart</code> berisi fungsi <code>main()</code>, pemanggilan <code>WidgetsFlutterBinding.ensureInitialized()</code>, dan <code>runApp(const ExpenseTrackerApp())</code>. Class <code>ExpenseTrackerApp</code> mengatur tema, warna utama, serta route untuk halaman autentikasi, halaman utama, form tambah transaksi, dan detail transaksi.
+            <pre class="bg-light p-3 rounded mt-3">void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const ExpenseTrackerApp());
+}
+
+// Route yang digunakan antara lain:
+// '/'       : AuthGate
+// '/login'  : LoginScreen
+// '/register': RegisterScreen
+// '/main'   : AuthGate
+// '/add'    : AddTransactionScreen
+// '/detail' : TransactionDetailScreen</pre>
+            <p>Route <code>/add</code> menerima ID pengguna, sedangkan route <code>/detail</code> menerima objek transaksi. Tema antarmuka juga dikonfigurasi di file ini. Warna utama dapat disesuaikan dengan desain akhir aplikasi.</p>
+          </li>
+          <li class="mb-5"><b>Membuat database SQLite</b><br>File <code>lib/database/app_database.dart</code> membuat class <code>AppDatabase</code> sebagai pengelola database tunggal. Database disimpan dengan nama <code>expense_tracker_final.db</code>. Pada pembuatan awal, dibuat dua tabel: <code>users</code> dan <code>transactions</code>.
+            <pre class="bg-light p-3 rounded mt-3">CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL COLLATE NOCASE UNIQUE,
+  password_hash TEXT NOT NULL,
+  salt TEXT NOT NULL,
+  created_at TEXT NOT NULL
+)
+
+CREATE TABLE transactions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  title TEXT NOT NULL,
+  amount INTEGER NOT NULL,
+  type TEXT NOT NULL,
+  category TEXT NOT NULL,
+  date TEXT NOT NULL,
+  note TEXT NOT NULL DEFAULT '',
+  FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 )</pre>
-<p>Warna kuning keemasan menjadi aksen utama, dengan latar abu-abu muda dan kartu putih.</p>
-<center><img src="images/dashboard-akhir.png" width="600" class="rounded shadow mt-4" alt="Dashboard Expense Tracker"></center></li>
-<li class="mb-5"><b>Membuat Login dan Registrasi</b><br>Login menerima email dan kata sandi. Registrasi menerima nama lengkap, email, kata sandi, dan konfirmasi kata sandi. Validator memeriksa input sebelum data diproses.
-<pre class="bg-light p-3 rounded mt-3">if (!_formKey.currentState!.validate()) return;
-setState(() => _loading = true);
-// Proses login atau registrasi</pre>
-<p>Status loading digunakan sebagai umpan balik ketika proses berlangsung.</p>
-<center><img src="images/login-register-akhir.png" width="600" class="rounded shadow mt-4" alt="Login dan Registrasi"></center></li>
-<li class="mb-5"><b>Membuat Form Tambah Transaksi</b><br>Form menerima nama transaksi, nominal, jenis, kategori, tanggal, dan catatan opsional. Kategori menyesuaikan jenis transaksi dan tanggal dipilih melalui kalender.
-<pre class="bg-light p-3 rounded mt-3">final selected = await showDatePicker(
-  context: context,
-  initialDate: _selectedDate,
-  firstDate: DateTime(2000),
-  lastDate: DateTime.now().add(
-    const Duration(days: 365),
-  ),
-);
-if (selected != null) {
-  setState(() => _selectedDate = selected);
-}</pre>
-<p>Nominal divalidasi agar berupa bilangan bulat lebih besar dari nol.</p>
-<center><img src="images/form-transaksi-akhir.png" width="600" class="rounded shadow mt-4" alt="Form Tambah Transaksi"></center></li>
-<li class="mb-5"><b>Menerapkan Navigasi dan Detail Transaksi</b><br>Pengguna memilih transaksi dari daftar untuk membuka detail. Informasi transaksi ditampilkan pada halaman detail, yang juga menyediakan aksi hapus setelah konfirmasi.
-<pre class="bg-light p-3 rounded mt-3">await Navigator.pushNamed(
-  context,
-  '/detail',
-  arguments: transaction,
-);
-await _loadTransactions();</pre>
-<center><img src="images/detail-transaksi-akhir.png" width="600" class="rounded shadow mt-4" alt="Detail Transaksi"></center></li>
-<li class="mb-5"><b>Menghubungkan Aplikasi dengan SQLite</b><br>Database lokal dikelola melalui <b>AppDatabase</b>. Data akun digunakan untuk login dan registrasi, sedangkan data transaksi menyimpan pengguna, judul, nominal, jenis, kategori, tanggal, dan catatan.
-<pre class="bg-light p-3 rounded mt-3">await AppDatabase.instance.insertTransaction(
+            <p>Tabel transaksi menyimpan ID pemilik, judul, nominal, jenis, kategori, tanggal, dan catatan. Data transaksi kemudian difilter berdasarkan <code>user_id</code> agar setiap pengguna mengambil transaksi miliknya.</p>
+          </li>
+          <li class="mb-5"><b>Membuat model pengguna dan transaksi</b><br>File <code>models/app_user.dart</code> mewakili data akun, sedangkan <code>models/transaction_model.dart</code> mewakili transaksi. Model transaksi menyediakan konversi data dari dan ke bentuk Map melalui metode seperti <code>toMap()</code> dan <code>fromMap()</code>, sehingga dapat digunakan saat membaca atau menulis database.</li>
+          <li class="mb-5"><b>Menerapkan registrasi pengguna</b><br>File <code>screens/register_screen.dart</code> menyediakan form pembuatan akun. Input nama, email, password, dan konfirmasi password divalidasi sebelum diteruskan ke <code>AppDatabase.instance.registerUser()</code>. Fungsi database menormalkan nama dan email, membuat salt acak, menghasilkan hash password, lalu menyimpan informasi akun ke tabel <code>users</code>. Dengan demikian, password tidak disimpan sebagai teks biasa dalam tabel.</li>
+          <li class="mb-5"><b>Menerapkan login pengguna</b><br>File <code>screens/login_screen.dart</code> menerima email dan password. Fungsi login memanggil <code>AppDatabase.instance.loginUser()</code>. Database mencari akun berdasarkan email, mengambil salt dan hash yang tersimpan, kemudian membandingkan hash password yang dimasukkan. Jika cocok, data pengguna dikembalikan dan proses login dilanjutkan; jika tidak, aplikasi menampilkan pesan kegagalan.</li>
+          <li class="mb-5"><b>Mengelola sesi dengan SharedPreferences</b><br>File <code>services/session_service.dart</code> menyimpan ID pengguna menggunakan SharedPreferences. Setelah login berhasil, ID disimpan melalui <code>saveUserId()</code>. Ketika pengguna keluar, data sesi dihapus melalui <code>clear()</code>. File <code>screens/auth_gate.dart</code> memeriksa ID sesi dan mengambil data pengguna dari SQLite. Jika sesi tidak valid atau pengguna tidak ditemukan, aplikasi mengarahkan pengguna ke halaman login.</li>
+          <li class="mb-5"><b>Membuat halaman utama dan navigasi</b><br>File <code>screens/main_screen.dart</code> menjadi wadah navigasi halaman utama. Pengguna dapat berpindah ke dashboard, riwayat transaksi, dan profil. File ini juga menyediakan alur logout yang menghapus sesi, kemudian mengarahkan pengguna kembali ke autentikasi.</li>
+          <li class="mb-5"><b>Membuat dashboard dan ringkasan keuangan</b><br>File <code>screens/dashboard_screen.dart</code> memuat transaksi menggunakan <code>AppDatabase.instance.getTransactions(widget.user.id)</code>. Data yang diterima digunakan untuk menghitung total pemasukan, total pengeluaran, dan saldo. Saldo dihitung dari total pemasukan dikurangi total pengeluaran. Dashboard juga menyediakan aksi untuk membuka form tambah transaksi dan halaman detail transaksi.</li>
+          <li class="mb-5"><b>Membuat form tambah transaksi dan validasi input</b><br>File <code>screens/add_transaction_screen.dart</code> menyediakan pilihan jenis transaksi, nama transaksi, nominal, kategori, tanggal, dan catatan. Kategori disesuaikan dengan jenis pemasukan atau pengeluaran. Form memakai <code>GlobalKey&lt;FormState&gt;</code> dan controller untuk membaca input. Validasi memastikan nama tidak kosong dan nominal merupakan angka bulat lebih dari nol. Tanggal dipilih menggunakan <code>showDatePicker</code>.</li>
+          <li class="mb-5"><b>Menyimpan transaksi ke database</b><br>Ketika form valid, fungsi <code>_saveTransaction()</code> membentuk objek <code>TransactionModel</code> dari input pengguna lalu memanggil <code>AppDatabase.instance.insertTransaction()</code>. Data transaksi disimpan dengan ID pengguna yang sedang login. Setelah berhasil, aplikasi menampilkan pesan dan menutup form menggunakan <code>Navigator.pop(context, true)</code>, sehingga halaman sebelumnya dapat memuat ulang data.
+            <pre class="bg-light p-3 rounded mt-3">await AppDatabase.instance.insertTransaction(
   TransactionModel(
     userId: widget.userId,
     title: _titleController.text.trim(),
@@ -225,59 +229,1465 @@ await _loadTransactions();</pre>
     date: _selectedDate,
     note: _noteController.text.trim(),
   ),
-);</pre></li>
-</ol>
-        </div>
-    </div>
+);</pre>
+          </li>
+          <li class="mb-5"><b>Membuat riwayat dan komponen item transaksi</b><br>File <code>screens/history_screen.dart</code> mengambil daftar transaksi dari database berdasarkan ID pengguna, lalu menampilkannya sebagai riwayat. File <code>widgets/transaction_tile.dart</code> menyediakan tampilan satu item transaksi, sedangkan <code>widgets/formatters.dart</code> berisi fungsi bantu untuk memformat nominal atau tanggal agar tampil lebih mudah dibaca.</li>
+          <li class="mb-5"><b>Membuat detail dan penghapusan transaksi</b><br>File <code>screens/transaction_detail_screen.dart</code> menerima objek <code>TransactionModel</code> melalui route argument dan menampilkan informasi transaksi yang dipilih. Saat pengguna memilih hapus, aplikasi meminta konfirmasi terlebih dahulu. Jika disetujui, fungsi <code>deleteTransaction()</code> menghapus data berdasarkan ID transaksi dan ID pengguna, lalu halaman detail ditutup dan daftar transaksi dapat diperbarui.</li>
+          <li class="mb-5"><b>Membuat halaman profil dan logout</b><br>File <code>screens/profile_screen.dart</code> menampilkan informasi pengguna seperti nama dan email. Halaman ini juga menyediakan aksi logout dengan dialog konfirmasi. Setelah dikonfirmasi, callback logout menghapus sesi pengguna dan mengembalikan aplikasi ke halaman autentikasi.</li>
+          <li class="mb-5"><b>Menyesuaikan tampilan aplikasi</b><br>Konfigurasi tema dasar berada di <code>main.dart</code>, sedangkan tiap halaman mengatur komponen UI masing-masing. Pada versi tampilan akhir, warna utama disesuaikan menjadi kuning keemasan. Perubahan warna berpengaruh pada presentasi visual, sedangkan alur penyimpanan, model, dan fitur aplikasi tetap mengikuti implementasi kode yang digunakan.</li>
+          <li class="mb-5"><b>Menjalankan dan menguji fitur</b><br>Aplikasi diuji melalui alur registrasi, login, penambahan transaksi pemasukan dan pengeluaran, pemeriksaan perubahan saldo, riwayat, detail, penghapusan, serta logout dan login kembali. Pengujian penyimpanan dilakukan dengan membuka ulang aplikasi dan memeriksa bahwa data masih tersedia. Pengujian juga perlu memastikan setiap pengguna hanya melihat transaksi miliknya.</li>
+          <li class="mb-2"><b>Membangun APK release</b><br>Setelah kode disimpan dan dependensi tersedia, APK dibuat melalui terminal pada direktori utama project.
+            <pre class="bg-light p-3 rounded mt-3">flutter pub get
+flutter build apk --release</pre>
+            <p>Jika proses build berhasil, file APK berada pada <code>build/app/outputs/flutter-apk/app-release.apk</code>. APK hasil build kemudian dipasang dan diuji pada perangkat Android sebelum dibagikan.</p>
+          </li>
+        </ol>
+    </div></div>
 
-    <!-- TUGAS -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">IV. Tugas Praktikum</h2>
-<p class="fs-5 lh-lg">Tugas akhir menggabungkan materi Praktikum 1 sampai Praktikum 5 ke dalam satu aplikasi pencatatan keuangan. Alur penggunaan meliputi registrasi atau login, membuka dashboard, menambah transaksi, melihat detail transaksi, dan menghapus transaksi.</p>
-<ol class="fs-5 lh-lg">
-<li class="mb-4"><b>Menguji Registrasi dan Login</b><br>Memasukkan data akun dan memastikan validasi serta pesan kesalahan ditampilkan ketika input tidak sesuai atau email sudah terdaftar.</li>
-<li class="mb-4"><b>Menguji Validasi Transaksi</b><br>Menguji input kosong, nominal bukan angka, nominal nol atau negatif, serta input valid.</li>
-<li class="mb-4"><b>Menguji Penyimpanan Data</b><br>Memastikan transaksi yang disimpan muncul kembali pada dashboard dan memengaruhi ringkasan pemasukan, pengeluaran, serta saldo.</li>
-<li class="mb-4"><b>Menguji Detail dan Penghapusan</b><br>Memastikan detail sesuai dengan transaksi yang dipilih dan penghapusan hanya dilakukan setelah konfirmasi.</li>
-<li class="mb-4"><b>Menyiapkan Dokumentasi dan Deployment</b><br>Screenshot aplikasi akhir dapat ditempatkan di folder <b>images</b> sesuai nama file pada kode. Build dan deployment web dilakukan mengikuti layanan hosting yang digunakan.</li>
-</ol>
-        </div>
-    </div>
+
+    <!-- URAIAN KODE PER FILE -->
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+      <h2 class="fw-bold mb-4" style="color:#73073d;">IV. Struktur Project dan Penjelasan Kode per File</h2>
+      <p class="fs-5 lh-lg">Bagian ini menjelaskan tanggung jawab setiap file berdasarkan source code project Expense Tracker. Source code lengkap disertakan pada panel yang dapat dibuka di setiap uraian. Dengan demikian, pembaca dapat memahami fungsi file terlebih dahulu, lalu memeriksa implementasi kodenya jika diperlukan.</p>
+      <h3 class="fw-bold mt-4 mb-3" style="color:#73073d;">A. Struktur direktori</h3>
+      <pre class="bg-light p-3 rounded">expense_tracker_flutter_source/
+├── pubspec.yaml
+└── lib/
+    ├── main.dart
+    ├── database/
+    │   └── app_database.dart
+    ├── models/
+    │   ├── app_user.dart
+    │   └── transaction_model.dart
+    ├── screens/
+    │   ├── auth_gate.dart
+    │   ├── login_screen.dart
+    │   ├── register_screen.dart
+    │   ├── main_screen.dart
+    │   ├── dashboard_screen.dart
+    │   ├── add_transaction_screen.dart
+    │   ├── history_screen.dart
+    │   ├── transaction_detail_screen.dart
+    │   └── profile_screen.dart
+    ├── services/
+    │   └── session_service.dart
+    └── widgets/
+        ├── formatters.dart
+        └── transaction_tile.dart</pre>
+      <p class="fs-5 lh-lg">Struktur ini memisahkan konfigurasi, akses database, model data, halaman UI, pengelolaan sesi, dan komponen UI yang dipakai ulang. Pemisahan berdasarkan tanggung jawab membuat kode lebih mudah dibaca, diuji, dan dikembangkan.</p>
+      <h3 class="fw-bold mt-4 mb-3" style="color:#73073d;">B. Penjelasan dan source code</h3>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">1. <code>pubspec.yaml</code></h4>
+        <p class="fw-semibold mb-2">Konfigurasi project dan dependensi</p>
+        <p class="fs-6 lh-lg">Menentukan nama project, versi aplikasi, batas versi SDK Dart, package yang dipakai, serta konfigurasi aset Material. Package utama: sqflite untuk SQLite, path untuk lokasi database, shared_preferences untuk sesi, dan crypto untuk hash password.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>name: expense_tracker_final
+description: Project akhir Flutter gabungan Praktikum 1-5 - Expense Tracker.
+publish_to: &#x27;none&#x27;
+version: 1.0.0+1
+
+environment:
+  sdk: &#x27;&gt;=3.3.0 &lt;4.0.0&#x27;
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  sqflite: ^2.4.2
+  path: ^1.9.1
+  shared_preferences: ^2.5.3
+  crypto: ^3.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">2. <code>lib/main.dart</code></h4>
+        <p class="fw-semibold mb-2">Titik awal, tema, dan route aplikasi</p>
+        <p class="fs-6 lh-lg">File entry point Flutter. Fungsi main menyiapkan binding lalu menjalankan ExpenseTrackerApp. MaterialApp mengatur tema, halaman awal, serta named routes yang menghubungkan autentikasi, halaman utama, form transaksi, dan detail transaksi. Perubahan warna kuning keemasan dilakukan pada konfigurasi UI/tema terkait.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;screens/add_transaction_screen.dart&#x27;;
+import &#x27;screens/auth_gate.dart&#x27;;
+import &#x27;screens/login_screen.dart&#x27;;
+import &#x27;screens/register_screen.dart&#x27;;
+import &#x27;screens/transaction_detail_screen.dart&#x27;;
+import &#x27;models/transaction_model.dart&#x27;;
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const ExpenseTrackerApp());
+}
+
+class ExpenseTrackerApp extends StatelessWidget {
+  const ExpenseTrackerApp({super.key});
+
+  static const Color primaryColor = Color(0xFFE53935);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;Expense Tracker&#x27;,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: primaryColor,
+          foregroundColor: Colors.white,
+          centerTitle: false,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+          filled: true,
+          fillColor: Colors.grey.shade50,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: primaryColor,
+            foregroundColor: Colors.white,
+            minimumSize: const Size.fromHeight(48),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          ),
+        ),
+      ),
+      initialRoute: &#x27;/&#x27;,
+      routes: {
+        &#x27;/&#x27;: (_) =&gt; const AuthGate(),
+        &#x27;/login&#x27;: (_) =&gt; const LoginScreen(),
+        &#x27;/register&#x27;: (_) =&gt; const RegisterScreen(),
+        &#x27;/main&#x27;: (_) =&gt; const AuthGate(),
+        &#x27;/add&#x27;: (context) {
+          final userId = ModalRoute.of(context)?.settings.arguments as int?;
+          if (userId == null) return const AuthGate();
+          return AddTransactionScreen(userId: userId);
+        },
+        &#x27;/detail&#x27;: (context) {
+          final transaction = ModalRoute.of(context)?.settings.arguments;
+          if (transaction is! TransactionModel) return const AuthGate();
+          return TransactionDetailScreen(transaction: transaction);
+        },
+      },
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">3. <code>lib/database/app_database.dart</code></h4>
+        <p class="fw-semibold mb-2">Pengelolaan SQLite dan operasi data</p>
+        <p class="fs-6 lh-lg">Membuat koneksi database lokal dan tabel users serta transactions. File ini menjadi lapisan akses data: registrasi akun, validasi login, pencarian pengguna, mengambil transaksi per pengguna, memasukkan transaksi, dan menghapus transaksi. Password diproses menggunakan salt dan hash sebelum disimpan.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;dart:convert&#x27;;
+import &#x27;dart:math&#x27;;
+
+import &#x27;package:crypto/crypto.dart&#x27;;
+import &#x27;package:path/path.dart&#x27; as p;
+import &#x27;package:sqflite/sqflite.dart&#x27;;
+
+import &#x27;../models/app_user.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+
+class AppDatabase {
+  AppDatabase._();
+  static final AppDatabase instance = AppDatabase._();
+  Database? _database;
+
+  Future&lt;Database&gt; get database async {
+    if (_database != null) return _database!;
+    final databasesPath = await getDatabasesPath();
+    final databasePath = p.join(databasesPath, &#x27;expense_tracker_final.db&#x27;);
+    _database = await openDatabase(
+      databasePath,
+      version: 1,
+      onCreate: (db, version) async {
+        await db.execute(&#x27;&#x27;&#x27;
+          CREATE TABLE users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL COLLATE NOCASE UNIQUE,
+            password_hash TEXT NOT NULL,
+            salt TEXT NOT NULL,
+            created_at TEXT NOT NULL
+          )
+        &#x27;&#x27;&#x27;);
+        await db.execute(&#x27;&#x27;&#x27;
+          CREATE TABLE transactions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            title TEXT NOT NULL,
+            amount INTEGER NOT NULL,
+            type TEXT NOT NULL,
+            category TEXT NOT NULL,
+            date TEXT NOT NULL,
+            note TEXT NOT NULL DEFAULT &#x27;&#x27;,
+            FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+          )
+        &#x27;&#x27;&#x27;);
+      },
+    );
+    return _database!;
+  }
+
+  String _makeSalt() {
+    final random = Random.secure();
+    return List&lt;int&gt;.generate(16, (_) =&gt; random.nextInt(256))
+        .map((value) =&gt; value.toRadixString(16).padLeft(2, &#x27;0&#x27;))
+        .join();
+  }
+
+  String _hashPassword(String salt, String password) =&gt;
+      sha256.convert(utf8.encode(&#x27;$salt:$password&#x27;)).toString();
+
+  Future&lt;int&gt; registerUser({required String name, required String email, required String password}) async {
+    final db = await database;
+    final salt = _makeSalt();
+    return db.insert(&#x27;users&#x27;, {
+      &#x27;name&#x27;: name.trim(),
+      &#x27;email&#x27;: email.trim().toLowerCase(),
+      &#x27;password_hash&#x27;: _hashPassword(salt, password),
+      &#x27;salt&#x27;: salt,
+      &#x27;created_at&#x27;: DateTime.now().toIso8601String(),
+    });
+  }
+
+  Future&lt;AppUser?&gt; loginUser({required String email, required String password}) async {
+    final db = await database;
+    final rows = await db.query(
+      &#x27;users&#x27;,
+      where: &#x27;email = ?&#x27;,
+      whereArgs: [email.trim().toLowerCase()],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    final row = rows.first;
+    final salt = row[&#x27;salt&#x27;] as String;
+    final storedHash = row[&#x27;password_hash&#x27;] as String;
+    if (_hashPassword(salt, password) != storedHash) return null;
+    return AppUser.fromMap(row);
+  }
+
+  Future&lt;AppUser?&gt; getUserById(int userId) async {
+    final db = await database;
+    final rows = await db.query(&#x27;users&#x27;, where: &#x27;id = ?&#x27;, whereArgs: [userId], limit: 1);
+    if (rows.isEmpty) return null;
+    return AppUser.fromMap(rows.first);
+  }
+
+  Future&lt;int&gt; insertTransaction(TransactionModel transaction) async {
+    final db = await database;
+    return db.insert(&#x27;transactions&#x27;, transaction.toMap()..remove(&#x27;id&#x27;));
+  }
+
+  Future&lt;List&lt;TransactionModel&gt;&gt; getTransactions(int userId) async {
+    final db = await database;
+    final rows = await db.query(
+      &#x27;transactions&#x27;,
+      where: &#x27;user_id = ?&#x27;,
+      whereArgs: [userId],
+      orderBy: &#x27;date DESC, id DESC&#x27;,
+    );
+    return rows.map(TransactionModel.fromMap).toList();
+  }
+
+  Future&lt;void&gt; deleteTransaction({required int transactionId, required int userId}) async {
+    final db = await database;
+    await db.delete(
+      &#x27;transactions&#x27;,
+      where: &#x27;id = ? AND user_id = ?&#x27;,
+      whereArgs: [transactionId, userId],
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">4. <code>lib/models/app_user.dart</code></h4>
+        <p class="fw-semibold mb-2">Model data pengguna</p>
+        <p class="fs-6 lh-lg">Merepresentasikan data akun pengguna dalam bentuk objek agar data hasil query database mudah digunakan oleh halaman login, autentikasi, profil, dan dashboard.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>class AppUser {
+  const AppUser({required this.id, required this.name, required this.email});
+
+  final int id;
+  final String name;
+  final String email;
+
+  factory AppUser.fromMap(Map&lt;String, Object?&gt; map) =&gt; AppUser(
+        id: map[&#x27;id&#x27;] as int,
+        name: map[&#x27;name&#x27;] as String,
+        email: map[&#x27;email&#x27;] as String,
+      );
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">5. <code>lib/models/transaction_model.dart</code></h4>
+        <p class="fw-semibold mb-2">Model data transaksi</p>
+        <p class="fs-6 lh-lg">Merepresentasikan data transaksi seperti ID, pemilik transaksi, judul, nominal, jenis, kategori, tanggal, dan catatan. Konversi Map membantu menghubungkan objek Dart dengan baris database SQLite.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>class TransactionModel {
+  const TransactionModel({
+    this.id,
+    required this.userId,
+    required this.title,
+    required this.amount,
+    required this.type,
+    required this.category,
+    required this.date,
+    this.note = &#x27;&#x27;,
+  });
+
+  final int? id;
+  final int userId;
+  final String title;
+  final int amount;
+  final String type; // Pemasukan atau Pengeluaran
+  final String category;
+  final DateTime date;
+  final String note;
+
+  bool get isIncome =&gt; type == &#x27;Pemasukan&#x27;;
+
+  Map&lt;String, Object?&gt; toMap() =&gt; {
+        &#x27;id&#x27;: id,
+        &#x27;user_id&#x27;: userId,
+        &#x27;title&#x27;: title,
+        &#x27;amount&#x27;: amount,
+        &#x27;type&#x27;: type,
+        &#x27;category&#x27;: category,
+        &#x27;date&#x27;: date.toIso8601String(),
+        &#x27;note&#x27;: note,
+      };
+
+  factory TransactionModel.fromMap(Map&lt;String, Object?&gt; map) =&gt; TransactionModel(
+        id: map[&#x27;id&#x27;] as int?,
+        userId: map[&#x27;user_id&#x27;] as int,
+        title: map[&#x27;title&#x27;] as String,
+        amount: map[&#x27;amount&#x27;] as int,
+        type: map[&#x27;type&#x27;] as String,
+        category: map[&#x27;category&#x27;] as String,
+        date: DateTime.parse(map[&#x27;date&#x27;] as String),
+        note: (map[&#x27;note&#x27;] as String?) ?? &#x27;&#x27;,
+      );
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">6. <code>lib/services/session_service.dart</code></h4>
+        <p class="fw-semibold mb-2">Penyimpanan sesi login</p>
+        <p class="fs-6 lh-lg">Menggunakan SharedPreferences untuk menyimpan, membaca, dan menghapus ID pengguna yang sedang login. Data transaksi tidak disimpan di SharedPreferences; penyimpanan utamanya tetap SQLite.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:shared_preferences/shared_preferences.dart&#x27;;
+
+class SessionService {
+  static const String _userIdKey = &#x27;logged_in_user_id&#x27;;
+
+  static Future&lt;int?&gt; getUserId() async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.getInt(_userIdKey);
+  }
+
+  static Future&lt;void&gt; saveUserId(int userId) async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setInt(_userIdKey, userId);
+  }
+
+  static Future&lt;void&gt; clear() async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.remove(_userIdKey);
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">7. <code>lib/screens/auth_gate.dart</code></h4>
+        <p class="fw-semibold mb-2">Pemeriksaan status autentikasi</p>
+        <p class="fs-6 lh-lg">Memeriksa apakah terdapat ID pengguna tersimpan, lalu mengambil akun terkait dari database. Jika sesi valid, pengguna diarahkan ke halaman utama; jika tidak, halaman login ditampilkan.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../services/session_service.dart&#x27;;
+import &#x27;login_screen.dart&#x27;;
+import &#x27;main_screen.dart&#x27;;
+
+class AuthGate extends StatelessWidget {
+  const AuthGate({super.key});
+
+  Future&lt;Widget&gt; _resolveScreen() async {
+    final userId = await SessionService.getUserId();
+    if (userId == null) return const LoginScreen();
+    final user = await AppDatabase.instance.getUserById(userId);
+    if (user == null) {
+      await SessionService.clear();
+      return const LoginScreen();
+    }
+    return MainScreen(user: user);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder&lt;Widget&gt;(
+      future: _resolveScreen(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState != ConnectionState.done) {
+          return const Scaffold(body: Center(child: CircularProgressIndicator()));
+        }
+        if (snapshot.hasError) {
+          return Scaffold(body: Center(child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Text(&#x27;Aplikasi gagal membuka data lokal. Coba tutup dan buka kembali.\n${snapshot.error}&#x27;, textAlign: TextAlign.center),
+          )));
+        }
+        return snapshot.data ?? const LoginScreen();
+      },
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">8. <code>lib/screens/login_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Antarmuka dan proses login</p>
+        <p class="fs-6 lh-lg">Menyediakan input email dan password, validasi form, pemanggilan fungsi autentikasi pada database, penyimpanan sesi saat login berhasil, dan pesan ketika login gagal.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../services/session_service.dart&#x27;;
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State&lt;LoginScreen&gt; createState() =&gt; _LoginScreenState();
+}
+
+class _LoginScreenState extends State&lt;LoginScreen&gt; {
+  final _formKey = GlobalKey&lt;FormState&gt;();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  bool _obscurePassword = true;
+  bool _loading = false;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  Future&lt;void&gt; _login() async {
+    if (!_formKey.currentState!.validate()) return;
+    setState(() =&gt; _loading = true);
+    try {
+      final user = await AppDatabase.instance.loginUser(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      if (!mounted) return;
+      if (user == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text(&#x27;Email atau kata sandi salah.&#x27;)),
+        );
+        return;
+      }
+      await SessionService.saveUserId(user.id);
+      if (!mounted) return;
+      Navigator.pushNamedAndRemoveUntil(context, &#x27;/main&#x27;, (route) =&gt; false);
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(&#x27;Login gagal: $error&#x27;)),
+        );
+      }
+    } finally {
+      if (mounted) setState(() =&gt; _loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(
+                    width: 86,
+                    height: 86,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(color: Colors.red.shade50, shape: BoxShape.circle),
+                    child: const Icon(Icons.account_balance_wallet, size: 44, color: Colors.red),
+                  ),
+                  const SizedBox(height: 24),
+                  const Text(&#x27;Selamat Datang!&#x27;, textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  Text(&#x27;Masuk untuk mengelola keuanganmu&#x27;, textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.grey.shade600)),
+                  const SizedBox(height: 32),
+                  TextFormField(
+                    controller: _emailController,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(labelText: &#x27;Email&#x27;, prefixIcon: Icon(Icons.email_outlined)),
+                    validator: (value) {
+                      if (value == null || value.trim().isEmpty) return &#x27;Email wajib diisi&#x27;;
+                      if (!value.contains(&#x27;@&#x27;) || !value.contains(&#x27;.&#x27;)) return &#x27;Format email belum benar&#x27;;
+                      return null;
+                    },
+                  ),
+                  const SizedBox(height: 16),
+                  TextFormField(
+                    controller: _passwordController,
+                    obscureText: _obscurePassword,
+                    decoration: InputDecoration(
+                      labelText: &#x27;Kata sandi&#x27;,
+                      prefixIcon: const Icon(Icons.lock_outline),
+                      suffixIcon: IconButton(
+                        onPressed: () =&gt; setState(() =&gt; _obscurePassword = !_obscurePassword),
+                        icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
+                      ),
+                    ),
+                    validator: (value) =&gt; value == null || value.isEmpty ? &#x27;Kata sandi wajib diisi&#x27; : null,
+                  ),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: _loading ? null : _login,
+                    child: _loading ? const SizedBox(height: 22, width: 22, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Text(&#x27;Login&#x27;),
+                  ),
+                  const SizedBox(height: 16),
+                  TextButton(
+                    onPressed: () =&gt; Navigator.pushNamed(context, &#x27;/register&#x27;),
+                    child: const Text(&#x27;Belum punya akun? Daftar sekarang&#x27;),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">9. <code>lib/screens/register_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Antarmuka dan proses registrasi</p>
+        <p class="fs-6 lh-lg">Menerima nama, email, password, dan konfirmasi password. Form memeriksa input sebelum meminta database membuat akun. Hasil proses ditampilkan kepada pengguna melalui pesan antarmuka.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;package:sqflite/sqflite.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
+
+  @override
+  State&lt;RegisterScreen&gt; createState() =&gt; _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State&lt;RegisterScreen&gt; {
+  final _formKey = GlobalKey&lt;FormState&gt;();
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmController = TextEditingController();
+  bool _loading = false;
+  bool _obscurePassword = true;
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmController.dispose();
+    super.dispose();
+  }
+
+  Future&lt;void&gt; _register() async {
+    if (!_formKey.currentState!.validate()) return;
+    setState(() =&gt; _loading = true);
+    try {
+      await AppDatabase.instance.registerUser(
+        name: _nameController.text,
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text(&#x27;Akun berhasil dibuat. Silakan login.&#x27;)),
+      );
+      Navigator.pop(context);
+    } on DatabaseException catch (error) {
+      if (!mounted) return;
+      final message = error.isUniqueConstraintError()
+          ? &#x27;Email tersebut sudah terdaftar.&#x27;
+          : &#x27;Registrasi gagal. Periksa kembali data kamu.&#x27;;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    } catch (error) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(&#x27;Registrasi gagal: $error&#x27;)));
+    } finally {
+      if (mounted) setState(() =&gt; _loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;Buat Akun&#x27;)),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Text(&#x27;Daftar Akun Baru&#x27;, style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                Text(&#x27;Buat akun untuk menyimpan transaksi keuanganmu.&#x27;, style: TextStyle(color: Colors.grey.shade600)),
+                const SizedBox(height: 24),
+                TextFormField(
+                  controller: _nameController,
+                  textCapitalization: TextCapitalization.words,
+                  decoration: const InputDecoration(labelText: &#x27;Nama lengkap&#x27;, prefixIcon: Icon(Icons.person_outline)),
+                  validator: (value) =&gt; value == null || value.trim().isEmpty ? &#x27;Nama wajib diisi&#x27; : null,
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: const InputDecoration(labelText: &#x27;Email&#x27;, prefixIcon: Icon(Icons.email_outlined)),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) return &#x27;Email wajib diisi&#x27;;
+                    if (!value.contains(&#x27;@&#x27;) || !value.contains(&#x27;.&#x27;)) return &#x27;Format email belum benar&#x27;;
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _passwordController,
+                  obscureText: _obscurePassword,
+                  decoration: InputDecoration(
+                    labelText: &#x27;Kata sandi (minimal 6 karakter)&#x27;,
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: IconButton(
+                      onPressed: () =&gt; setState(() =&gt; _obscurePassword = !_obscurePassword),
+                      icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
+                    ),
+                  ),
+                  validator: (value) =&gt; value == null || value.length &lt; 6 ? &#x27;Kata sandi minimal 6 karakter&#x27; : null,
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _confirmController,
+                  obscureText: _obscurePassword,
+                  decoration: const InputDecoration(labelText: &#x27;Konfirmasi kata sandi&#x27;, prefixIcon: Icon(Icons.lock_reset)),
+                  validator: (value) =&gt; value != _passwordController.text ? &#x27;Konfirmasi kata sandi tidak sama&#x27; : null,
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: _loading ? null : _register,
+                  child: _loading ? const CircularProgressIndicator(color: Colors.white) : const Text(&#x27;Daftar&#x27;),
+                ),
+                TextButton(onPressed: () =&gt; Navigator.pop(context), child: const Text(&#x27;Sudah punya akun? Login&#x27;)),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">10. <code>lib/screens/main_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Navigasi utama</p>
+        <p class="fs-6 lh-lg">Menjadi kerangka halaman utama dan menyediakan perpindahan antara dashboard, riwayat, serta profil. Juga menghubungkan alur logout agar sesi dihapus dan pengguna kembali ke autentikasi.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../models/app_user.dart&#x27;;
+import &#x27;../services/session_service.dart&#x27;;
+import &#x27;dashboard_screen.dart&#x27;;
+import &#x27;history_screen.dart&#x27;;
+import &#x27;profile_screen.dart&#x27;;
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key, required this.user});
+  final AppUser user;
+
+  @override
+  State&lt;MainScreen&gt; createState() =&gt; _MainScreenState();
+}
+
+class _MainScreenState extends State&lt;MainScreen&gt; {
+  int _selectedIndex = 0;
+
+  Future&lt;void&gt; _logout() async {
+    await SessionService.clear();
+    if (!mounted) return;
+    Navigator.pushNamedAndRemoveUntil(context, &#x27;/login&#x27;, (route) =&gt; false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final pages = &lt;Widget&gt;[
+      DashboardScreen(user: widget.user),
+      HistoryScreen(userId: widget.user.id),
+      ProfileScreen(user: widget.user, onLogout: _logout),
+    ];
+
+    return Scaffold(
+      body: IndexedStack(index: _selectedIndex, children: pages),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) =&gt; setState(() =&gt; _selectedIndex = index),
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home), label: &#x27;Beranda&#x27;),
+          NavigationDestination(icon: Icon(Icons.receipt_long_outlined), selectedIcon: Icon(Icons.receipt_long), label: &#x27;Riwayat&#x27;),
+          NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: &#x27;Profil&#x27;),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">11. <code>lib/screens/dashboard_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Ringkasan keuangan</p>
+        <p class="fs-6 lh-lg">Mengambil transaksi milik pengguna yang sedang login, menghitung pemasukan, pengeluaran, dan saldo, serta menampilkan transaksi terbaru. Halaman ini menjadi titik masuk untuk menambah transaksi atau melihat detail.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../models/app_user.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+import &#x27;../widgets/formatters.dart&#x27;;
+import &#x27;../widgets/transaction_tile.dart&#x27;;
+
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key, required this.user});
+  final AppUser user;
+
+  @override
+  State&lt;DashboardScreen&gt; createState() =&gt; _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State&lt;DashboardScreen&gt; {
+  List&lt;TransactionModel&gt; _transactions = [];
+  bool _loading = true;
+  bool _hideBalance = false;
+
+  int get _income =&gt; _transactions.where((item) =&gt; item.isIncome).fold(0, (sum, item) =&gt; sum + item.amount);
+  int get _expenses =&gt; _transactions.where((item) =&gt; !item.isIncome).fold(0, (sum, item) =&gt; sum + item.amount);
+  int get _balance =&gt; _income - _expenses;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadTransactions();
+  }
+
+  Future&lt;void&gt; _loadTransactions() async {
+    final items = await AppDatabase.instance.getTransactions(widget.user.id);
+    if (!mounted) return;
+    setState(() {
+      _transactions = items;
+      _loading = false;
+    });
+  }
+
+  Future&lt;void&gt; _openAddForm() async {
+    await Navigator.pushNamed(context, &#x27;/add&#x27;, arguments: widget.user.id);
+    await _loadTransactions();
+  }
+
+  Future&lt;void&gt; _openDetail(TransactionModel transaction) async {
+    await Navigator.pushNamed(context, &#x27;/detail&#x27;, arguments: transaction);
+    await _loadTransactions();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final recent = _transactions.take(4).toList();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(&#x27;Dashboard Keuangan&#x27;),
+        actions: [
+          IconButton(onPressed: _loadTransactions, tooltip: &#x27;Muat ulang&#x27;, icon: const Icon(Icons.refresh)),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _openAddForm,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        icon: const Icon(Icons.add),
+        label: const Text(&#x27;Tambah&#x27;),
+      ),
+      body: RefreshIndicator(
+        onRefresh: _loadTransactions,
+        child: _loading
+            ? const Center(child: CircularProgressIndicator())
+            : ListView(
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 100),
+                children: [
+                  Text(&#x27;Halo, ${widget.user.name} 👋&#x27;, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 4),
+                  Text(&#x27;Ringkasan keuanganmu&#x27;, style: TextStyle(color: Colors.grey.shade600)),
+                  const SizedBox(height: 20),
+                  Card(
+                    color: Colors.red,
+                    elevation: 3,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                            const Text(&#x27;Saldo Utama&#x27;, style: TextStyle(color: Colors.white70, fontSize: 16)),
+                            IconButton(
+                              onPressed: () =&gt; setState(() =&gt; _hideBalance = !_hideBalance),
+                              color: Colors.white,
+                              icon: Icon(_hideBalance ? Icons.visibility_off : Icons.visibility),
+                            ),
+                          ]),
+                          Text(_hideBalance ? &#x27;••••••••&#x27; : formatRupiah(_balance),
+                            style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold)),
+                          const SizedBox(height: 20),
+                          Row(children: [
+                            Expanded(child: _SummaryItem(label: &#x27;Pemasukan&#x27;, amount: _income, icon: Icons.south_west)),
+                            const SizedBox(width: 12),
+                            Expanded(child: _SummaryItem(label: &#x27;Pengeluaran&#x27;, amount: _expenses, icon: Icons.north_east)),
+                          ]),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  const Text(&#x27;Transaksi Terbaru&#x27;, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 12),
+                  if (recent.isEmpty)
+                    Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(color: Colors.grey.shade100, borderRadius: BorderRadius.circular(16)),
+                      child: Column(children: [
+                        Icon(Icons.receipt_long, size: 42, color: Colors.grey.shade500),
+                        const SizedBox(height: 8),
+                        const Text(&#x27;Belum ada transaksi&#x27;),
+                        const SizedBox(height: 4),
+                        Text(&#x27;Tekan tombol Tambah untuk mencatat transaksi pertamamu.&#x27;, textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.grey.shade600)),
+                      ]),
+                    )
+                  else
+                    ...recent.map((item) =&gt; TransactionTile(transaction: item, onTap: () =&gt; _openDetail(item))),
+                ],
+              ),
+      ),
+    );
+  }
+}
+
+class _SummaryItem extends StatelessWidget {
+  const _SummaryItem({required this.label, required this.amount, required this.icon});
+  final String label;
+  final int amount;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(color: Colors.white.withOpacity(0.14), borderRadius: BorderRadius.circular(14)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Icon(icon, color: Colors.white, size: 20),
+        const SizedBox(height: 8),
+        Text(label, style: const TextStyle(color: Colors.white70, fontSize: 12)),
+        const SizedBox(height: 4),
+        Text(formatRupiah(amount), maxLines: 1, overflow: TextOverflow.ellipsis,
+          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+      ]),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">12. <code>lib/screens/add_transaction_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Form input transaksi</p>
+        <p class="fs-6 lh-lg">Menyediakan input judul, nominal, jenis, kategori, tanggal, dan catatan. Validasi memastikan input wajib terisi dan nominal bernilai valid sebelum objek TransactionModel disimpan melalui AppDatabase.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+import &#x27;../widgets/formatters.dart&#x27;;
+
+class AddTransactionScreen extends StatefulWidget {
+  const AddTransactionScreen({super.key, required this.userId});
+  final int userId;
+
+  @override
+  State&lt;AddTransactionScreen&gt; createState() =&gt; _AddTransactionScreenState();
+}
+
+class _AddTransactionScreenState extends State&lt;AddTransactionScreen&gt; {
+  final _formKey = GlobalKey&lt;FormState&gt;();
+  final _titleController = TextEditingController();
+  final _amountController = TextEditingController();
+  final _noteController = TextEditingController();
+  String _type = &#x27;Pengeluaran&#x27;;
+  String _category = &#x27;Makanan&#x27;;
+  DateTime _selectedDate = DateTime.now();
+  bool _saving = false;
+
+  static const Map&lt;String, List&lt;String&gt;&gt; _categories = {
+    &#x27;Pemasukan&#x27;: [&#x27;Gaji&#x27;, &#x27;Bonus&#x27;, &#x27;Hadiah&#x27;, &#x27;Investasi&#x27;, &#x27;Lainnya&#x27;],
+    &#x27;Pengeluaran&#x27;: [&#x27;Makanan&#x27;, &#x27;Transportasi&#x27;, &#x27;Belanja&#x27;, &#x27;Tagihan&#x27;, &#x27;Hiburan&#x27;, &#x27;Kesehatan&#x27;, &#x27;Lainnya&#x27;],
+  };
+
+  @override
+  void dispose() {
+    _titleController.dispose();
+    _amountController.dispose();
+    _noteController.dispose();
+    super.dispose();
+  }
+
+  Future&lt;void&gt; _chooseDate() async {
+    final selected = await showDatePicker(
+      context: context,
+      initialDate: _selectedDate,
+      firstDate: DateTime(2000),
+      lastDate: DateTime.now().add(const Duration(days: 365)),
+    );
+    if (selected != null) setState(() =&gt; _selectedDate = selected);
+  }
+
+  Future&lt;void&gt; _saveTransaction() async {
+    if (!_formKey.currentState!.validate()) return;
+    setState(() =&gt; _saving = true);
+    try {
+      final amount = int.parse(_amountController.text.trim());
+      await AppDatabase.instance.insertTransaction(TransactionModel(
+        userId: widget.userId,
+        title: _titleController.text.trim(),
+        amount: amount,
+        type: _type,
+        category: _category,
+        date: _selectedDate,
+        note: _noteController.text.trim(),
+      ));
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text(&#x27;Transaksi berhasil disimpan.&#x27;)));
+      Navigator.pop(context, true);
+    } catch (error) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(&#x27;Gagal menyimpan transaksi: $error&#x27;)));
+    } finally {
+      if (mounted) setState(() =&gt; _saving = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final availableCategories = _categories[_type]!;
+    if (!availableCategories.contains(_category)) _category = availableCategories.first;
+
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;Tambah Transaksi&#x27;)),
+      body: SafeArea(
+        child: Form(
+          key: _formKey,
+          child: ListView(
+            padding: const EdgeInsets.all(20),
+            children: [
+              const Text(&#x27;Jenis Transaksi&#x27;, style: TextStyle(fontWeight: FontWeight.w600)),
+              const SizedBox(height: 10),
+              SegmentedButton&lt;String&gt;(
+                segments: const [
+                  ButtonSegment(value: &#x27;Pemasukan&#x27;, label: Text(&#x27;Pemasukan&#x27;), icon: Icon(Icons.south_west)),
+                  ButtonSegment(value: &#x27;Pengeluaran&#x27;, label: Text(&#x27;Pengeluaran&#x27;), icon: Icon(Icons.north_east)),
+                ],
+                selected: {_type},
+                onSelectionChanged: (selection) =&gt; setState(() {
+                  _type = selection.first;
+                  _category = _categories[_type]!.first;
+                }),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: _titleController,
+                textCapitalization: TextCapitalization.sentences,
+                decoration: const InputDecoration(labelText: &#x27;Nama transaksi&#x27;, prefixIcon: Icon(Icons.edit_note)),
+                validator: (value) =&gt; value == null || value.trim().isEmpty ? &#x27;Nama transaksi wajib diisi&#x27; : null,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _amountController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(labelText: &#x27;Nominal (Rupiah)&#x27;, prefixIcon: Icon(Icons.payments_outlined)),
+                validator: (value) {
+                  if (value == null || value.trim().isEmpty) return &#x27;Nominal wajib diisi&#x27;;
+                  final amount = int.tryParse(value.trim());
+                  if (amount == null) return &#x27;Nominal harus berupa angka bulat tanpa titik&#x27;;
+                  if (amount &lt;= 0) return &#x27;Nominal harus lebih dari nol&#x27;;
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              DropdownButtonFormField&lt;String&gt;(
+                value: _category,
+                decoration: const InputDecoration(labelText: &#x27;Kategori&#x27;, prefixIcon: Icon(Icons.category_outlined)),
+                items: availableCategories.map((item) =&gt; DropdownMenuItem(value: item, child: Text(item))).toList(),
+                onChanged: (value) =&gt; setState(() =&gt; _category = value ?? availableCategories.first),
+              ),
+              const SizedBox(height: 16),
+              InkWell(
+                onTap: _chooseDate,
+                borderRadius: BorderRadius.circular(12),
+                child: InputDecorator(
+                  decoration: const InputDecoration(labelText: &#x27;Tanggal transaksi&#x27;, prefixIcon: Icon(Icons.calendar_month)),
+                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                    Text(formatDate(_selectedDate)),
+                    const Icon(Icons.edit_calendar, size: 20),
+                  ]),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _noteController,
+                maxLines: 3,
+                decoration: const InputDecoration(labelText: &#x27;Catatan (opsional)&#x27;, prefixIcon: Icon(Icons.notes), alignLabelWithHint: true),
+              ),
+              const SizedBox(height: 28),
+              ElevatedButton.icon(
+                onPressed: _saving ? null : _saveTransaction,
+                icon: const Icon(Icons.save_outlined),
+                label: Text(_saving ? &#x27;Menyimpan...&#x27; : &#x27;Simpan Transaksi&#x27;),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">13. <code>lib/screens/history_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Daftar riwayat transaksi</p>
+        <p class="fs-6 lh-lg">Mengambil dan menampilkan transaksi yang terhubung ke ID pengguna. Pengguna dapat memilih item untuk membuka detail; daftar dapat dimuat ulang setelah terjadi perubahan data.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+import &#x27;../widgets/transaction_tile.dart&#x27;;
+
+class HistoryScreen extends StatefulWidget {
+  const HistoryScreen({super.key, required this.userId});
+  final int userId;
+
+  @override
+  State&lt;HistoryScreen&gt; createState() =&gt; _HistoryScreenState();
+}
+
+class _HistoryScreenState extends State&lt;HistoryScreen&gt; {
+  List&lt;TransactionModel&gt; _transactions = [];
+  bool _loading = true;
+  String _filter = &#x27;Semua&#x27;;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadTransactions();
+  }
+
+  Future&lt;void&gt; _loadTransactions() async {
+    final items = await AppDatabase.instance.getTransactions(widget.userId);
+    if (!mounted) return;
+    setState(() {
+      _transactions = items;
+      _loading = false;
+    });
+  }
+
+  Future&lt;void&gt; _openDetail(TransactionModel item) async {
+    await Navigator.pushNamed(context, &#x27;/detail&#x27;, arguments: item);
+    await _loadTransactions();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final visibleItems = _transactions.where((item) {
+      if (_filter == &#x27;Pemasukan&#x27;) return item.isIncome;
+      if (_filter == &#x27;Pengeluaran&#x27;) return !item.isIncome;
+      return true;
+    }).toList();
+
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;Riwayat Transaksi&#x27;)),
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : RefreshIndicator(
+              onRefresh: _loadTransactions,
+              child: ListView(
+                padding: const EdgeInsets.all(16),
+                children: [
+                  SegmentedButton&lt;String&gt;(
+                    segments: const [
+                      ButtonSegment(value: &#x27;Semua&#x27;, label: Text(&#x27;Semua&#x27;)),
+                      ButtonSegment(value: &#x27;Pemasukan&#x27;, label: Text(&#x27;Masuk&#x27;)),
+                      ButtonSegment(value: &#x27;Pengeluaran&#x27;, label: Text(&#x27;Keluar&#x27;)),
+                    ],
+                    selected: {_filter},
+                    onSelectionChanged: (selection) =&gt; setState(() =&gt; _filter = selection.first),
+                  ),
+                  const SizedBox(height: 16),
+                  if (visibleItems.isEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 64),
+                      child: Column(children: [
+                        Icon(Icons.history, size: 52, color: Colors.grey.shade400),
+                        const SizedBox(height: 12),
+                        const Text(&#x27;Belum ada riwayat transaksi&#x27;),
+                      ]),
+                    )
+                  else
+                    ...visibleItems.map((item) =&gt; TransactionTile(transaction: item, onTap: () =&gt; _openDetail(item))),
+                ],
+              ),
+            ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">14. <code>lib/screens/transaction_detail_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Detail dan penghapusan transaksi</p>
+        <p class="fs-6 lh-lg">Menampilkan rincian transaksi yang dipilih. Sebelum menghapus, aplikasi meminta konfirmasi, kemudian menghapus data melalui database dan kembali ke halaman sebelumnya.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../database/app_database.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+import &#x27;../widgets/formatters.dart&#x27;;
+
+class TransactionDetailScreen extends StatelessWidget {
+  const TransactionDetailScreen({super.key, required this.transaction});
+  final TransactionModel transaction;
+
+  @override
+  Widget build(BuildContext context) {
+    final isIncome = transaction.isIncome;
+    final color = isIncome ? Colors.green.shade700 : Colors.red.shade700;
+
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;Detail Transaksi&#x27;)),
+      body: ListView(
+        padding: const EdgeInsets.all(24),
+        children: [
+          const SizedBox(height: 16),
+          CircleAvatar(
+            radius: 42,
+            backgroundColor: color.withOpacity(0.12),
+            child: Icon(isIncome ? Icons.south_west : Icons.north_east, size: 42, color: color),
+          ),
+          const SizedBox(height: 20),
+          Text(transaction.title, textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+          Text(&#x27;${isIncome ? &#x27;+&#x27; : &#x27;-&#x27;} ${formatRupiah(transaction.amount)}&#x27;, textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: color)),
+          const SizedBox(height: 24),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(18),
+              child: Column(children: [
+                _DetailRow(label: &#x27;Jenis transaksi&#x27;, value: transaction.type),
+                const Divider(height: 24),
+                _DetailRow(label: &#x27;Kategori&#x27;, value: transaction.category),
+                const Divider(height: 24),
+                _DetailRow(label: &#x27;Tanggal&#x27;, value: formatDate(transaction.date)),
+                if (transaction.note.trim().isNotEmpty) ...[
+                  const Divider(height: 24),
+                  _DetailRow(label: &#x27;Catatan&#x27;, value: transaction.note),
+                ],
+              ]),
+            ),
+          ),
+          const SizedBox(height: 24),
+          OutlinedButton.icon(
+            onPressed: () async {
+              final confirmed = await showDialog&lt;bool&gt;(
+                context: context,
+                builder: (dialogContext) =&gt; AlertDialog(
+                  title: const Text(&#x27;Hapus transaksi?&#x27;),
+                  content: const Text(&#x27;Transaksi yang dihapus tidak dapat dikembalikan.&#x27;),
+                  actions: [
+                    TextButton(onPressed: () =&gt; Navigator.pop(dialogContext, false), child: const Text(&#x27;Batal&#x27;)),
+                    FilledButton(onPressed: () =&gt; Navigator.pop(dialogContext, true), child: const Text(&#x27;Hapus&#x27;)),
+                  ],
+                ),
+              );
+              if (confirmed != true || transaction.id == null) return;
+              await AppDatabase.instance.deleteTransaction(
+                transactionId: transaction.id!,
+                userId: transaction.userId,
+              );
+              if (context.mounted) {
+                Navigator.pop(context, true);
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text(&#x27;Transaksi dihapus.&#x27;)));
+              }
+            },
+            icon: const Icon(Icons.delete_outline),
+            label: const Text(&#x27;Hapus Transaksi&#x27;),
+            style: OutlinedButton.styleFrom(foregroundColor: Colors.red),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _DetailRow extends StatelessWidget {
+  const _DetailRow({required this.label, required this.value});
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) =&gt; Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(width: 125, child: Text(label, style: TextStyle(color: Colors.grey.shade600))),
+          const SizedBox(width: 12),
+          Expanded(child: Text(value, style: const TextStyle(fontWeight: FontWeight.w600))),
+        ],
+      );
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">15. <code>lib/screens/profile_screen.dart</code></h4>
+        <p class="fw-semibold mb-2">Informasi akun dan logout</p>
+        <p class="fs-6 lh-lg">Menampilkan informasi pengguna dan menyediakan aksi keluar. Logout meminta konfirmasi, menghapus sesi melalui SessionService, lalu mengarahkan pengguna ke halaman autentikasi.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../models/app_user.dart&#x27;;
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key, required this.user, required this.onLogout});
+  final AppUser user;
+  final Future&lt;void&gt; Function() onLogout;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(&#x27;Profil Pengguna&#x27;)),
+      body: ListView(
+        padding: const EdgeInsets.all(24),
+        children: [
+          const SizedBox(height: 16),
+          Center(
+            child: CircleAvatar(
+              radius: 48,
+              backgroundColor: Colors.red.shade50,
+              child: const Icon(Icons.person, size: 54, color: Colors.red),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Text(user.name, textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 4),
+          Text(user.email, textAlign: TextAlign.center, style: TextStyle(color: Colors.grey.shade600)),
+          const SizedBox(height: 32),
+          Card(child: Column(children: [
+            ListTile(leading: const Icon(Icons.person_outline), title: const Text(&#x27;Nama&#x27;), subtitle: Text(user.name)),
+            const Divider(height: 1),
+            ListTile(leading: const Icon(Icons.email_outlined), title: const Text(&#x27;Email&#x27;), subtitle: Text(user.email)),
+          ])),
+          const SizedBox(height: 24),
+          OutlinedButton.icon(
+            onPressed: () async {
+              final confirmed = await showDialog&lt;bool&gt;(
+                context: context,
+                builder: (dialogContext) =&gt; AlertDialog(
+                  title: const Text(&#x27;Logout&#x27;),
+                  content: const Text(&#x27;Yakin ingin keluar dari akun ini?&#x27;),
+                  actions: [
+                    TextButton(onPressed: () =&gt; Navigator.pop(dialogContext, false), child: const Text(&#x27;Batal&#x27;)),
+                    FilledButton(onPressed: () =&gt; Navigator.pop(dialogContext, true), child: const Text(&#x27;Logout&#x27;)),
+                  ],
+                ),
+              );
+              if (confirmed == true) await onLogout();
+            },
+            icon: const Icon(Icons.logout),
+            label: const Text(&#x27;Logout&#x27;),
+            style: OutlinedButton.styleFrom(foregroundColor: Colors.red, minimumSize: const Size.fromHeight(48)),
+          ),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">16. <code>lib/widgets/formatters.dart</code></h4>
+        <p class="fw-semibold mb-2">Fungsi bantu format tampilan</p>
+        <p class="fs-6 lh-lg">Berisi helper pemformatan nilai agar nominal atau tanggal lebih mudah dibaca dan konsisten di berbagai bagian antarmuka.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>String formatRupiah(int amount) {
+  final digits = amount.abs().toString();
+  final buffer = StringBuffer();
+  for (var i = 0; i &lt; digits.length; i++) {
+    buffer.write(digits[i]);
+    final remaining = digits.length - i - 1;
+    if (remaining &gt; 0 &amp;&amp; remaining % 3 == 0) buffer.write(&#x27;.&#x27;);
+  }
+  return &#x27;Rp ${amount &lt; 0 ? &#x27;-&#x27; : &#x27;&#x27;}${buffer.toString()}&#x27;;
+}
+
+String formatDate(DateTime date) {
+  const months = [
+    &#x27;Januari&#x27;, &#x27;Februari&#x27;, &#x27;Maret&#x27;, &#x27;April&#x27;, &#x27;Mei&#x27;, &#x27;Juni&#x27;,
+    &#x27;Juli&#x27;, &#x27;Agustus&#x27;, &#x27;September&#x27;, &#x27;Oktober&#x27;, &#x27;November&#x27;, &#x27;Desember&#x27;
+  ];
+  return &#x27;${date.day} ${months[date.month - 1]} ${date.year}&#x27;;
+}
+</code></pre>
+        </details>
+      </div>
+      <div class="border rounded-3 p-4 mb-4" style="border-color:#f3c5dc !important;">
+        <h4 class="fw-bold mb-2" style="color:#73073d;">17. <code>lib/widgets/transaction_tile.dart</code></h4>
+        <p class="fw-semibold mb-2">Widget item transaksi yang dapat digunakan ulang</p>
+        <p class="fs-6 lh-lg">Menyusun tampilan satu transaksi pada daftar, termasuk informasi transaksi dan gaya visualnya. Pemisahan ini menghindari pengulangan kode UI di dashboard dan riwayat.</p>
+        <details class="mt-3">
+          <summary class="fw-semibold" style="color:#73073d; cursor:pointer;">Lihat source code lengkap file ini</summary>
+          <pre class="bg-light p-3 rounded mt-3" style="overflow-x:auto; white-space:pre; font-size:.82rem;"><code>import &#x27;package:flutter/material.dart&#x27;;
+import &#x27;../models/transaction_model.dart&#x27;;
+import &#x27;formatters.dart&#x27;;
+
+class TransactionTile extends StatelessWidget {
+  const TransactionTile({super.key, required this.transaction, this.onTap});
+
+  final TransactionModel transaction;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final income = transaction.isIncome;
+    final color = income ? Colors.green.shade700 : Colors.red.shade700;
+    return Card(
+      margin: const EdgeInsets.only(bottom: 10),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        leading: CircleAvatar(
+          backgroundColor: color.withOpacity(0.12),
+          child: Icon(income ? Icons.south_west : Icons.north_east, color: color),
+        ),
+        title: Text(transaction.title, style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Text(&#x27;${transaction.category} • ${formatDate(transaction.date)}&#x27;),
+        trailing: Text(
+          &#x27;${income ? &#x27;+&#x27; : &#x27;-&#x27;} ${formatRupiah(transaction.amount)}&#x27;,
+          style: TextStyle(color: color, fontWeight: FontWeight.bold),
+        ),
+        onTap: onTap,
+      ),
+    );
+  }
+}
+</code></pre>
+        </details>
+      </div>
+      <h3 class="fw-bold mt-4 mb-3" style="color:#73073d;">C. Alur kerja antarfile</h3>
+      <ol class="fs-5 lh-lg">
+        <li><b>Registrasi:</b> <code>register_screen.dart</code> memvalidasi input dan memanggil <code>app_database.dart</code> untuk menyimpan akun. Data akun direpresentasikan menggunakan <code>app_user.dart</code>.</li>
+        <li><b>Login:</b> <code>login_screen.dart</code> mengirim kredensial ke database. Jika valid, <code>session_service.dart</code> menyimpan ID pengguna. <code>auth_gate.dart</code> memeriksa sesi ketika aplikasi dimulai.</li>
+        <li><b>Memuat dashboard:</b> <code>dashboard_screen.dart</code> meminta daftar transaksi berdasarkan ID pengguna. Setiap baris data dibentuk menjadi <code>TransactionModel</code> dan dihitung menjadi ringkasan keuangan.</li>
+        <li><b>Menambah transaksi:</b> <code>add_transaction_screen.dart</code> memvalidasi input, membentuk objek model transaksi, lalu menyimpannya melalui database. Dashboard atau riwayat dapat memuat ulang data setelah form ditutup.</li>
+        <li><b>Melihat dan menghapus transaksi:</b> <code>history_screen.dart</code> menampilkan daftar, <code>transaction_tile.dart</code> mengatur tampilan tiap item, dan <code>transaction_detail_screen.dart</code> menampilkan detail serta memproses penghapusan.</li>
+        <li><b>Logout:</b> halaman profil atau navigasi utama memanggil penghapusan sesi pada <code>session_service.dart</code>, kemudian aplikasi kembali ke alur autentikasi.</li>
+      </ol>
+      <p class="fs-6 lh-lg"><b>Catatan penyesuaian tampilan:</b> source code di dalam ZIP merupakan acuan struktur dan logika aplikasi. Warna UI pada project yang digunakan untuk rilis telah disesuaikan menjadi kuning keemasan. Apabila kode warna berubah setelah ZIP dibuat, gunakan file project terbaru sebagai acuan untuk screenshot dan pengujian visual.</p>
+    </div></div>
 
     <!-- HASIL DAN PEMBAHASAN -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">V. Hasil dan Pembahasan</h2>
-<p class="fs-5 lh-lg">Project akhir Expense Tracker menggabungkan komponen antarmuka Flutter, pengelolaan form, validasi input, navigasi, passing data, dan penyimpanan data lokal. Kode dipisahkan ke dalam file halaman, model, widget, serta pengelola database.</p>
-<p class="fs-5 lh-lg">Dashboard menampilkan saldo dari selisih pemasukan dan pengeluaran, ringkasan keuangan, serta daftar transaksi terbaru. Form transaksi memungkinkan pengguna menentukan jenis, kategori, tanggal, nominal, dan catatan. Halaman detail menampilkan informasi transaksi terpilih dan menyediakan fungsi penghapusan dengan konfirmasi.</p>
-<p class="fs-5 lh-lg">Form login dan registrasi menerapkan validasi sebelum data diproses. SQLite melalui <b>sqflite</b> digunakan untuk mengelola data akun dan transaksi. Setelah operasi data selesai, tampilan dimuat ulang agar informasi sesuai dengan data terbaru.</p>
-<p class="fs-5 lh-lg">Tampilan aplikasi menggunakan kuning keemasan sebagai aksen utama, latar abu-abu muda, dan kartu putih. Warna hijau untuk pemasukan dan merah untuk pengeluaran dipertahankan sebagai pembeda visual. Pengujian pada target platform perlu dilakukan sebelum aplikasi dipublikasikan.</p>
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+        <h2 class="fw-bold mb-4" style="color:#73073d;">V. Hasil dan Pembahasan</h2>
+        <p class="fs-5 lh-lg">Project Expense Tracker menggabungkan beberapa fungsi utama dalam satu aplikasi, yaitu autentikasi pengguna, penyimpanan data lokal, pencatatan transaksi, ringkasan keuangan, riwayat, detail transaksi, profil, dan logout. Pemisahan file berdasarkan fungsi membuat kode lebih terstruktur serta memudahkan pengembangan dan pemeliharaan.</p>
+        <p class="fs-5 lh-lg">Penyimpanan data dilakukan melalui SQLite. Tabel <code>users</code> menyimpan informasi akun beserta hash password dan salt, sedangkan tabel <code>transactions</code> menyimpan transaksi yang terkait dengan pengguna melalui <code>user_id</code>. Fungsi query transaksi menggunakan ID pengguna untuk memisahkan data antarakun. SharedPreferences digunakan untuk menyimpan ID sesi, bukan sebagai tempat penyimpanan utama data transaksi.</p>
+        <p class="fs-5 lh-lg">Dashboard mengambil transaksi dari database dan menghitung total pemasukan, pengeluaran, serta saldo. Form transaksi melakukan validasi sebelum data disimpan. Riwayat dan detail membaca data yang sama dari database, sedangkan penghapusan menghapus catatan yang dipilih berdasarkan ID transaksi dan ID pengguna. Dengan alur ini, perubahan transaksi dapat tercermin kembali pada daftar dan ringkasan setelah data dimuat ulang.</p>
+        <p class="fs-5 lh-lg">Navigasi aplikasi menggunakan route yang dikonfigurasi pada <code>MaterialApp</code>. Argumen route digunakan untuk meneruskan ID pengguna ke form transaksi dan objek transaksi ke halaman detail. <code>AuthGate</code> memeriksa sesi saat aplikasi dibuka agar halaman yang ditampilkan sesuai dengan status pengguna.</p>
+        <p class="fs-5 lh-lg">Pada tahap akhir, tampilan UI disesuaikan dengan warna kuning keemasan. Aplikasi kemudian dibangun menggunakan mode release melalui Flutter CLI. Hasil akhir perlu diverifikasi dengan menjalankan APK pada perangkat Android, termasuk pengujian penyimpanan setelah aplikasi ditutup dan dibuka kembali.</p>
+        <p class="fs-5 lh-lg"><b>Catatan:</b> hasil pengujian akhir sebaiknya dilengkapi screenshot aktual dari versi aplikasi yang sudah diperbarui. Jika laporan ini dibuka di perangkat lain, sertakan juga folder gambar yang digunakan agar semua ilustrasi dapat ditampilkan.</p>
+        <h3 class="fw-bold mt-4 mb-3" style="color:#73073d;">Dokumentasi hasil aplikasi</h3>
+        <p class="fs-6 lh-lg">Tambahkan screenshot aktual pada ruang berikut setelah pengujian. Gunakan gambar dari versi aplikasi terbaru dengan tema kuning keemasan.</p>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="border rounded-3 p-3 text-center" style="border-style:dashed !important; border-color:#d99ab9 !important;"><p class="fw-semibold mb-1">Gambar 1. Halaman Login/Register</p><p class="text-muted small mb-0">Tempatkan screenshot di sini: <code>images/login-register-akhir.png</code></p></div></div>
+          <div class="col-md-6"><div class="border rounded-3 p-3 text-center" style="border-style:dashed !important; border-color:#d99ab9 !important;"><p class="fw-semibold mb-1">Gambar 2. Dashboard</p><p class="text-muted small mb-0">Tempatkan screenshot di sini: <code>images/dashboard-akhir.png</code></p></div></div>
+          <div class="col-md-6"><div class="border rounded-3 p-3 text-center" style="border-style:dashed !important; border-color:#d99ab9 !important;"><p class="fw-semibold mb-1">Gambar 3. Form Tambah Transaksi</p><p class="text-muted small mb-0">Tempatkan screenshot di sini: <code>images/form-transaksi-akhir.png</code></p></div></div>
+          <div class="col-md-6"><div class="border rounded-3 p-3 text-center" style="border-style:dashed !important; border-color:#d99ab9 !important;"><p class="fw-semibold mb-1">Gambar 4. Detail/Riwayat Transaksi</p><p class="text-muted small mb-0">Tempatkan screenshot di sini: <code>images/detail-transaksi-akhir.png</code></p></div></div>
         </div>
-    </div>
+    </div></div>
 
     <!-- KESIMPULAN -->
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-        <div class="p-5">
-<h2 class="fw-bold mb-4" style="color:#73073d;">VI. Kesimpulan</h2>
-<p class="fs-5 lh-lg">Berdasarkan pengembangan project akhir, Flutter dapat digunakan untuk membangun aplikasi pencatatan keuangan dengan antarmuka yang terstruktur dan interaktif. Pemisahan halaman, model, widget, dan pengelola database membantu kode lebih mudah dipelihara.</p>
-<p class="fs-5 lh-lg">Expense Tracker menyediakan fitur registrasi dan login, dashboard ringkasan keuangan, pencatatan pemasukan dan pengeluaran, detail transaksi, serta penghapusan transaksi. Validasi input membantu memastikan data memenuhi ketentuan sebelum disimpan.</p>
-<p class="fs-5 lh-lg">Penggunaan SQLite melalui <b>sqflite</b> memungkinkan data akun dan transaksi dikelola secara lokal. Dengan menggabungkan materi Praktikum 1 sampai Praktikum 5, project ini menerapkan pembuatan antarmuka, pengelolaan input, navigasi, passing data, dan pengolahan data. Aplikasi perlu diuji pada target platform sebelum deployment web.</p>
-        </div>
-    </div>
+    <div class="card border-0 shadow-lg mb-5 overflow-hidden"><div class="p-5">
+        <h2 class="fw-bold mb-4" style="color:#73073d;">VI. Kesimpulan</h2>
+        <p class="fs-5 lh-lg">Berdasarkan pengembangan project, Expense Tracker dirancang sebagai aplikasi pencatatan keuangan berbasis Flutter yang menyediakan fitur registrasi, login, pencatatan pemasukan dan pengeluaran, dashboard, riwayat, detail transaksi, profil, dan logout.</p>
+        <p class="fs-5 lh-lg">SQLite digunakan sebagai penyimpanan lokal untuk akun dan transaksi, sedangkan SharedPreferences menyimpan ID sesi pengguna. Model data, layanan sesi, database, halaman, dan widget dipisahkan berdasarkan fungsi sehingga struktur project lebih terorganisasi.</p>
+        <p class="fs-5 lh-lg">Project ini menerapkan validasi form, navigasi antarrute, pengambilan dan penyimpanan data, serta proses build APK release. Tahap pengujian akhir memastikan fitur berjalan sesuai kebutuhan dan data transaksi tetap tersedia setelah aplikasi dibuka kembali.</p>
+    </div></div>
 
     <!-- GITHUB -->
     <div class="text-center mt-5">
-        <a
-            href="https://github.com/PutriBalqisAfradinata/PutriBalqisAfradinata_2411531009_AplikasiMobile"
-            target="_blank"
-            class="btn btn-lg text-white fw-semibold px-4 py-3 shadow"
-            style="background-color:#ff69b4; border-radius:14px;"
-        >
-            🔗 Lihat Repository GitHub Project
-        </a>
+        <a href="https://github.com/PutriBalqisAfradinata/PutriBalqisAfradinata_2411531009_AplikasiMobile" target="_blank" class="btn btn-lg text-white fw-semibold px-4 py-3 shadow" style="background-color:#ff69b4; border-radius:14px;">🔗 Lihat Repository GitHub</a>
     </div>
-
 </div>
 </section>
 
