@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="id">
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +8,7 @@
     content="width=device-width, initial-scale=1.0">
 
     <title>
-        Report 2 AppMobile - State Management ResepKu
+        Laporan Praktikum 6 — State Management ResepKu
     </title>
 
     <!-- FONT -->
@@ -26,23 +24,17 @@
 
 </head>
 
-
 <body style="background-color:#fff7fb;">
 
-
 <!-- NAVBAR -->
-
 <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
 style="background-color:#ffb6d9;">
 
     <div class="container">
 
         <a class="navbar-brand fw-bold" href="index.html">
-
             Balqis<span style="color:#73073d;">Portfolio</span>
-
         </a>
-
 
         <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -52,68 +44,43 @@ style="background-color:#ffb6d9;">
 
         </button>
 
-
         <div class="collapse navbar-collapse" id="navbarNav">
 
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-
                     <a class="nav-link fw-semibold"
                     href="index.html">
-
                         Home
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a class="nav-link fw-semibold"
                     href="about.html">
-
                         About
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a class="nav-link fw-semibold"
                     href="portfolio.html">
-
                         Portfolio
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a class="nav-link fw-semibold active-page"
                     href="report.html">
-
                         Report
-
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
                     <a class="nav-link fw-semibold"
                     href="contact.html">
-
                         Contact
-
                     </a>
-
                 </li>
 
             </ul>
@@ -129,11 +96,12 @@ style="background-color:#ffb6d9;">
 
 
 <section class="pb-5">
-
 <div class="container">
 
 
-<!-- JUDUL -->
+<!-- ========================================================= -->
+<!-- HEADER -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg overflow-hidden mb-5">
 
@@ -147,11 +115,15 @@ style="background-color:#ffb6d9;">
         <div class="mt-3 d-flex flex-wrap gap-2">
 
             <span class="badge rounded-pill bg-light text-dark px-3 py-2">
-                Aplikasi Mobile
+                Praktikum Aplikasi Mobile
             </span>
 
             <span class="badge rounded-pill bg-light text-dark px-3 py-2">
                 Semester 5
+            </span>
+
+            <span class="badge rounded-pill bg-light text-dark px-3 py-2">
+                State Management
             </span>
 
             <span class="badge rounded-pill bg-light text-dark px-3 py-2">
@@ -165,32 +137,140 @@ style="background-color:#ffb6d9;">
 </div>
 
 
+
+<!-- ========================================================= -->
+<!-- IDENTITAS -->
+<!-- ========================================================= -->
+
+<div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+    <div class="p-5">
+
+        <h2 class="fw-bold mb-4" style="color:#73073d;">
+            Identitas Praktikum
+        </h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered align-middle">
+
+                <tr>
+                    <th style="width:35%;">
+                        Mata Kuliah
+                    </th>
+                    <td>
+                        Praktikum Aplikasi Mobile (DIF61145)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Modul
+                    </th>
+                    <td>
+                        Praktikum 6 — State Management: setState() dan Provider
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Materi
+                    </th>
+                    <td>
+                        State Management pada Aplikasi ResepKu
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        CPMK
+                    </th>
+                    <td>
+                        CPMK-45.02 — Mengembangkan, menguji, dan melakukan optimisasi aplikasi mobile interaktif
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Nama
+                    </th>
+                    <td>
+                        Putri Balqis Afradinata
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        NIM
+                    </th>
+                    <td>
+                        2411531009
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================================================= -->
 <!-- I. TUJUAN -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    I. Tujuan Praktikum
+I. Tujuan Praktikum
 </h2>
+
+<p class="fs-5 lh-lg">
+Praktikum ini bertujuan untuk memahami penerapan state management
+pada aplikasi Flutter melalui pengembangan aplikasi ResepKu.
+Pada praktikum ini digunakan dua pendekatan, yaitu state lokal
+menggunakan <code>setState()</code> dan state bersama menggunakan
+package <code>provider</code>.
+</p>
 
 <ul class="fs-5 lh-lg">
 
 <li>
-Membuat state lokal menggunakan StatefulWidget dan setState() pada fitur jumlah porsi di halaman Detail.
+Membuat state lokal dengan <code>StatefulWidget</code> dan
+<code>setState()</code> pada fitur jumlah porsi di halaman detail.
 </li>
 
 <li>
-Menjelaskan keterbatasan state lokal ketika satu data dibutuhkan oleh banyak widget dan halaman.
+Menjelaskan keterbatasan state lokal ketika satu data dibutuhkan
+oleh banyak widget dan halaman.
 </li>
 
 <li>
-Membuat state global menggunakan package Provider dengan ChangeNotifier dan MultiProvider pada fitur favorit.
+Membuat state global menggunakan package <code>provider</code>,
+<code>ChangeNotifier</code>, dan <code>MultiProvider</code>.
 </li>
 
 <li>
-Menggunakan context.watch, context.read, dan Consumer untuk membaca serta mengubah state pada beberapa halaman.
+Menerapkan <code>context.watch()</code>,
+<code>context.read()</code>, dan <code>Consumer</code>.
+</li>
+
+<li>
+Menerapkan state management pada fitur favorit yang digunakan
+oleh daftar resep, badge, halaman detail, dan halaman Favorit.
+</li>
+
+<li>
+Menerapkan tema gelap dan terang menggunakan Provider.
+</li>
+
+<li>
+Menerapkan fitur untuk menghapus seluruh resep favorit.
 </li>
 
 </ul>
@@ -200,129 +280,214 @@ Menggunakan context.watch, context.read, dan Consumer untuk membaca serta mengub
 </div>
 
 
+
+<!-- ========================================================= -->
 <!-- II. DASAR TEORI -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    II. Dasar Teori
+II. Dasar Teori
 </h2>
 
 <p class="fs-5 lh-lg">
 
-State merupakan data yang dapat berubah selama aplikasi berjalan dan perubahan tersebut dapat memengaruhi tampilan aplikasi. Dalam aplikasi ResepKu terdapat dua jenis state yang digunakan, yaitu state lokal dan state global.
+<b>State</b> merupakan data yang dapat berubah selama aplikasi
+berjalan dan perubahan tersebut dapat memengaruhi tampilan antarmuka.
+Secara sederhana, UI dapat dipandang sebagai fungsi dari state,
+yaitu <code>UI = f(state)</code>.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-State lokal digunakan untuk data yang hanya dibutuhkan oleh satu halaman. Pada praktikum ini, jumlah porsi pada halaman Detail menggunakan StatefulWidget dan setState() karena data tersebut hanya digunakan pada halaman Detail.
+<b>setState()</b> digunakan untuk mengubah state lokal pada sebuah
+<code>StatefulWidget</code>. Ketika <code>setState()</code> dipanggil,
+Flutter akan membangun kembali widget sehingga perubahan data dapat
+ditampilkan pada UI.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-State global digunakan untuk data yang perlu diakses oleh beberapa widget atau halaman. Pada aplikasi ResepKu, daftar resep favorit membutuhkan state global karena digunakan pada HomePage, DetailPage, badge pada AppBar, dan FavoritePage.
+<b>Provider</b> digunakan untuk mengelola state yang perlu digunakan
+oleh beberapa widget atau halaman. Pada praktikum ini Provider
+menggunakan <code>ChangeNotifier</code> sebagai tempat penyimpanan
+state dan <code>notifyListeners()</code> untuk memberitahukan widget
+yang sedang mendengarkan bahwa data telah berubah.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-Provider digunakan untuk mengelola state global. ChangeNotifier digunakan untuk menyimpan data dan memberitahukan widget ketika terjadi perubahan melalui notifyListeners().
+<b>context.watch()</b> digunakan ketika widget perlu mendengarkan
+perubahan state sehingga widget tersebut akan melakukan rebuild ketika
+data berubah.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-context.watch digunakan untuk membaca state sekaligus mendengarkan perubahan state. context.read digunakan untuk mengakses state tanpa mendengarkan perubahan, sehingga cocok digunakan pada callback seperti tombol. Consumer digunakan sebagai widget untuk mendengarkan perubahan state dari Provider.
+<b>context.read()</b> digunakan ketika widget hanya perlu membaca
+Provider atau memanggil method tanpa ikut mendengarkan perubahan state.
+Penggunaan ini sesuai untuk callback seperti <code>onPressed</code>.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-MultiProvider ditempatkan di atas MaterialApp agar FavoriteProvider dapat diakses oleh seluruh halaman dan route yang ada pada aplikasi.
+<b>Consumer</b> merupakan widget dari package Provider yang digunakan
+untuk mendengarkan perubahan pada sebuah Provider. Ketika
+<code>notifyListeners()</code> dipanggil, bagian yang menggunakan
+Consumer akan dibangun kembali.
 
 </p>
+
+<div class="table-responsive mt-4">
+
+<table class="table table-bordered">
+
+<thead>
+<tr>
+<th>Aspek</th>
+<th>setState()</th>
+<th>Provider</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Penggunaan</td>
+<td>State lokal / ephemeral</td>
+<td>App state yang digunakan banyak widget</td>
+</tr>
+
+<tr>
+<td>Contoh ResepKu</td>
+<td>Jumlah porsi pada DetailPage</td>
+<td>Daftar resep favorit</td>
+</tr>
+
+<tr>
+<td>Tempat data</td>
+<td>Field pada class State</td>
+<td>Class yang meng-extend ChangeNotifier</td>
+</tr>
+
+<tr>
+<td>Update UI</td>
+<td><code>setState()</code></td>
+<td><code>notifyListeners()</code></td>
+</tr>
+
+<tr>
+<td>Membaca state</td>
+<td>Langsung dari field</td>
+<td><code>context.watch()</code>, <code>context.read()</code>, Consumer</td>
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
 </div>
 
+</div>
 
-<!-- III. LANGKAH PRAKTIKUM -->
+
+
+<!-- ========================================================= -->
+<!-- III. LANGKAH-LANGKAH -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    III. Langkah-Langkah Praktikum
+III. Langkah-Langkah Praktikum
 </h2>
 
+<p class="fs-5 lh-lg">
+Praktikum dilakukan dengan membangun aplikasi ResepKu secara bertahap.
+Bagian pertama menggunakan state lokal dengan <code>setState()</code>,
+kemudian dilakukan eksperimen state lokal untuk fitur favorit.
+Setelah keterbatasannya diamati, fitur favorit dipindahkan ke Provider.
+</p>
 
-<!-- A -->
-
-<h3 class="fw-bold mt-4 mb-4" style="color:#73073d;">
-    A. Menyiapkan ResepKu dan State Lokal
-</h3>
-
-
-<ol class="fs-5 lh-lg">
 
 
 <!-- A.1 -->
 
-<li class="mb-5">
+<h3 class="fw-bold mt-5 mb-3" style="color:#73073d;">
+A. Menyiapkan ResepKu dan State Lokal
+</h3>
 
-<b>A.1 — Membuat Project</b>
+<h4 class="fw-bold mt-4">
+A.1 Membuat Project
+</h4>
 
-<br>
-
-<p>
-Membuat project Flutter dengan nama <b>resepku</b>. Setelah project berhasil dibuat, masuk ke folder project dan membuat struktur folder sesuai modul.
+<p class="fs-5 lh-lg">
+Project dibuat menggunakan Flutter dengan nama <code>resepku</code>.
+Perintah yang digunakan:
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>flutter create resepku
+<pre class="bg-light p-3 rounded"><code>flutter create resepku
 cd resepku</code></pre>
 
-<p>
-Folder yang digunakan pada praktikum adalah:
+<p class="fs-5 lh-lg">
+Di dalam folder <code>lib/</code> dibuat folder:
 </p>
 
-<ul>
+<pre class="bg-light p-3 rounded"><code>lib/
+├── main.dart
+├── models/
+│   └── recipe.dart
+├── data/
+│   └── dummy_recipes.dart
+├── providers/
+│   └── favorite_provider.dart
+├── pages/
+│   ├── home_page.dart
+│   ├── detail_page.dart
+│   └── favorite_page.dart
+└── widgets/
+    ├── identity_footer.dart
+    ├── recipe_tile.dart
+    └── favorite_badge_button.dart</code></pre>
 
-<li>models</li>
-<li>data</li>
-<li>providers</li>
-<li>pages</li>
-<li>widgets</li>
-
-</ul>
-
-<p>
-File <b>widget_test.dart</b> bawaan project dihapus karena tidak digunakan dalam praktikum.
+<p class="fs-5 lh-lg">
+File bawaan <code>test/widget_test.dart</code> dihapus karena masih
+merujuk class bawaan Flutter yang tidak digunakan pada project ini.
 </p>
 
-</li>
 
 
 <!-- A.2 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+A.2 Membuat Model Recipe
+</h4>
 
-<b>A.2 — Membuat Model Recipe</b>
-
-<br>
-
-<p>
-Membuat model Recipe untuk merepresentasikan data resep.
+<p class="fs-5 lh-lg">
+File <code>lib/models/recipe.dart</code> digunakan untuk
+merepresentasikan satu resep.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>class Recipe {
+<details class="mt-3">
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code recipe.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>class Recipe {
   final int id;
   final String name;
   final String cuisine;
@@ -332,7 +497,7 @@ style="overflow-x:auto; white-space:pre;"><code>class Recipe {
   final int servings;
   final int caloriesPerServing;
   final double rating;
-  final String image;
+  final String image; // dipakai mulai Modul 7
   final List&lt;String&gt; ingredients;
 
   const Recipe({
@@ -352,92 +517,190 @@ style="overflow-x:auto; white-space:pre;"><code>class Recipe {
   int get totalTimeMinutes =&gt; prepTimeMinutes + cookTimeMinutes;
 }</code></pre>
 
-</li>
+</details>
+
 
 
 <!-- A.3 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+A.3 Menambahkan Data Dummy
+</h4>
 
-<b>A.3 — Menambahkan Data Dummy</b>
-
-<br>
-
-<p>
-Menambahkan enam data resep dummy ke dalam file <b>dummy_recipes.dart</b>.
+<p class="fs-5 lh-lg">
+Data dummy terdiri dari enam resep pertama dari DummyJSON.
+Data ini digunakan sebagai data awal aplikasi sebelum nantinya
+dikembangkan menggunakan API pada Modul 8.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:resepku/models/recipe.dart';
+<details class="mt-3">
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code dummy_recipes.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:resepku/models/recipe.dart';
 
 const List&lt;Recipe&gt; dummyRecipes = [
   Recipe(
-    id: 1, name: 'Classic Margherita Pizza', cuisine: 'Italian', difficulty: 'Easy',
-    prepTimeMinutes: 20, cookTimeMinutes: 15, servings: 4, caloriesPerServing: 300,
-    rating: 4.6, image: 'https://cdn.dummyjson.com/recipe-images/1.webp',
-    ingredients: ['Pizza dough', 'Tomato sauce', 'Fresh mozzarella cheese',
-      'Fresh basil leaves', 'Olive oil', 'Salt and pepper to taste'],
+    id: 1,
+    name: 'Classic Margherita Pizza',
+    cuisine: 'Italian',
+    difficulty: 'Easy',
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    servings: 4,
+    caloriesPerServing: 300,
+    rating: 4.6,
+    image: 'https://cdn.dummyjson.com/recipe-images/1.webp',
+    ingredients: [
+      'Pizza dough',
+      'Tomato sauce',
+      'Fresh mozzarella cheese',
+      'Fresh basil leaves',
+      'Olive oil',
+      'Salt and pepper to taste'
+    ],
   ),
   Recipe(
-    id: 2, name: 'Vegetarian Stir-Fry', cuisine: 'Asian', difficulty: 'Medium',
-    prepTimeMinutes: 15, cookTimeMinutes: 20, servings: 3, caloriesPerServing: 250,
-    rating: 4.7, image: 'https://cdn.dummyjson.com/recipe-images/2.webp',
-    ingredients: ['Tofu, cubed', 'Broccoli florets', 'Carrots, sliced',
-      'Bell peppers, sliced', 'Soy sauce', 'Ginger, minced', 'Garlic, minced',
-      'Sesame oil', 'Cooked rice for serving'],
+    id: 2,
+    name: 'Vegetarian Stir-Fry',
+    cuisine: 'Asian',
+    difficulty: 'Medium',
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    servings: 3,
+    caloriesPerServing: 250,
+    rating: 4.7,
+    image: 'https://cdn.dummyjson.com/recipe-images/2.webp',
+    ingredients: [
+      'Tofu, cubed',
+      'Broccoli florets',
+      'Carrots, sliced',
+      'Bell peppers, sliced',
+      'Soy sauce',
+      'Ginger, minced',
+      'Garlic, minced',
+      'Sesame oil',
+      'Cooked rice for serving'
+    ],
   ),
   Recipe(
-    id: 3, name: 'Chocolate Chip Cookies', cuisine: 'American', difficulty: 'Easy',
-    prepTimeMinutes: 15, cookTimeMinutes: 10, servings: 24, caloriesPerServing: 150,
-    rating: 4.9, image: 'https://cdn.dummyjson.com/recipe-images/3.webp',
-    ingredients: ['All-purpose flour', 'Butter, softened', 'Brown sugar',
-      'White sugar', 'Eggs', 'Vanilla extract', 'Baking soda', 'Salt',
-      'Chocolate chips'],
+    id: 3,
+    name: 'Chocolate Chip Cookies',
+    cuisine: 'American',
+    difficulty: 'Easy',
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 10,
+    servings: 24,
+    caloriesPerServing: 150,
+    rating: 4.9,
+    image: 'https://cdn.dummyjson.com/recipe-images/3.webp',
+    ingredients: [
+      'All-purpose flour',
+      'Butter, softened',
+      'Brown sugar',
+      'White sugar',
+      'Eggs',
+      'Vanilla extract',
+      'Baking soda',
+      'Salt',
+      'Chocolate chips'
+    ],
   ),
   Recipe(
-    id: 4, name: 'Chicken Alfredo Pasta', cuisine: 'Italian', difficulty: 'Medium',
-    prepTimeMinutes: 15, cookTimeMinutes: 20, servings: 4, caloriesPerServing: 500,
-    rating: 4.9, image: 'https://cdn.dummyjson.com/recipe-images/4.webp',
-    ingredients: ['Fettuccine pasta', 'Chicken breast, sliced', 'Heavy cream',
-      'Parmesan cheese, grated', 'Garlic, minced', 'Butter',
-      'Salt and pepper to taste', 'Fresh parsley for garnish'],
+    id: 4,
+    name: 'Chicken Alfredo Pasta',
+    cuisine: 'Italian',
+    difficulty: 'Medium',
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    servings: 4,
+    caloriesPerServing: 500,
+    rating: 4.9,
+    image: 'https://cdn.dummyjson.com/recipe-images/4.webp',
+    ingredients: [
+      'Fettuccine pasta',
+      'Chicken breast, sliced',
+      'Heavy cream',
+      'Parmesan cheese, grated',
+      'Garlic, minced',
+      'Butter',
+      'Salt and pepper to taste',
+      'Fresh parsley for garnish'
+    ],
   ),
   Recipe(
-    id: 5, name: 'Mango Salsa Chicken', cuisine: 'Mexican', difficulty: 'Easy',
-    prepTimeMinutes: 15, cookTimeMinutes: 25, servings: 3, caloriesPerServing: 380,
-    rating: 4.9, image: 'https://cdn.dummyjson.com/recipe-images/5.webp',
-    ingredients: ['Chicken thighs', 'Mango, diced', 'Red onion, finely chopped',
-      'Cilantro, chopped', 'Lime juice', 'Jalapeño, minced',
-      'Salt and pepper to taste', 'Cooked rice for serving'],
+    id: 5,
+    name: 'Mango Salsa Chicken',
+    cuisine: 'Mexican',
+    difficulty: 'Easy',
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 25,
+    servings: 3,
+    caloriesPerServing: 380,
+    rating: 4.9,
+    image: 'https://cdn.dummyjson.com/recipe-images/5.webp',
+    ingredients: [
+      'Chicken thighs',
+      'Mango, diced',
+      'Red onion, finely chopped',
+      'Cilantro, chopped',
+      'Lime juice',
+      'Jalapeño, minced',
+      'Salt and pepper to taste',
+      'Cooked rice for serving'
+    ],
   ),
   Recipe(
-    id: 6, name: 'Quinoa Salad with Avocado', cuisine: 'Mediterranean',
-    difficulty: 'Easy', prepTimeMinutes: 20, cookTimeMinutes: 15, servings: 4,
-    caloriesPerServing: 280, rating: 4.4,
+    id: 6,
+    name: 'Quinoa Salad with Avocado',
+    cuisine: 'Mediterranean',
+    difficulty: 'Easy',
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    servings: 4,
+    caloriesPerServing: 280,
+    rating: 4.4,
     image: 'https://cdn.dummyjson.com/recipe-images/6.webp',
-    ingredients: ['Quinoa, cooked', 'Avocado, diced', 'Cherry tomatoes, halved',
-      'Cucumber, diced', 'Red bell pepper, diced', 'Feta cheese, crumbled',
-      'Lemon vinaigrette dressing', 'Salt and pepper to taste'],
+    ingredients: [
+      'Quinoa, cooked',
+      'Avocado, diced',
+      'Cherry tomatoes, halved',
+      'Cucumber, diced',
+      'Red bell pepper, diced',
+      'Feta cheese, crumbled',
+      'Lemon vinaigrette dressing',
+      'Salt and pepper to taste'
+    ],
   ),
 ];</code></pre>
 
-</li>
+</details>
+
 
 
 <!-- A.4 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+A.4 Membuat Footer Identitas
+</h4>
 
-<b>A.4 — Membuat IdentityFooter</b>
-
-<br>
-
-<p>
-IdentityFooter digunakan agar NIM dan nama mahasiswa ditampilkan pada setiap halaman aplikasi.
+<p class="fs-5 lh-lg">
+Footer identitas digunakan agar NIM dan nama mahasiswa selalu
+terlihat pada setiap halaman aplikasi. Nilai NIM dan nama perlu
+disesuaikan dengan identitas mahasiswa.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code identity_footer.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 
 // GANTI dengan NIM dan nama lengkap Kalian sendiri
 const String kNim = '2411531009';
@@ -470,7 +733,10 @@ class IdentityFooter extends StatelessWidget {
                 child: Text(
                   '$kNim • $kNama',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
                 ),
               ),
             ),
@@ -481,19 +747,24 @@ class IdentityFooter extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- MAIN -->
 
-<li class="mb-5">
+<!-- A.5 -->
 
-<b>A.4 — Membuat main.dart</b>
+<h4 class="fw-bold mt-5">
+A.5 Membuat main.dart Versi Awal
+</h4>
 
-<br>
+<details>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code main.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/pages/home_page.dart';
 import 'package:resepku/widgets/identity_footer.dart';
 
@@ -510,25 +781,30 @@ class ResepKuApp extends StatelessWidget {
       title: 'ResepKu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.deepOrange),
-      builder: (context, child) =&gt; IdentityFooter(child: child!),
+      builder: (context, child) => IdentityFooter(child: child!),
       home: const HomePage(),
     );
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- HOME -->
 
-<li class="mb-5">
+<!-- A.6 -->
 
-<b>A.4 — Membuat home_page.dart</b>
+<h4 class="fw-bold mt-5">
+A.6 Membuat HomePage dan RecipeTile
+</h4>
 
-<br>
+<details>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code home_page.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/data/dummy_recipes.dart';
 import 'package:resepku/widgets/recipe_tile.dart';
 
@@ -543,26 +819,24 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          for (final recipe in dummyRecipes) RecipeTile(recipe: recipe),
+          for (final recipe in dummyRecipes)
+            RecipeTile(recipe: recipe),
         ],
       ),
     );
   }
 }</code></pre>
 
-</li>
+</details>
 
+<details>
 
-<!-- RECIPE TILE -->
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code recipe_tile.dart
+</summary>
 
-<li class="mb-5">
-
-<b>A.4 — Membuat recipe_tile.dart</b>
-
-<br>
-
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/models/recipe.dart';
 import 'package:resepku/pages/detail_page.dart';
 
@@ -579,34 +853,41 @@ class RecipeTile extends StatelessWidget {
       subtitle: Text(
         '${recipe.cuisine} • ${recipe.totalTimeMinutes} menit • ★ ${recipe.rating}',
       ),
-      onTap: () =&gt; Navigator.push(
+      onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) =&gt; DetailPage(recipe: recipe)),
+        MaterialPageRoute(
+          builder: (context) => DetailPage(recipe: recipe),
+        ),
       ),
     );
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- DETAIL -->
 
-<li class="mb-5">
+<!-- A.7 -->
 
-<b>A.5 — Membuat DetailPage dengan State Lokal</b>
+<h4 class="fw-bold mt-5">
+A.7 Membuat DetailPage dengan setState()
+</h4>
 
-<br>
-
-<p>
-Pada halaman Detail, jumlah porsi menggunakan state lokal dengan StatefulWidget dan setState().
+<p class="fs-5 lh-lg">
+Halaman detail dibuat menggunakan <code>StatefulWidget</code> karena
+jumlah porsi merupakan state lokal yang berubah ketika tombol tambah
+atau kurang ditekan.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code detail_page.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/models/recipe.dart';
-import 'package:resepku/providers/favorite_provider.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key, required this.recipe});
@@ -614,7 +895,7 @@ class DetailPage extends StatefulWidget {
   final Recipe recipe;
 
   @override
-  State&lt;DetailPage&gt; createState() =&gt; _DetailPageState();
+  State&lt;DetailPage&gt; createState() => _DetailPageState();
 }
 
 class _DetailPageState extends State&lt;DetailPage&gt; {
@@ -627,37 +908,32 @@ class _DetailPageState extends State&lt;DetailPage&gt; {
   }
 
   void _addServing() {
-    setState(() =&gt; _servings++);
+    setState(() => _servings++);
   }
 
   void _removeServing() {
-    if (_servings &gt; 1) {
-      setState(() =&gt; _servings--);
+    if (_servings > 1) {
+      setState(() => _servings--);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final recipe = widget.recipe;
-    final totalCalories = recipe.caloriesPerServing * _servings;
-    final isFavorite = context.watch&lt;FavoriteProvider&gt;().isFavorite(recipe);
+    final totalCalories =
+        recipe.caloriesPerServing * _servings;
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
       appBar: AppBar(
         title: Text(recipe.name),
-        actions: [
-          IconButton(
-            icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
-            onPressed: () =&gt; context.read&lt;FavoriteProvider&gt;().toggle(recipe),
-          ),
-        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           Text(
-            '${recipe.cuisine} • ${recipe.difficulty} • ${recipe.totalTimeMinutes} menit',
+            '${recipe.cuisine} • ${recipe.difficulty} • '
+            '${recipe.totalTimeMinutes} menit',
             style: textTheme.bodyLarge,
           ),
           const SizedBox(height: 16),
@@ -666,14 +942,20 @@ class _DetailPageState extends State&lt;DetailPage&gt; {
               padding: const EdgeInsets.all(12),
               child: Row(
                 children: [
-                  Text('Porsi', style: textTheme.titleMedium),
+                  Text(
+                    'Porsi',
+                    style: textTheme.titleMedium,
+                  ),
                   const Spacer(),
                   IconButton.filledTonal(
-                    onPressed: _servings &gt; 1 ? _removeServing : null,
+                    onPressed:
+                        _servings > 1 ? _removeServing : null,
                     icon: const Icon(Icons.remove),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                    ),
                     child: Text(
                       '$_servings',
                       style: textTheme.titleLarge,
@@ -700,7 +982,8 @@ class _DetailPageState extends State&lt;DetailPage&gt; {
           for (final item in recipe.ingredients)
             ListTile(
               dense: true,
-              leading: const Icon(Icons.check_circle_outline),
+              leading:
+                  const Icon(Icons.check_circle_outline),
               title: Text(item),
             ),
         ],
@@ -709,51 +992,115 @@ class _DetailPageState extends State&lt;DetailPage&gt; {
   }
 }</code></pre>
 
-</li>
+</details>
 
-</ol>
 
 
 <!-- CHECKPOINT 1 -->
 
-<div class="alert alert-light border rounded-3 fs-5 lh-lg">
+<div class="border rounded-3 p-4 mt-5"
+style="border-color:#f3c5dc !important;">
 
-<b>Checkpoint 1:</b>
+<h4 class="fw-bold" style="color:#73073d;">
+Checkpoint 1 — Hasil Pengujian
+</h4>
 
-Buka <b>Classic Margherita Pizza</b>, ubah jumlah porsi menjadi <b>6</b>.
+<p class="fs-5 lh-lg">
+Pengujian dilakukan dengan membuka resep
+<b>Classic Margherita Pizza</b> kemudian mengubah jumlah porsi
+menjadi 6.
+</p>
 
-Pastikan total kalori berubah menjadi:
+<ul class="fs-5 lh-lg">
 
-<b>6 × 300 = 1800 kkal</b>.
+<li>
+Jumlah porsi berhasil berubah dari 4 menjadi 6.
+</li>
 
-Tombol minus tidak aktif ketika jumlah porsi bernilai 1.
+<li>
+Total kalori menjadi <b>1800 kkal</b>, karena
+6 × 300 kkal = 1800 kkal.
+</li>
 
-Footer NIM dan nama harus terlihat pada screenshot.
+<li>
+Tombol minus tidak dapat digunakan ketika jumlah porsi bernilai 1.
+</li>
+
+<li>
+Footer identitas menampilkan NIM dan nama mahasiswa.
+</li>
+
+</ul>
+
+<h5 class="fw-bold mt-4">
+Baris kode yang membuat tombol minus nonaktif:
+</h5>
+
+<pre class="bg-light p-3 rounded"><code>onPressed: _servings &gt; 1 ? _removeServing : null,</code></pre>
 
 </div>
 
 
-<!-- BAGIAN B -->
+<!-- SCREENSHOT CHECKPOINT 1 -->
 
-<h3 class="fw-bold mt-5 mb-4" style="color:#73073d;">
-    B. Eksperimen Favorit dengan State Lokal
+<div class="border rounded-3 p-5 mt-4 text-center"
+style="border:2px dashed #f3a6c8 !important;
+background-color:#fffafd;">
+
+<h4 class="fw-bold" style="color:#73073d;">
+  CHECKPOINT 1
+</h4>
+
+<div class="screenshot-grid">
+
+  <div class="screenshot-item">
+    <img src="images/cp1.png" alt="Screenshot Checkpoint 1">
+    <p>Checkpoint 1</p>
+  </div>
+
+  <div class="screenshot-item">
+    <img src="images/cp1_2.png" alt="Screenshot Checkpoint 2">
+    <p>Checkpoint 1</p>
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- BAGIAN B -->
+<!-- ========================================================= -->
+
+<h3 class="fw-bold mt-5 mb-3" style="color:#73073d;">
+B. Eksperimen Favorit dengan State Lokal
 </h3>
 
-
-<ol class="fs-5 lh-lg">
-
-<li class="mb-5">
-
-<b>B.1 — Menyimpan Favorit pada RecipeTile</b>
-
-<br>
-
-<p>
-Pada tahap ini status favorit disimpan sebagai state lokal di masing-masing RecipeTile.
+<p class="fs-5 lh-lg">
+Sebelum menggunakan Provider, fitur favorit dicoba terlebih dahulu
+dengan state lokal pada setiap <code>RecipeTile</code>. Tujuan eksperimen
+ini adalah mengetahui secara langsung keterbatasan state lokal ketika
+data yang sama dibutuhkan oleh beberapa widget.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+
+
+<h4 class="fw-bold mt-4">
+B.1 Mengganti RecipeTile
+</h4>
+
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code RecipeTile Versi Eksperimen
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/models/recipe.dart';
 import 'package:resepku/pages/detail_page.dart';
 
@@ -764,7 +1111,7 @@ class RecipeTile extends StatefulWidget {
   final Recipe recipe;
 
   @override
-  State&lt;RecipeTile&gt; createState() =&gt; _RecipeTileState();
+  State&lt;RecipeTile&gt; createState() => _RecipeTileState();
 }
 
 class _RecipeTileState extends State&lt;RecipeTile&gt; {
@@ -775,10 +1122,14 @@ class _RecipeTileState extends State&lt;RecipeTile&gt; {
     final recipe = widget.recipe;
 
     return ListTile(
-      leading: CircleAvatar(child: Text(recipe.name[0])),
+      leading: CircleAvatar(
+        child: Text(recipe.name[0]),
+      ),
       title: Text(recipe.name),
       subtitle: Text(
-        '${recipe.cuisine} • ${recipe.totalTimeMinutes} menit • ★ ${recipe.rating}',
+        '${recipe.cuisine} • '
+        '${recipe.totalTimeMinutes} menit • '
+        '★ ${recipe.rating}',
       ),
       trailing: IconButton(
         icon: Icon(
@@ -793,112 +1144,177 @@ class _RecipeTileState extends State&lt;RecipeTile&gt; {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => DetailPage(recipe: recipe),
+          builder: (context) =>
+              DetailPage(recipe: recipe),
         ),
       ),
     );
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<li class="mb-5">
 
-<b>B.2 — Mengamati Hasil</b>
+<h4 class="fw-bold mt-5">
+B.2 Hasil Pengamatan
+</h4>
 
-<br>
+<div class="table-responsive">
 
-<p>
-Lakukan hot reload kemudian tekan ikon hati pada beberapa resep.
+<table class="table table-bordered align-middle">
 
-</p>
+<thead>
 
-<p>
-Pada eksperimen ini setiap RecipeTile memiliki state favoritnya sendiri. Oleh karena itu perubahan hanya diketahui oleh tile yang memiliki state tersebut.
-</p>
+<tr>
+<th>No.</th>
+<th>Pertanyaan</th>
+<th>Hasil Pengamatan</th>
+</tr>
 
-</li>
+</thead>
 
-</ol>
+<tbody>
 
+<tr>
 
-<ul class="fs-5 lh-lg">
+<td>1</td>
 
-<li>
+<td>
 Apakah ikon hati berubah? Mengapa?
-</li>
+</td>
 
-<li>
-Apakah jumlah resep favorit dapat ditampilkan pada AppBar HomePage?
-</li>
+<td>
+Ya. Ikon hati berubah karena nilai
+<code>_isFavorite</code> berubah ketika
+<code>setState()</code> dipanggil. Perubahan tersebut menyebabkan
+widget melakukan rebuild sehingga ikon berubah dari
+<code>favorite_border</code> menjadi <code>favorite</code>, atau
+sebaliknya.
+</td>
 
-<li>
-Di class mana data <code>_isFavorite</code> berada?
-</li>
+</tr>
 
-<li>
-Apakah HomePage dapat membaca data tersebut?
-</li>
+<tr>
 
-<li>
-Bagaimana DetailPage dapat mengetahui bahwa suatu resep merupakan favorit?
-</li>
+<td>2</td>
 
-</ul>
+<td>
+Apakah jumlah resep favorit dapat ditampilkan di HomePage?
+</td>
 
+<td>
+Tidak secara langsung. Data <code>_isFavorite</code> berada di
+class <code>_RecipeTileState</code>, sehingga HomePage tidak memiliki
+akses langsung terhadap state tersebut. Setiap RecipeTile memiliki
+state favoritnya masing-masing.
+</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>
+Bagaimana DetailPage mengetahui bahwa suatu resep merupakan favorit?
+</td>
+
+<td>
+DetailPage tidak dapat mengetahui state favorit yang disimpan
+di RecipeTile secara langsung. State tersebut hanya dimiliki oleh
+tile yang bersangkutan. Oleh karena itu diperlukan state yang dapat
+diakses oleh beberapa halaman.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+
+<h4 class="fw-bold mt-5">
+Kesimpulan Eksperimen
+</h4>
 
 <p class="fs-5 lh-lg">
+State lokal dengan <code>setState()</code> dapat digunakan dengan baik
+untuk perubahan data yang hanya dibutuhkan oleh satu widget atau
+satu halaman. Namun, state tersebut menjadi sulit digunakan ketika
+data yang sama harus diakses oleh beberapa widget dan halaman.
+</p>
 
-<b>Kesimpulan eksperimen:</b>
-
-State lokal tidak cocok digunakan untuk data yang harus diakses oleh banyak widget dan halaman. Karena itu data favorit dipindahkan ke Provider pada tahap berikutnya.
-
+<p class="fs-5 lh-lg">
+Pada fitur favorit, data dibutuhkan oleh daftar resep, badge jumlah
+favorit, halaman detail, dan halaman Favorit. Jika data favorit
+disimpan pada setiap RecipeTile, widget lain tidak dapat membacanya
+dengan mudah. Oleh karena itu, data favorit dipindahkan ke Provider
+sebagai state bersama.
 </p>
 
 
-<!-- BAGIAN C -->
 
-<h3 class="fw-bold mt-5 mb-4" style="color:#73073d;">
-    C. Fitur Favorit dengan Provider
+<!-- ========================================================= -->
+<!-- BAGIAN C -->
+<!-- ========================================================= -->
+
+<h3 class="fw-bold mt-5 mb-3" style="color:#73073d;">
+C. Fitur Favorit dengan Provider
 </h3>
 
-
-<ol class="fs-5 lh-lg">
-
-
-<!-- C1 -->
-
-<li class="mb-5">
-
-<b>C.1 — Memasang Provider dan Membuat FavoriteProvider</b>
-
-<br>
-
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>flutter pub add provider</code></pre>
-
-<p>
-Kemudian membuat file <b>favorite_provider.dart</b>.
+<p class="fs-5 lh-lg">
+Pada bagian ini daftar favorit dipindahkan menjadi app state menggunakan
+package Provider. State disimpan dalam <code>FavoriteProvider</code>
+yang meng-extend <code>ChangeNotifier</code>.
 </p>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/foundation.dart';
+
+
+<h4 class="fw-bold mt-4">
+C.1 Memasang Provider
+</h4>
+
+<pre class="bg-light p-3 rounded"><code>flutter pub add provider</code></pre>
+
+<p class="fs-5 lh-lg">
+Perintah tersebut menambahkan package Provider ke project Flutter.
+</p>
+
+
+
+<h4 class="fw-bold mt-4">
+C.2 Membuat FavoriteProvider
+</h4>
+
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code favorite_provider.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/foundation.dart';
 import 'package:resepku/models/recipe.dart';
 
 class FavoriteProvider extends ChangeNotifier {
   final List&lt;Recipe&gt; _items = [];
 
-  List&lt;Recipe&gt; get items =&gt; List.unmodifiable(_items);
+  // Dari luar hanya boleh dibaca, tidak boleh diubah langsung
+  List&lt;Recipe&gt; get items =>
+      List.unmodifiable(_items);
 
-  int get count =&gt; _items.length;
+  int get count => _items.length;
 
-  bool isFavorite(Recipe recipe) =&gt;
-      _items.any((r) =&gt; r.id == recipe.id);
+  bool isFavorite(Recipe recipe) =>
+      _items.any((r) => r.id == recipe.id);
 
   void toggle(Recipe recipe) {
     if (isFavorite(recipe)) {
-      _items.removeWhere((r) =&gt; r.id == recipe.id);
+      _items.removeWhere((r) => r.id == recipe.id);
     } else {
       _items.add(recipe);
     }
@@ -912,19 +1328,29 @@ class FavoriteProvider extends ChangeNotifier {
   }
 }</code></pre>
 
-</li>
+</details>
+
+<p class="fs-5 lh-lg">
+Method <code>toggle()</code> digunakan untuk menambahkan atau
+menghapus resep dari daftar favorit. Setelah data berubah,
+<code>notifyListeners()</code> dipanggil agar widget yang mendengarkan
+perubahan Provider dapat melakukan rebuild.
+</p>
 
 
-<!-- C2 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.3 Memasang Provider pada main.dart
+</h4>
 
-<b>C.2 — Memasang Provider di atas MaterialApp</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code main.dart Versi Provider
+</summary>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resepku/pages/home_page.dart';
 import 'package:resepku/providers/favorite_provider.dart';
@@ -961,36 +1387,54 @@ class ResepKuApp extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
+
+<div class="border rounded-3 p-4 mt-3"
+style="border-color:#f3c5dc !important;">
+
+<p class="fs-5 lh-lg mb-0">
+
+<b>Catatan:</b> setelah mengubah <code>main.dart</code>,
+dilakukan <b>hot restart</b>, bukan hanya hot reload. Hal ini
+diperlukan agar <code>main()</code> dijalankan kembali dan
+Provider terpasang pada widget tree.
+
+</p>
+
+</div>
 
 
-<!-- C3 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.4 Menghubungkan RecipeTile dengan Provider
+</h4>
 
-<b>C.3 — RecipeTile Membaca Provider</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code recipe_tile.dart
+</summary>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resepku/models/recipe.dart';
 import 'package:resepku/pages/detail_page.dart';
 import 'package:resepku/providers/favorite_provider.dart';
 
 class RecipeTile extends StatelessWidget {
-  const RecipeTile({
-    super.key,
-    required this.recipe,
-  });
+  const RecipeTile({super.key, required this.recipe});
 
   final Recipe recipe;
 
   @override
   Widget build(BuildContext context) {
+
+    // watch: widget ini ikut rebuild
+    // saat daftar favorit berubah
     final isFavorite =
-        context.watch&lt;FavoriteProvider&gt;().isFavorite(recipe);
+        context.watch&lt;FavoriteProvider&gt;()
+            .isFavorite(recipe);
 
     return ListTile(
       leading: CircleAvatar(
@@ -1009,8 +1453,11 @@ class RecipeTile extends StatelessWidget {
               : Icons.favorite_border,
           color: isFavorite ? Colors.red : null,
         ),
+
+        // read: hanya membaca/memanggil method
         onPressed: () =>
-            context.read&lt;FavoriteProvider&gt;().toggle(recipe),
+            context.read&lt;FavoriteProvider&gt;()
+                .toggle(recipe),
       ),
       onTap: () => Navigator.push(
         context,
@@ -1023,48 +1470,171 @@ class RecipeTile extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- C4 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.5 Menambahkan Favorit pada DetailPage
+</h4>
 
-<b>C.4 — Tombol Favorit pada DetailPage</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code detail_page.dart Versi Provider
+</summary>
 
-<p>
-DetailPage menggunakan dua jenis state. Jumlah porsi menggunakan state lokal, sedangkan status favorit menggunakan FavoriteProvider.
-</p>
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:resepku/models/recipe.dart';
+import 'package:resepku/providers/favorite_provider.dart';
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>final isFavorite =
-    context.watch&lt;FavoriteProvider&gt;().isFavorite(recipe);
+class DetailPage extends StatefulWidget {
+  const DetailPage({
+    super.key,
+    required this.recipe,
+  });
 
-IconButton(
-  icon: Icon(
-    isFavorite
-        ? Icons.favorite
-        : Icons.favorite_border,
-  ),
-  onPressed: () =>
-      context.read&lt;FavoriteProvider&gt;().toggle(recipe),
-)</code></pre>
+  final Recipe recipe;
 
-</li>
+  @override
+  State&lt;DetailPage&gt; createState() =>
+      _DetailPageState();
+}
+
+class _DetailPageState extends State&lt;DetailPage&gt; {
+  late int _servings;
+
+  @override
+  void initState() {
+    super.initState();
+    _servings = widget.recipe.servings;
+  }
+
+  void _addServing() {
+    setState(() => _servings++);
+  }
+
+  void _removeServing() {
+    if (_servings > 1) {
+      setState(() => _servings--);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final recipe = widget.recipe;
+
+    final totalCalories =
+        recipe.caloriesPerServing * _servings;
+
+    final isFavorite =
+        context.watch&lt;FavoriteProvider&gt;()
+            .isFavorite(recipe);
+
+    final textTheme =
+        Theme.of(context).textTheme;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(recipe.name),
+        actions: [
+          IconButton(
+            icon: Icon(
+              isFavorite
+                  ? Icons.favorite
+                  : Icons.favorite_border,
+            ),
+            onPressed: () =>
+                context.read&lt;FavoriteProvider&gt;()
+                    .toggle(recipe),
+          ),
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Text(
+            '${recipe.cuisine} • '
+            '${recipe.difficulty} • '
+            '${recipe.totalTimeMinutes} menit',
+            style: textTheme.bodyLarge,
+          ),
+          const SizedBox(height: 16),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Text(
+                    'Porsi',
+                    style: textTheme.titleMedium,
+                  ),
+                  const Spacer(),
+                  IconButton.filledTonal(
+                    onPressed: _servings > 1
+                        ? _removeServing
+                        : null,
+                    icon: const Icon(Icons.remove),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                    ),
+                    child: Text(
+                      '$_servings',
+                      style: textTheme.titleLarge,
+                    ),
+                  ),
+                  IconButton.filledTonal(
+                    onPressed: _addServing,
+                    icon: const Icon(Icons.add),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Total kalori: $totalCalories kkal',
+            style: textTheme.titleMedium,
+          ),
+          const SizedBox(height: 24),
+          Text(
+            'Bahan',
+            style: textTheme.titleLarge,
+          ),
+          for (final item in recipe.ingredients)
+            ListTile(
+              dense: true,
+              leading: const Icon(
+                Icons.check_circle_outline,
+              ),
+              title: Text(item),
+            ),
+        ],
+      ),
+    );
+  }
+}</code></pre>
+
+</details>
 
 
-<!-- C5 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.6 Membuat FavoritePage
+</h4>
 
-<b>C.5 — Membuat FavoritePage</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code favorite_page.dart
+</summary>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resepku/providers/favorite_provider.dart';
 
@@ -1111,19 +1681,22 @@ class FavoritePage extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- C6 -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.7 Membuat Badge Jumlah Favorit
+</h4>
 
-<b>C.6 — Membuat FavoriteBadgeButton</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code favorite_badge_button.dart
+</summary>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:resepku/pages/favorite_page.dart';
 import 'package:resepku/providers/favorite_provider.dart';
@@ -1139,11 +1712,11 @@ class FavoriteBadgeButton extends StatelessWidget {
     return IconButton(
       tooltip: 'Favorit saya',
       icon: Badge(
-        isLabelVisible: count &gt; 0,
+        isLabelVisible: count > 0,
         label: Text('$count'),
         child: const Icon(Icons.favorite),
       ),
-      onPressed: () =&gt; Navigator.push(
+      onPressed: () => Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) =>
@@ -1154,19 +1727,22 @@ class FavoriteBadgeButton extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- C6 HOME -->
 
-<li class="mb-5">
+<h4 class="fw-bold mt-5">
+C.8 Memasang Badge pada HomePage
+</h4>
 
-<b>C.6 — Memasang FavoriteBadgeButton pada HomePage</b>
+<details>
 
-<br>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code home_page.dart Versi Provider
+</summary>
 
-<pre class="bg-light p-3 rounded mt-3"
-style="overflow-x:auto; white-space:pre;"><code>import 'package:flutter/material.dart';
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 import 'package:resepku/data/dummy_recipes.dart';
 import 'package:resepku/widgets/favorite_badge_button.dart';
 import 'package:resepku/widgets/recipe_tile.dart';
@@ -1193,39 +1769,38 @@ class HomePage extends StatelessWidget {
   }
 }</code></pre>
 
-</li>
+</details>
 
 
-<!-- C7 -->
 
-<li class="mb-5">
+<!-- C.7 TEST -->
 
-<b>C.7 — Menguji Aplikasi</b>
+<h4 class="fw-bold mt-5">
+C.9 Pengujian Aplikasi
+</h4>
 
-<br>
-
-<p>
-Setelah semua kode selesai, lakukan hot restart kemudian jalankan skenario pengujian sesuai modul.
+<p class="fs-5 lh-lg">
+Setelah seluruh fitur Provider selesai, dilakukan hot restart dan
+pengujian terhadap enam skenario yang diberikan pada modul.
 </p>
 
-</li>
+<div class="table-responsive">
 
-</ol>
-
-
-<!-- TABEL TEST -->
-
-<table class="table table-bordered fs-6 align-middle">
+<table class="table table-bordered align-middle">
 
 <thead>
 
 <tr>
 
-<th>No</th>
+<th>No.</th>
 
 <th>Skenario</th>
 
 <th>Hasil yang Diharapkan</th>
+
+<th>Hasil Pengujian</th>
+
+<th>Status</th>
 
 </tr>
 
@@ -1238,11 +1813,19 @@ Setelah semua kode selesai, lakukan hot restart kemudian jalankan skenario pengu
 <td>1</td>
 
 <td>
-Tap ikon hati pada Margherita dan Alfredo di Home
+Tap ikon hati pada Margherita dan Alfredo di Home.
 </td>
 
 <td>
-Ikon berubah menjadi hati terisi dan badge menunjukkan angka 2.
+Ikon berwarna merah dan badge menunjukkan angka 2.
+</td>
+
+<td>
+Kedua resep menjadi favorit dan badge menampilkan angka 2.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1252,11 +1835,19 @@ Ikon berubah menjadi hati terisi dan badge menunjukkan angka 2.
 <td>2</td>
 
 <td>
-Buka Detail Margherita
+Buka detail Margherita.
 </td>
 
 <td>
-Ikon hati pada AppBar Detail dalam keadaan terisi.
+Ikon hati di AppBar terisi.
+</td>
+
+<td>
+Ikon hati pada AppBar DetailPage terisi.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1266,11 +1857,19 @@ Ikon hati pada AppBar Detail dalam keadaan terisi.
 <td>3</td>
 
 <td>
-Tap ikon hati pada Detail Margherita lalu kembali ke Home
+Pada DetailPage tap ikon hati lalu kembali ke Home.
 </td>
 
 <td>
-Ikon Margherita kembali kosong dan badge menjadi 1.
+Ikon Margherita kosong dan badge menjadi 1.
+</td>
+
+<td>
+Margherita tidak lagi menjadi favorit dan badge berubah menjadi 1.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1280,11 +1879,19 @@ Ikon Margherita kembali kosong dan badge menjadi 1.
 <td>4</td>
 
 <td>
-Tap badge favorit
+Tap badge pada AppBar.
 </td>
 
 <td>
-FavoritePage menampilkan resep Alfredo.
+Halaman Favorit hanya berisi Alfredo.
+</td>
+
+<td>
+FavoritePage hanya menampilkan Chicken Alfredo Pasta.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1294,11 +1901,19 @@ FavoritePage menampilkan resep Alfredo.
 <td>5</td>
 
 <td>
-Hapus Alfredo dari FavoritePage
+Hapus Alfredo dari halaman Favorit.
 </td>
 
 <td>
-Muncul pesan belum ada resep favorit dan badge hilang.
+Pesan belum ada favorit muncul dan badge hilang.
+</td>
+
+<td>
+Daftar favorit menjadi kosong dan badge tidak ditampilkan.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1308,11 +1923,19 @@ Muncul pesan belum ada resep favorit dan badge hilang.
 <td>6</td>
 
 <td>
-Ubah porsi menjadi 2, kembali ke Home, kemudian buka resep yang sama.
+Ubah porsi menjadi 2, kembali ke Home, lalu buka lagi resep yang sama.
 </td>
 
 <td>
-Jumlah porsi kembali ke nilai awal karena state lokal DetailPage sudah dibuang.
+Porsi kembali ke nilai awal karena state lokal dibuang.
+</td>
+
+<td>
+Jumlah porsi kembali ke nilai awal resep.
+</td>
+
+<td>
+✓ Sesuai
 </td>
 
 </tr>
@@ -1321,71 +1944,114 @@ Jumlah porsi kembali ke nilai awal karena state lokal DetailPage sudah dibuang.
 
 </table>
 
-
-<!-- CHECKPOINT 2 -->
-
-<div class="alert alert-light border rounded-3 fs-5 lh-lg">
-
-<b>Checkpoint 2:</b>
-
-Screenshot harus menampilkan:
-
-<ul>
-
-<li>Home dengan badge favorit bernilai <b>2</b>.</li>
-
-<li>DetailPage dengan ikon favorit terisi.</li>
-
-<li>FavoritePage yang menampilkan resep favorit.</li>
-
-<li>Footer NIM dan nama pada setiap screenshot.</li>
-
-</ul>
-
-</div>
-
-</div>
-
 </div>
 
 
-<!-- IV. HASIL DAN PEMBAHASAN -->
+
+
+
+<!-- SCREENSHOT CHECKPOINT 2 -->
+
+<div class="border rounded-3 p-5 mt-4 text-center"
+style="border:2px dashed #f3a6c8 !important;
+background-color:#fffafd;">
+
+<h4 class="fw-bold" style="color:#73073d;">
+  CHECKPOINT 2 
+</h4>
+
+<div class="screenshot-grid">
+
+  <div class="screenshot-item">
+    <img src="images/cp2_1.png" alt="Screenshot Checkpoint 2">
+    <p>Checkpoint 2</p>
+  </div>
+
+  <div class="screenshot-item">
+    <img src="images/cp2_2.png" alt="Screenshot Checkpoint 2">
+    <p>Checkpoint 2</p>
+  </div>
+
+    <div class="screenshot-item">
+      <img src="images/cp2_3.png" alt="Screenshot Checkpoint 2">
+    <p>Checkpoint 2</p>
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- IV. ANALISIS -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    IV. Hasil dan Pembahasan
+IV. Pertanyaan Analisis
 </h2>
 
+
+
+<h4 class="fw-bold mt-4">
+1. Bagaimana hasil eksperimen state lokal pada Bagian B?
+</h4>
+
 <p class="fs-5 lh-lg">
 
-Praktikum berhasil menerapkan state lokal dan state global pada aplikasi ResepKu. State lokal diterapkan pada halaman Detail untuk mengatur jumlah porsi menggunakan StatefulWidget dan setState(). Ketika jumlah porsi berubah, total kalori juga ikut berubah sesuai jumlah porsi.
+Ikon hati dapat berubah karena setiap RecipeTile memiliki state
+lokal <code>_isFavorite</code> dan perubahan nilainya dibungkus
+dengan <code>setState()</code>. Namun, state tersebut hanya berada
+di dalam class <code>_RecipeTileState</code>. HomePage tidak dapat
+membaca state tersebut secara langsung sehingga jumlah favorit tidak
+mudah ditampilkan pada AppBar. DetailPage juga tidak dapat mengetahui
+status favorit dari RecipeTile. Hal ini menunjukkan bahwa state lokal
+tidak sesuai untuk data yang harus digunakan bersama oleh banyak widget
+dan halaman.
 
 </p>
 
+
+
+<h4 class="fw-bold mt-5">
+2. Mengapa jumlah porsi tetap menggunakan setState()?
+</h4>
+
 <p class="fs-5 lh-lg">
 
-Eksperimen state lokal pada fitur favorit menunjukkan bahwa setiap RecipeTile memiliki state _isFavorite masing-masing. Oleh karena itu data favorit hanya diketahui oleh tile yang menyimpan state tersebut dan sulit digunakan oleh widget atau halaman lain.
+Jumlah porsi tetap menggunakan <code>setState()</code> karena data
+tersebut hanya dibutuhkan oleh halaman DetailPage dan tidak perlu
+dibagikan kepada halaman lain. Hal ini juga terlihat pada skenario 6,
+ketika jumlah porsi diubah menjadi 2 lalu pengguna kembali ke Home
+dan membuka kembali resep tersebut. Jumlah porsi kembali ke nilai awal
+karena state lokal ikut dibuang ketika halaman DetailPage ditutup.
+Perilaku tersebut sesuai dengan kebutuhan fitur sehingga jumlah porsi
+tidak perlu dimasukkan ke Provider.
 
 </p>
 
-<p class="fs-5 lh-lg">
 
-Pada tahap Provider, data favorit dipindahkan ke FavoriteProvider yang menggunakan ChangeNotifier. Ketika data favorit berubah, notifyListeners() dipanggil sehingga widget yang menggunakan context.watch atau Consumer dapat memperbarui tampilannya.
 
-</p>
-
-<p class="fs-5 lh-lg">
-
-context.read digunakan ketika aplikasi hanya perlu menjalankan aksi seperti toggle() tanpa perlu mendengarkan perubahan state. Dengan menggunakan Provider, status favorit dapat digunakan secara konsisten pada HomePage, DetailPage, FavoriteBadgeButton, dan FavoritePage.
-
-</p>
+<h4 class="fw-bold mt-5">
+3. Apa yang terjadi jika Provider dipindahkan ke HomePage?
+</h4>
 
 <p class="fs-5 lh-lg">
 
-MultiProvider ditempatkan di atas MaterialApp sehingga FavoriteProvider dapat diakses oleh seluruh route aplikasi.
+Jika <code>ChangeNotifierProvider</code> dipindahkan dari
+<code>main()</code> ke dalam HomePage dan hanya membungkus Scaffold,
+maka Provider berada di bawah HomePage dalam widget tree. Ketika
+FavoritePage dibuka menggunakan route baru, halaman tersebut dapat
+berada di luar scope Provider tersebut. Akibatnya FavoritePage tidak
+dapat menemukan <code>FavoriteProvider</code> dan dapat muncul
+<code>ProviderNotFoundException</code>. Oleh karena itu Provider
+dikembalikan ke posisi semula, yaitu di atas MaterialApp, sehingga
+seluruh halaman dapat mengakses state favorit yang sama.
 
 </p>
 
@@ -1394,121 +2060,568 @@ MultiProvider ditempatkan di atas MaterialApp sehingga FavoriteProvider dapat di
 </div>
 
 
-<!-- V. PERTANYAAN ANALISIS -->
+
+<!-- ========================================================= -->
+<!-- V. LATIHAN 1 -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    V. Pertanyaan Analisis
+V. Latihan 1 — Tema Gelap dan Terang
 </h2>
 
+<p class="fs-5 lh-lg">
 
-<ol class="fs-5 lh-lg">
+Latihan pertama menambahkan pengelolaan tema menggunakan Provider.
+Pengguna dapat mengaktifkan SwitchListTile "Mode gelap" pada halaman
+Pengaturan. Ketika switch diaktifkan, seluruh aplikasi menggunakan
+dark theme.
 
-
-<li>
-
-<b>Apakah ikon hati berubah? Mengapa?</b>
-
-<br>
-
-Ya. Ikon hati berubah karena setiap RecipeTile memiliki state lokal <code>_isFavorite</code>. Ketika tombol ditekan, nilai tersebut diubah menggunakan setState() sehingga tampilan RecipeTile diperbarui.
-
-</li>
+</p>
 
 
-<li>
 
-<b>
-Apakah jumlah resep favorit dapat ditampilkan pada AppBar HomePage?
-</b>
+<h4 class="fw-bold mt-4">
+5.1 Membuat ThemeProvider
+</h4>
 
-<br>
+<p class="fs-5 lh-lg">
+File yang dibuat adalah
+<code>lib/providers/theme_provider.dart</code>.
+</p>
 
-Tidak secara langsung dengan pendekatan state lokal. Data <code>_isFavorite</code> berada pada State milik masing-masing RecipeTile sehingga HomePage tidak dapat membaca data tersebut secara langsung.
+<details>
 
-</li>
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code theme_provider.dart
+</summary>
 
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
 
-<li>
+class ThemeProvider extends ChangeNotifier {
+  ThemeMode _mode = ThemeMode.light;
 
-<b>
-Bagaimana DetailPage mengetahui bahwa resep tersebut merupakan favorit?
-</b>
+  ThemeMode get mode => _mode;
 
-<br>
+  void toggleTheme(bool isDark) {
+    _mode = isDark
+        ? ThemeMode.dark
+        : ThemeMode.light;
 
-Pada pendekatan state lokal, DetailPage tidak memiliki akses terhadap <code>_isFavorite</code> yang berada di RecipeTile. Hal tersebut menunjukkan bahwa state lokal tidak cocok untuk data yang perlu digunakan oleh beberapa halaman.
+    notifyListeners();
+  }
+}</code></pre>
 
-</li>
-
-
-<li>
-
-<b>
-Mengapa jumlah porsi tetap menggunakan setState()?
-</b>
-
-<br>
-
-Jumlah porsi hanya digunakan oleh halaman Detail sehingga state lokal sudah sesuai. Ketika DetailPage ditutup, state lokal ikut dibuang sehingga ketika halaman dibuka kembali jumlah porsi kembali ke nilai awal.
-
-</li>
+</details>
 
 
-<li>
 
-<b>
-Mengapa Provider harus diletakkan di atas MaterialApp?
-</b>
+<h4 class="fw-bold mt-5">
+5.2 Menambahkan ThemeProvider ke MultiProvider
+</h4>
 
-<br>
+<p class="fs-5 lh-lg">
+ThemeProvider ditambahkan bersama FavoriteProvider pada
+<code>MultiProvider</code>.
+</p>
 
-Provider diletakkan di atas MaterialApp agar FavoriteProvider dapat diakses oleh seluruh halaman dan route dalam aplikasi. Jika provider hanya diletakkan pada HomePage, halaman lain yang berada di luar subtree tersebut tidak dapat mengakses provider.
+<pre class="bg-light p-3 rounded"><code>MultiProvider(
+  providers: [
+    ChangeNotifierProvider(
+      create: (context) => FavoriteProvider(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+    ),
+  ],
+  child: const ResepKuApp(),
+)</code></pre>
 
-</li>
 
 
-</ol>
+<h4 class="fw-bold mt-5">
+5.3 Mengatur ThemeMode pada MaterialApp
+</h4>
+
+<p class="fs-5 lh-lg">
+Karena MaterialApp perlu mengikuti perubahan mode tema, digunakan
+<code>context.watch&lt;ThemeProvider&gt;().mode</code>.
+</p>
+
+<pre class="bg-light p-3 rounded"><code>return MaterialApp(
+  title: 'ResepKu',
+  theme: ThemeData(
+    colorSchemeSeed: Colors.deepOrange,
+  ),
+  darkTheme: ThemeData(
+    colorSchemeSeed: Colors.deepOrange,
+    brightness: Brightness.dark,
+  ),
+  themeMode:
+      context.watch&lt;ThemeProvider&gt;().mode,
+  builder: (context, child) =>
+      IdentityFooter(child: child!),
+  home: const HomePage(),
+);</code></pre>
+
+
+
+<h4 class="fw-bold mt-5">
+5.4 Membuat SettingsPage
+</h4>
+
+<p class="fs-5 lh-lg">
+Halaman Pengaturan menyediakan switch untuk mengaktifkan dan
+menonaktifkan mode gelap.
+</p>
+
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code settings_page.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:resepku/providers/theme_provider.dart';
+
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark =
+        context.watch&lt;ThemeProvider&gt;().mode ==
+        ThemeMode.dark;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pengaturan'),
+      ),
+      body: SwitchListTile(
+        title: const Text('Mode gelap'),
+        value: isDark,
+        onChanged: (value) =>
+            context
+                .read&lt;ThemeProvider&gt;()
+                .toggleTheme(value),
+      ),
+    );
+  }
+}</code></pre>
+
+</details>
+
+
+
+<h4 class="fw-bold mt-5">
+5.5 Menambahkan Tombol Pengaturan pada HomePage
+</h4>
+
+<pre class="bg-light p-3 rounded"><code>actions: const [
+  FavoriteBadgeButton(),
+  IconButton(
+    icon: Icon(Icons.settings),
+    onPressed: null,
+  ),
+],</code></pre>
+
+<p class="fs-5 lh-lg">
+Tombol pengaturan diarahkan menuju SettingsPage menggunakan
+Navigator.push. Implementasi navigasinya dapat ditulis sebagai berikut:
+</p>
+
+<pre class="bg-light p-3 rounded"><code>IconButton(
+  icon: const Icon(Icons.settings),
+  onPressed: () => Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) =>
+          const SettingsPage(),
+    ),
+  ),
+),</code></pre>
+
+
+
+<h4 class="fw-bold mt-5">
+5.6 Hasil Pengujian Latihan 1
+</h4>
+
+<p class="fs-5 lh-lg">
+
+Setelah halaman Pengaturan dibuat, switch "Mode gelap" dapat
+digunakan untuk mengubah tema aplikasi. Ketika switch aktif, tampilan
+aplikasi berubah menjadi dark theme. Ketika switch dimatikan,
+aplikasi kembali menggunakan light theme. Perubahan tema berlaku
+pada seluruh aplikasi karena ThemeProvider berada pada MultiProvider
+di atas MaterialApp.
+
+</p>
+
+
+<!-- SCREENSHOT LATIHAN 1 -->
+
+<div class="border rounded-3 p-5 mt-4 text-center"
+style="border:2px dashed #f3a6c8 !important;
+background-color:#fffafd;">
+
+<h4 class="fw-bold" style="color:#73073d;">
+  LATIHAN 1
+</h4>
+
+<div class="screenshot-grid">
+
+  <div class="screenshot-item">
+    <img src="images/latihan1_1.png" alt="Screenshot Checkpoint 1">
+    <p>Mode Terang</p>
+  </div>
+
+  <div class="screenshot-item">
+    <img src="images/latihan1_2.png" alt="Screenshot Checkpoint 2">
+    <p>Mode Gelap</p>
+  </div>
+
+</div>
+
+
+</div>
+
 
 </div>
 
 </div>
 
+</div>
 
-<!-- VI. KESIMPULAN -->
+
+
+<!-- ========================================================= -->
+<!-- VI. LATIHAN 2 -->
+<!-- ========================================================= -->
 
 <div class="card border-0 shadow-lg mb-5 overflow-hidden">
 
 <div class="p-5">
 
 <h2 class="fw-bold mb-4" style="color:#73073d;">
-    VI. Kesimpulan
+VI. Latihan 2 — Menghapus Semua Favorit
 </h2>
 
 <p class="fs-5 lh-lg">
 
-Praktikum 6 menunjukkan bahwa pemilihan state management harus disesuaikan dengan kebutuhan data. State lokal dengan StatefulWidget dan setState() sesuai digunakan untuk data yang hanya dibutuhkan oleh satu halaman, seperti jumlah porsi pada DetailPage.
+Latihan kedua menambahkan tombol <b>"Hapus semua"</b> pada AppBar
+FavoritePage. Tombol digunakan untuk menghapus seluruh resep favorit
+setelah pengguna memberikan konfirmasi melalui AlertDialog.
+
+</p>
+
+
+
+<h4 class="fw-bold mt-4">
+6.1 Implementasi Tombol Hapus Semua
+</h4>
+
+<details>
+
+<summary class="fw-semibold"
+style="color:#73073d; cursor:pointer;">
+Lihat Source Code favorite_page.dart
+</summary>
+
+<pre class="bg-light p-3 rounded mt-3"><code>import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:resepku/providers/favorite_provider.dart';
+
+class FavoritePage extends StatelessWidget {
+  const FavoritePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Favorit Saya'),
+        actions: [
+          Consumer&lt;FavoriteProvider&gt;(
+            builder: (context, favorite, child) {
+              return TextButton(
+                onPressed: favorite.count == 0
+                    ? null
+                    : () async {
+                        final confirmed =
+                            await showDialog&lt;bool&gt;(
+                          context: context,
+                          builder: (context) =>
+                              AlertDialog(
+                            title: const Text(
+                              'Hapus semua favorit?',
+                            ),
+                            content: const Text(
+                              'Semua resep favorit akan dihapus.',
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.pop(
+                                      context,
+                                      false,
+                                    ),
+                                child:
+                                    const Text('Batal'),
+                              ),
+                              FilledButton(
+                                onPressed: () =>
+                                    Navigator.pop(
+                                      context,
+                                      true,
+                                    ),
+                                child:
+                                    const Text('Hapus'),
+                              ),
+                            ],
+                          ),
+                        );
+
+                        if (confirmed == true) {
+                          favorite.clear();
+                        }
+                      },
+                child: const Text('Hapus semua'),
+              );
+            },
+          ),
+        ],
+      ),
+      body: Consumer&lt;FavoriteProvider&gt;(
+        builder: (context, favorite, child) {
+          if (favorite.count == 0) {
+            return const Center(
+              child: Text(
+                'Belum ada resep favorit.\n'
+                'Tekan ikon hati di daftar resep.',
+                textAlign: TextAlign.center,
+              ),
+            );
+          }
+
+          return ListView(
+            children: [
+              for (final recipe in favorite.items)
+                ListTile(
+                  title: Text(recipe.name),
+                  subtitle: Text(recipe.cuisine),
+                  trailing: IconButton(
+                    icon: const Icon(
+                      Icons.delete_outline,
+                    ),
+                    onPressed: () =>
+                        favorite.toggle(recipe),
+                  ),
+                ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}</code></pre>
+
+</details>
+
+
+
+<h4 class="fw-bold mt-5">
+6.2 Hasil Pengujian Latihan 2
+</h4>
+
+<p class="fs-5 lh-lg">
+
+Ketika terdapat resep favorit, tombol "Hapus semua" dapat digunakan.
+Sebelum data dihapus, aplikasi menampilkan AlertDialog untuk meminta
+konfirmasi. Jika pengguna memilih "Batal", data favorit tetap ada.
+Jika pengguna memilih "Hapus", seluruh daftar favorit dihapus
+melalui method <code>clear()</code>. Ketika daftar favorit kosong,
+tombol "Hapus semua" menjadi nonaktif.
+
+</p>
+
+
+<!-- SCREENSHOT LATIHAN 2 -->
+
+<div class="border rounded-3 p-5 mt-4 text-center"
+style="border:2px dashed #f3a6c8 !important;
+background-color:#fffafd;">
+
+<h4 class="fw-bold" style="color:#73073d;">
+  LATIHAN 2
+</h4>
+
+<div class="screenshot-grid">
+
+  <div class="screenshot-item">
+    <img src="images/latihan2_1.png" alt="Screenshot Checkpoint 1">
+    <p>AlertDialog
+"Hapus semua favorit?"</p>
+  </div>
+
+  <div class="screenshot-item">
+    <img src="images/latihan2_2.png" alt="Screenshot Checkpoint 2">
+    <p>setelah seluruh favorit
+dihapus dan tombol "Hapus semua" nonaktif</p>
+  </div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- VII. RINGKASAN HASIL -->
+<!-- ========================================================= -->
+
+<div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+<div class="p-5">
+
+<h2 class="fw-bold mb-4" style="color:#73073d;">
+VII. Ringkasan Hasil Praktikum
+</h2>
+
+<p class="fs-5 lh-lg">
+Berdasarkan seluruh tahapan praktikum, aplikasi ResepKu berhasil
+menerapkan dua pendekatan state management. State lokal menggunakan
+<code>setState()</code> diterapkan pada jumlah porsi di DetailPage,
+sedangkan state favorit menggunakan Provider karena data favorit
+dibutuhkan oleh beberapa widget dan halaman.
+</p>
+
+<div class="table-responsive">
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+<th>Fitur</th>
+<th>State Management</th>
+<th>Hasil</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Jumlah porsi</td>
+<td>setState()</td>
+<td>Berhasil mengubah jumlah porsi dan total kalori.</td>
+</tr>
+
+<tr>
+<td>Favorit RecipeTile</td>
+<td>Provider</td>
+<td>Status favorit dapat dibaca oleh widget lain.</td>
+</tr>
+
+<tr>
+<td>Badge favorit</td>
+<td>Provider</td>
+<td>Jumlah favorit berubah secara otomatis.</td>
+</tr>
+
+<tr>
+<td>FavoritePage</td>
+<td>Consumer</td>
+<td>Daftar favorit dapat ditampilkan dan diperbarui.</td>
+</tr>
+
+<tr>
+<td>Mode gelap</td>
+<td>ThemeProvider</td>
+<td>Tema aplikasi dapat berubah secara global.</td>
+</tr>
+
+<tr>
+<td>Hapus semua favorit</td>
+<td>FavoriteProvider.clear()</td>
+<td>Seluruh favorit dapat dihapus setelah konfirmasi.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- VIII. KESIMPULAN -->
+<!-- ========================================================= -->
+
+<div class="card border-0 shadow-lg mb-5 overflow-hidden">
+
+<div class="p-5">
+
+<h2 class="fw-bold mb-4" style="color:#73073d;">
+VIII. Kesimpulan
+</h2>
+
+<p class="fs-5 lh-lg">
+
+Praktikum State Management pada aplikasi ResepKu menunjukkan bahwa
+pemilihan metode state management harus disesuaikan dengan kebutuhan
+data. <code>setState()</code> sesuai digunakan untuk state lokal yang
+hanya diperlukan oleh satu halaman, seperti jumlah porsi pada
+DetailPage. Perubahan state tersebut akan membangun kembali UI pada
+halaman yang bersangkutan.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-Untuk data yang digunakan oleh banyak widget dan halaman, seperti daftar resep favorit, digunakan Provider dengan ChangeNotifier. context.watch dan Consumer digunakan untuk mendengarkan perubahan state, sedangkan context.read digunakan untuk menjalankan aksi tanpa mendengarkan perubahan.
+Untuk data yang digunakan oleh banyak widget dan halaman, seperti
+daftar resep favorit, penggunaan state lokal pada masing-masing widget
+menjadi tidak efektif. Provider dengan <code>ChangeNotifier</code>
+memungkinkan data favorit disimpan pada satu tempat dan digunakan
+bersama oleh RecipeTile, DetailPage, FavoriteBadgeButton, dan
+FavoritePage.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-Dengan penerapan Provider, fitur favorit pada aplikasi ResepKu dapat tersinkronisasi antara HomePage, DetailPage, badge AppBar, dan FavoritePage.
+Penggunaan <code>context.watch()</code>, <code>context.read()</code>,
+dan <code>Consumer</code> juga menunjukkan bagaimana widget dapat
+mendengarkan atau mengakses state Provider sesuai kebutuhan. Selain
+itu, ThemeProvider dapat digunakan untuk mengatur perubahan tema
+secara global, sedangkan method <code>clear()</code> dapat digunakan
+untuk mengelola penghapusan seluruh data favorit.
 
 </p>
 
 <p class="fs-5 lh-lg">
 
-Praktikum ini juga menunjukkan bahwa posisi Provider pada widget tree menentukan halaman mana saja yang dapat mengakses state global.
+Dengan demikian, state yang hanya diperlukan oleh satu halaman dapat
+tetap menggunakan state lokal, sedangkan state yang digunakan bersama
+oleh banyak bagian aplikasi sebaiknya ditempatkan pada state management
+yang memiliki scope lebih luas seperti Provider.
 
 </p>
 
@@ -1516,22 +2629,21 @@ Praktikum ini juga menunjukkan bahwa posisi Provider pada widget tree menentukan
 
 </div>
 
+</div>
 
 <!-- GITHUB -->
-
 <div class="text-center mt-5">
-
-<a href="https://github.com/PutriBalqisAfradinata/PutriBalqisAfradinata_2411531009_AplikasiMobile"
-target="_blank"
-class="btn btn-lg text-white fw-semibold px-4 py-3 shadow"
-style="background-color:#ff69b4; border-radius:14px;">
-
-🔗 Lihat Repository GitHub
-
-</a>
-
+    <a
+        href="https://github.com/PutriBalqisAfradinata/PutriBalqisAfradinata_2411531009_AplikasiMobile"
+        target="_blank"
+        class="btn btn-lg text-white fw-semibold px-4 py-3 shadow"
+        style="background-color:#ff69b4; border-radius:14px;"
+    >
+        🔗 Lihat Repository GitHub
+    </a>
 </div>
 
+</div>
 
 </div>
 
@@ -1539,10 +2651,9 @@ style="background-color:#ff69b4; border-radius:14px;">
 
 
 <!-- BOOTSTRAP JS -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
-
 </html>
