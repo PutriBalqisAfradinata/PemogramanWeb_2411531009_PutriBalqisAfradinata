@@ -277,63 +277,43 @@ style="background-color:#ffb6d9;">
 
             <h5 class="fw-bold mt-3">4.1 Menyiapkan Folder Assets</h5>
             <p class="content-text">Pada direktori utama project ResepKu dibuat folder <code>assets</code> dengan dua subfolder, yaitu <code>images</code> dan <code>fonts</code>. File logo dan placeholder ditempatkan di folder images, sedangkan tiga file font Poppins ditempatkan di folder fonts.</p>
-            <pre><code>assets/
-├── images/
-│   ├── logo.png
-│   └── placeholder.png
-└── fonts/
-    ├── Poppins-Regular.ttf
-    ├── Poppins-Medium.ttf
-    └── Poppins-Bold.ttf</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-01-part-01.svg" alt="Gambar cuplikan kode report 7, 4.1 Menyiapkan Folder Assets, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.2 Mendaftarkan Asset dan Font pada pubspec.yaml</h5>
             <p class="content-text">Folder gambar dan font didaftarkan pada bagian <code>flutter</code> di file <code>pubspec.yaml</code>. Poppins didaftarkan dengan tiga variasi ketebalan, yaitu normal, 500, dan 700.</p>
-            <pre><code>flutter:
-  uses-material-design: true
-
-  assets:
-    - assets/images/
-
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Poppins-Bold.ttf
-          weight: 700</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-02-part-01.svg" alt="Gambar cuplikan kode report 7, 4.2 Mendaftarkan Asset dan Font pada pubspec.yaml, bagian 1 dari 1"></figure>
+</div>
             <p class="content-text">Setelah file disimpan, dependency diperbarui menggunakan perintah berikut apabila VS Code tidak menjalankan <code>flutter pub get</code> secara otomatis.</p>
-            <pre><code>flutter pub get</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-03-part-01.svg" alt="Gambar cuplikan kode report 7, 4.2 Mendaftarkan Asset dan Font pada pubspec.yaml, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.3 Menerapkan Font Poppins pada Tema Aplikasi</h5>
             <p class="content-text">Properti <code>fontFamily: 'Poppins'</code> ditambahkan pada <code>theme</code> dan <code>darkTheme</code> di MaterialApp. Pengaturan <code>themeMode</code> dan builder untuk footer identitas dari Modul 6 tetap dipertahankan.</p>
-            <pre><code>theme: ThemeData(
-  colorSchemeSeed: Colors.deepOrange,
-  fontFamily: 'Poppins',
-),
-darkTheme: ThemeData(
-  colorSchemeSeed: Colors.deepOrange,
-  brightness: Brightness.dark,
-  fontFamily: 'Poppins',
-),
-themeMode: context.watch&lt;ThemeProvider&gt;().mode,</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-04-part-01.svg" alt="Gambar cuplikan kode report 7, 4.3 Menerapkan Font Poppins pada Tema Aplikasi, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.4 Menambahkan Logo pada AppBar</h5>
             <p class="content-text">Judul AppBar pada HomePage diubah menjadi Row yang berisi logo ResepKu dan teks nama aplikasi. Logo ditampilkan menggunakan <code>Image.asset</code>.</p>
-            <pre><code>title: Row(
-  children: [
-    Image.asset('assets/images/logo.png', height: 32),
-    const SizedBox(width: 8),
-    const Text('ResepKu'),
-  ],
-),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-05-part-01.svg" alt="Gambar cuplikan kode report 7, 4.4 Menambahkan Logo pada AppBar, bagian 1 dari 1"></figure>
+</div>
 
             <div class="mt-4">
                 <strong>Checkpoint 1 — Hasil yang didokumentasikan</strong>
                 <p class="content-text mb-2">Tampilan Home dengan logo pada AppBar dan seluruh teks menggunakan font Poppins. Footer NIM dan nama harus terlihat.</p>
                    <center>
                         <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                            <img src="images/cek1.png" style="width: 100%; height: 550px; object-fit: contain;">
+                            <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek1.png">
                             <p>Gambar 1. Muncul logo pada AppBar.</p>
                         </span>
                    </center>
@@ -344,48 +324,25 @@ themeMode: context.watch&lt;ThemeProvider&gt;().mode,</code></pre>
 
             <h5 class="fw-bold mt-3">4.5 Membuat Widget RecipeImage</h5>
             <p class="content-text">Widget <code>RecipeImage</code> dibuat agar logika penampilan foto dapat digunakan kembali pada tampilan list, grid, dan detail. Widget ini menggunakan <code>Image.network</code>, <code>loadingBuilder</code>, <code>errorBuilder</code>, serta parameter opsional <code>cacheWidth</code>.</p>
-            <pre><code>return Image.network(
-  url,
-  fit: BoxFit.cover,
-  cacheWidth: cacheWidth,
-  loadingBuilder: (context, child, loadingProgress) {
-    if (loadingProgress == null) return child;
-    return ColoredBox(
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      child: const Center(child: Icon(Icons.restaurant_menu)),
-    );
-  },
-  errorBuilder: (context, error, stackTrace) {
-    return Image.asset(
-      'assets/images/placeholder.png',
-      fit: BoxFit.cover,
-    );
-  },
-);</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-06-part-01.svg" alt="Gambar cuplikan kode report 7, 4.5 Membuat Widget RecipeImage, bagian 1 dari 1"></figure>
+</div>
             <p class="content-text">Ketika gambar masih diunduh, aplikasi menampilkan tampilan loading. Jika gambar berhasil dimuat, gambar asli ditampilkan. Jika URL salah atau koneksi tidak tersedia, aplikasi menampilkan gambar placeholder.</p>
 
             <h5 class="fw-bold mt-4">4.6 Menambahkan Thumbnail pada RecipeTile</h5>
             <p class="content-text">Bagian leading pada RecipeTile yang sebelumnya menggunakan CircleAvatar diganti dengan gambar berukuran 56 × 56 dp. Gambar dibungkus dengan ClipRRect agar sudutnya membulat dan menggunakan <code>cacheWidth: 168</code> untuk mengurangi ukuran gambar saat proses decode.</p>
-            <pre><code>leading: ClipRRect(
-  borderRadius: BorderRadius.circular(8),
-  child: SizedBox(
-    width: 56,
-    height: 56,
-    child: RecipeImage(
-      url: recipe.image,
-      cacheWidth: 168,
-    ),
-  ),
-),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-07-part-01.svg" alt="Gambar cuplikan kode report 7, 4.6 Menambahkan Thumbnail pada RecipeTile, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.7 Mengubah HomePage menjadi ListView.builder</h5>
             <p class="content-text">Daftar resep pada HomePage ditampilkan menggunakan <code>ListView.builder</code>. Jumlah item diambil dari <code>dummyRecipes.length</code>, sedangkan setiap item menampilkan RecipeTile berdasarkan index. Tombol Favorit dan Pengaturan tetap dipertahankan.</p>
-            <pre><code>body: ListView.builder(
-  itemCount: dummyRecipes.length,
-  itemBuilder: (context, index) {
-    return RecipeTile(recipe: dummyRecipes[index]);
-  },
-),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-08-part-01.svg" alt="Gambar cuplikan kode report 7, 4.7 Mengubah HomePage menjadi ListView.builder, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.8 Menguji Error State</h5>
             <p class="content-text">Pengujian dilakukan dengan mengaktifkan mode pesawat pada emulator atau HP, kemudian menutup dan membuka kembali aplikasi. Alternatif lainnya adalah mengubah sementara URL foto menjadi URL yang salah, lalu melakukan hot restart. Setelah pengujian selesai, koneksi atau URL dikembalikan seperti semula.</p>
@@ -396,12 +353,12 @@ themeMode: context.watch&lt;ThemeProvider&gt;().mode,</code></pre>
                 <div class="row g-3">
                     <center>
                         <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                            <img src="images/cek2a.png" style="width: 100%; height: 550px; object-fit: contain;">
+                            <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek2a.png">
                             <p>Gambar 1. Gambar resep muncul.</p>
                         </span>
 
                         <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                            <img src="images/cek2b.png" style="width: 100%; height: 550px; object-fit: contain;">
+                            <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek2b.png">
                             <p>Gambar 2. Placeholder muncul.</p>
                         </span>
                     </center>
@@ -413,71 +370,24 @@ themeMode: context.watch&lt;ThemeProvider&gt;().mode,</code></pre>
 
             <h5 class="fw-bold mt-3">4.9 Membuat RecipeGridCard</h5>
             <p class="content-text">Widget RecipeGridCard dibuat untuk menampilkan resep dalam bentuk kartu grid. Card menggunakan <code>InkWell</code> agar seluruh kartu dapat ditekan untuk membuka halaman detail. Foto ditampilkan menggunakan RecipeImage, sedangkan tombol favorit diletakkan di atas foto menggunakan Stack dan Positioned.</p>
-            <pre><code>return Card(
-  clipBehavior: Clip.antiAlias,
-  child: InkWell(
-    onTap: () => Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => DetailPage(recipe: recipe),
-      ),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Expanded(
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              RecipeImage(url: recipe.image, cacheWidth: 500),
-              Positioned(
-                top: 4,
-                right: 4,
-                child: IconButton.filledTonal(
-                  icon: Icon(
-                    isFavorite
-                        ? Icons.favorite
-                        : Icons.favorite_border,
-                    color: isFavorite ? Colors.red : null,
-                  ),
-                  onPressed: () =>
-                      context.read&lt;FavoriteProvider&gt;().toggle(recipe),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  ),
-);</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-09-part-01.svg" alt="Gambar cuplikan kode report 7, 4.9 Membuat RecipeGridCard, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.10 Mengubah HomePage Menjadi StatefulWidget</h5>
             <p class="content-text">HomePage diubah menjadi StatefulWidget karena membutuhkan state lokal <code>_isGrid</code> untuk menentukan tampilan yang aktif. Nilai awal false berarti aplikasi pertama kali menampilkan list. Tombol pada AppBar mengubah nilai tersebut menggunakan <code>setState()</code>.</p>
-            <pre><code>bool _isGrid = false;
-
-onPressed: () => setState(() => _isGrid = !_isGrid),
-
-body: _isGrid ? _buildGrid() : _buildList(),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-10-part-01.svg" alt="Gambar cuplikan kode report 7, 4.10 Mengubah HomePage Menjadi StatefulWidget, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.11 Membuat Tampilan List dan Grid</h5>
             <p class="content-text">Method <code>_buildList()</code> menggunakan ListView.builder, sedangkan <code>_buildGrid()</code> menggunakan GridView.builder. Grid diatur menjadi dua kolom dengan jarak horizontal dan vertikal 8 dp serta rasio lebar dan tinggi kartu 3 : 4.</p>
-            <pre><code>Widget _buildGrid() {
-  return GridView.builder(
-    padding: const EdgeInsets.all(8),
-    gridDelegate:
-        const SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 2,
-      mainAxisSpacing: 8,
-      crossAxisSpacing: 8,
-      childAspectRatio: 3 / 4,
-    ),
-    itemCount: dummyRecipes.length,
-    itemBuilder: (context, index) {
-      return RecipeGridCard(recipe: dummyRecipes[index]);
-    },
-  );
-}</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-11-part-01.svg" alt="Gambar cuplikan kode report 7, 4.11 Membuat Tampilan List dan Grid, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.12 Perhitungan Ukuran Kartu Grid</h5>
             <p class="content-text">Diketahui lebar layar HP adalah 360 dp. Grid menggunakan padding kiri dan kanan masing-masing 8 dp, jarak antar kolom 8 dp, dan jumlah kolom sebanyak dua.</p>
@@ -505,14 +415,10 @@ body: _isGrid ? _buildGrid() : _buildList(),</code></pre>
 
             <h5 class="fw-bold mt-3">4.13 Menambahkan Foto pada Halaman Detail</h5>
             <p class="content-text">Widget RecipeImage digunakan kembali pada halaman detail. Foto diletakkan sebagai child pertama ListView dengan rasio 16 : 9 dan sudut membulat. Pada bagian ini cacheWidth tidak diisi karena foto ditampilkan hampir selebar layar.</p>
-            <pre><code>ClipRRect(
-  borderRadius: BorderRadius.circular(16),
-  child: AspectRatio(
-    aspectRatio: 16 / 9,
-    child: RecipeImage(url: recipe.image),
-  ),
-),
-const SizedBox(height: 16),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-12-part-01.svg" alt="Gambar cuplikan kode report 7, 4.13 Menambahkan Foto pada Halaman Detail, bagian 1 dari 1"></figure>
+</div>
 
             <h5 class="fw-bold mt-4">4.14 Pengujian Aplikasi</h5>
             <p class="content-text">Pengujian dilakukan untuk memastikan fitur Modul 6 dan Modul 7 dapat berjalan bersama. Hasil pengujian dicatat berdasarkan enam skenario pada modul.</p>
@@ -536,12 +442,12 @@ const SizedBox(height: 16),</code></pre>
                 <div class="row g-3">
                         <center>
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek3.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek3.png">
                                 <p>Gambar 1. Halaman home mode grid dan minimal 1 menu favorit.</p>
                             </span>
 
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek3b.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek3b.png">
                                 <p>Gambar 2. Halaman detail dengan foto menu.</p>
                             </span>
                         </center>
@@ -559,47 +465,24 @@ const SizedBox(height: 16),</code></pre>
             <h5 class="fw-bold mt-3">5.1 Filter Cuisine</h5>
             <p class="content-text">Latihan pertama menambahkan deretan ChoiceChip di bawah AppBar Home. Chip terdiri dari pilihan “Semua” dan seluruh cuisine yang tersedia pada data resep. Daftar cuisine diambil secara dinamis dari data menggunakan <code>map()</code> dan <code>toSet()</code>, bukan ditulis satu per satu secara manual.</p>
             <p class="content-text">State <code>String? _cuisine</code> ditambahkan pada _HomePageState. Nilai null berarti semua resep ditampilkan. Ketika salah satu chip dipilih, nilai state diperbarui dan data resep difilter berdasarkan cuisine tersebut. Hasil filter digunakan bersama oleh tampilan list maupun grid.</p>
-            <pre><code>String? _cuisine;
-
-// Daftar cuisine diambil dari data
-final cuisines = dummyRecipes
-    .map((r) => r.cuisine)
-    .toSet();
-
-// Nilai null berarti semua cuisine
-final filteredRecipes = _cuisine == null
-    ? dummyRecipes
-    : dummyRecipes
-        .where((r) => r.cuisine == _cuisine)
-        .toList();</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-13-part-01.svg" alt="Gambar cuplikan kode report 7, 5.1 Filter Cuisine, bagian 1 dari 1"></figure>
+</div>
             <p class="content-text">Body HomePage disusun menggunakan Column. ChoiceChip ditempatkan pada ListView horizontal di dalam SizedBox dengan tinggi 56 dp, sedangkan area list atau grid ditempatkan di dalam Expanded agar mengisi sisa ruang.</p>
-            <pre><code>body: Column(
-  children: [
-    SizedBox(
-      height: 56,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          // ChoiceChip "Semua" dan setiap cuisine
-        ],
-      ),
-    ),
-    Expanded(
-      child: _isGrid
-          ? _buildGrid(filteredRecipes)
-          : _buildList(filteredRecipes),
-    ),
-  ],
-),</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-14-part-01.svg" alt="Gambar cuplikan kode report 7, 5.1 Filter Cuisine, bagian 1 dari 1"></figure>
+</div>
             <div class="row g-3 mt-3">
                         <center>
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek1latihan.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek1latihan.png">
                                 <p>Gambar 1. Filter pada mode list.</p>
                             </span>
 
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek2latihan.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek2latihan.png">
                                 <p>Gambar 2. Filter pada mode grid.</p>
                             </span>
                         </center>
@@ -611,39 +494,19 @@ final filteredRecipes = _cuisine == null
             <h5 class="fw-bold mt-3">5.2 Halaman Favorit yang Lebih Rapi</h5>
             <p class="content-text">Latihan kedua memperbarui halaman Favorit agar daftar resep lebih rapi. Daftar ditampilkan menggunakan <code>ListView.separated</code> sehingga setiap item memiliki Divider sebagai pemisah. Setiap baris juga menampilkan thumbnail foto menggunakan widget RecipeImage.</p>
             <p class="content-text">Setiap item dibungkus dengan Dismissible agar pengguna dapat menggeser item ke kiri untuk menghapus resep dari daftar favorit. Dismissible menggunakan key unik dan stabil, yaitu <code>ValueKey(recipe.id)</code>, bukan index. Setelah item dihapus, aplikasi menampilkan SnackBar yang berisi nama resep yang dihapus. Tombol hapus semua dari Latihan 2 Modul 6 tetap dipertahankan.</p>
-            <pre><code>ListView.separated(
-  itemCount: favorites.length,
-  separatorBuilder: (context, index) =>
-      const Divider(),
-  itemBuilder: (context, index) {
-    final recipe = favorites[index];
-
-    return Dismissible(
-      key: ValueKey(recipe.id),
-      direction: DismissDirection.endToStart,
-      onDismissed: (direction) {
-        // Hapus resep dari FavoriteProvider
-        // Tampilkan SnackBar berisi nama resep
-      },
-      child: ListTile(
-        leading: RecipeImage(
-          url: recipe.image,
-          cacheWidth: 168,
-        ),
-        title: Text(recipe.name),
-      ),
-    );
-  },
-)</code></pre>
+            
+<div class="code-screenshot-set" style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin:20px 0 30px">
+<figure style="margin:0"><img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" loading="lazy" src="images/report7-code/code-15-part-01.svg" alt="Gambar cuplikan kode report 7, 5.2 Halaman Favorit yang Lebih Rapi, bagian 1 dari 1"></figure>
+</div>
             <div class="row g-3 mt-3">
                         <center>
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek1latihan2.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek1latihan2.png">
                                 <p>Gambar 1. Dismissable.</p>
                             </span>
 
                             <span style="display: inline-block; width: 30%; text-align: center; vertical-align: top;">
-                                <img src="images/cek2latihan2.png" style="width: 100%; height: 550px; object-fit: contain;">
+                                <img style="display:block;width:100%;height:auto;max-width:100%;border:1px solid #eadbe2;border-radius:12px;box-shadow:0 6px 16px rgba(115,7,61,.10)" src="images/cek2latihan2.png">
                                 <p>Gambar 2. Foto thumbnail dan bar notifikasi.</p>
                             </span>
                         </center>
